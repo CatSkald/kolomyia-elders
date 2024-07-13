@@ -14,7 +14,7 @@ export const getAge =
         if (typeof date === "number") year = date;
         else if (date.includes("18 ст.")) year = 1701;
         else if (date.includes("19 ст.")) year = 1801;
-        else if (date.startsWith("20 ст.")) year = 1901;
+        else if (date.includes("20 ст.")) year = 1901;
         else if (date.endsWith("-ті.")) year = parseInt(date.split("-")[0]);
 
         if (!year) return undefined;

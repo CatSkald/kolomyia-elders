@@ -2,8 +2,51 @@
   width: 100vw;
   height: 100vh;
 }
+.leaflet-control-zoom {
+  position: absolute;
+  top: 20rem;
+  right: 0.5rem;
+}
 
-/* Dark mode 
+.header {
+  position: absolute;
+  z-index: 500;
+  background-color: rgba(100, 100, 100, 0.75);
+  color: white;
+  box-sizing: border-box;
+  top: 0;
+  width: 100vw;
+  padding: 1rem;
+}
+
+.header h1 {
+  font-size: x-large;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header hr {
+  margin: 0.9rem 0;
+}
+
+.legend{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.legend div{
+  display: flex;
+  margin-top: 0.2rem;
+}
+
+.legend img{
+  width: 25px;
+  height: 25px;
+}
+
+/* TODO Add theme switcher
+Dark mode 
 .leaflet-layer,
 .leaflet-control-zoom-in,
 .leaflet-control-zoom-out,

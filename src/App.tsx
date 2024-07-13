@@ -1,10 +1,11 @@
 import "./App.css";
-import "./App.css";
+import Header from "./header/Header";
 import Map from "./map/Map";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
+      <Header />
       <section className="map-container">
         <Map />
       </section>

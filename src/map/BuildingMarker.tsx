@@ -1,33 +1,27 @@
 import { Marker, Popup } from "react-leaflet";
-import { Icon, LatLngExpression } from "leaflet";
+import { Icon } from "leaflet";
 
 import "leaflet/dist/leaflet.css";
-import markerIconUrl from "../assets/pin.png";
-import { BuildingProfile } from "./Types";
+import { BuildingProfile } from "../types";
 
-export default function BuildingMarker({
-  latLng,
-  data,
-}: {
-  latLng: LatLngExpression;
-  data: BuildingProfile;
-}) {
-  return (
+export default function BuildingMarker({ data }: { data: BuildingProfile }) {
+  return !data.coordinates ? (
+    <></>
+  ) : (
     <>
       <Marker
-        position={latLng}
+        position={data.coordinates}
         icon={
           new Icon({
-            iconUrl: markerIconUrl,
+            iconUrl: data.markerImage,
             iconSize: [36, 36],
-            className: "ancient",
           })
         }
       />
       <Popup>
         <div className="newline" style={{ fontWeight: "bold" }}>
-          {data.wikipedia ? (
-            <a href={data.wikipedia} target="_blank">
+          {data.link ? (
+            <a href={data.link} target="_blank">
               {data.name}
             </a>
           ) : (
@@ -35,9 +29,9 @@ export default function BuildingMarker({
           )}
         </div>
         <div className="newline" style={{ fontWeight: "bold" }}>
-          {data.year}
+          {data.date}
         </div>
-        <div className="newline">вул. {data.address}</div>
+        <div className="newline">{data.address}</div>
       </Popup>
     </>
   );

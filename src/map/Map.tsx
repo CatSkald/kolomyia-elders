@@ -2,7 +2,7 @@ import { TileLayer, MapContainer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import Building from "./Building";
 import { buildings } from "../data/buildings.ts";
-import { LatLngExpression } from "leaflet";
+import { mapBuildings } from "../utils.ts";
 
 export default function Map() {
   return (
@@ -12,17 +12,10 @@ export default function Map() {
         url="http://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}"
       />
       <>
-        {buildings
-          .filter((b) => !!b["Координати"])
+        {mapBuildings(buildings)
+          .filter((b) => !!b.coordinates)
           .map((b) => (
-            <Building
-              latLng={b["Координати"].split("/") as unknown as LatLngExpression}
-              data={{
-                name: b["Назва"],
-                year: b["Рік"] as number,
-                address: b["Адреса"],
-              }}
-            />
+            <Building data={b} />
           ))}
       </>
     </MapContainer>

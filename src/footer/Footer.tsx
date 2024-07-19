@@ -2,12 +2,14 @@ const Footer = () => {
   return (
     <div className="footer">
       <span>
-        Детективна робота по збору даних: <b>Hans</b> ⨳ Технічна розробка:{" "}
-        <a href="https://github.com/CatSkald">CatSkald</a> ⨳{" "}
+        Востаннє оновлено: <b>липень 2024</b> ⨳ Детективна робота по збору
+        даних: <b>Hans</b> ⨳ Технічна розробка:{" "}
+        <a href="https://github.com/CatSkald">CatSkald</a> ⨳ Дані та сирцевий
+        код:{" "}
         <a href="https://github.com/CatSkald/kolomyia-elders" className="logo">
           <svg
-            width="5%"
-            height="5%"
+            width="14"
+            height="14"
             viewBox="0 0 98 96"
             preserveAspectRatio="xMidYMid meet"
             xmlns="http://www.w3.org/2000/svg"

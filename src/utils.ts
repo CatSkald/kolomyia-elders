@@ -16,6 +16,7 @@ export const getAge =
         else if (date.includes("19 ст.")) year = 1801;
         else if (date.includes("20 ст.")) year = 1901;
         else if (date.endsWith("-ті.")) year = parseInt(date.split("-")[0]);
+        else if (date.startsWith("після")) year = 1 + parseInt(date.split(" ")[1]);
 
         if (!year) return undefined;
         else if (year < 1801) return "ancient";

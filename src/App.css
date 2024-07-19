@@ -7,6 +7,9 @@
   top: 20rem;
   right: 0.5rem;
 }
+.leaflet-control-attribution{
+  display: none;
+}
 
 .header {
   position: absolute;
@@ -45,6 +48,32 @@
   height: 25px;
 }
 
+.footer {
+  position: absolute;
+  z-index: 500;
+  background-color: rgba(100, 100, 100, 0.75);
+  color: white;
+  box-sizing: border-box;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem;
+  font-size: smaller;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .logo {
+  display: inline-block;
+}
+
+.footer a {
+  color: lightcyan;
+  text-decoration: none;
+  font-weight: bold;
+}
+.footer a:hover {
+  color: cyan;
+}
 /* TODO Add theme switcher
 Dark mode 
 .leaflet-layer,

@@ -20,7 +20,7 @@ export const getAge =
         if (!year) return undefined;
         else if (year < 1801) return "ancient";
         else if (year < 1901) return "elder";
-        else if (year < 1951) return "old";
+        else if (year < 1919) return "old";
         else return "modern";
     };
 

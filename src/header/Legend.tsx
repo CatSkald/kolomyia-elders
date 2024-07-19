@@ -1,4 +1,3 @@
-import defaultIconUrl from "../assets/pin.png";
 import ancientIconUrl from "../assets/ancient.png";
 import elderIconUrl from "../assets/elder.png";
 import oldIconUrl from "../assets/old.png";
@@ -8,19 +7,16 @@ const Legend = () => {
   return (
     <div className="legend">
       <div>
-        <img src={ancientIconUrl} alt="до 19 століття" /> до 19 століття
+        <img src={ancientIconUrl} alt="до XVIII століття" /> до XVIII ст.
       </div>
       <div>
-        <img src={elderIconUrl} alt="19 століття" /> 19 століття
+        <img src={elderIconUrl} alt="XIX століття" /> XIX ст.
       </div>
       <div>
-        <img src={oldIconUrl} alt="До 1951" /> перша половина 20 століття
+        <img src={oldIconUrl} alt="початок XX століття" /> початок XX ст.
       </div>
       <div>
-        <img src={modernIconUrl} alt="Сучасний" /> з середини 20 століття
-      </div>
-      <div>
-        <img src={defaultIconUrl} alt="Невідомо" /> невідомо
+        <img src={modernIconUrl} alt="сучасний" /> з 1919 року
       </div>
     </div>
   );

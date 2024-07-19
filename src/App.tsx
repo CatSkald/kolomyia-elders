@@ -1,4 +1,5 @@
 import "./App.css";
+import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import Map from "./map/Map";
 
@@ -9,6 +10,7 @@ function App() {
       <section className="map-container">
         <Map />
       </section>
+      <Footer />
     </div>
   );
 }

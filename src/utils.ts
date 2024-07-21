@@ -44,6 +44,8 @@ export const getImageUrl =
 export const mapBuildings = (buildings: Array<{
     "Назва": string,
     "Дата": string | number,
+    "Опис": string,
+    "Історія": string,
     "Адреса": string,
     "Координати"?: string,
     "Посилання на карту"?: string
@@ -55,6 +57,8 @@ export const mapBuildings = (buildings: Array<{
         return ({
             name: b["Назва"],
             date: date,
+            description: b["Опис"],
+            history: b["Історія"],
             age: age,
             address: b["Адреса"],
             coordinates: coordinates

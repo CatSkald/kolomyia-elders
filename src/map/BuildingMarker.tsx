@@ -3,6 +3,7 @@ import { Icon } from "leaflet";
 
 import "leaflet/dist/leaflet.css";
 import { BuildingProfile } from "../types";
+import BuildingHistory from "./BuildingHistory";
 
 export default function BuildingMarker({ data }: { data: BuildingProfile }) {
   return !data.coordinates ? (
@@ -20,18 +21,17 @@ export default function BuildingMarker({ data }: { data: BuildingProfile }) {
       />
       <Popup>
         <div className="newline" style={{ fontWeight: "bold" }}>
-          {data.link ? (
-            <a href={data.link} target="_blank">
-              {data.name}
-            </a>
-          ) : (
-            data.name
-          )}
+          {data.name}
         </div>
         <div className="newline" style={{ fontWeight: "bold" }}>
           {data.date}
         </div>
-        <div className="newline">{data.address}</div>
+        <div className="newline" style={{ fontStyle: "italic" }}>
+          {data.address}
+        </div>
+        {data.description && <div className="newline">{data.description}</div>}
+        {/* TODO Show dynamically */}
+        {data.history && <BuildingHistory data={data.history} />}
       </Popup>
     </>
   );

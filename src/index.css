@@ -6,3 +6,8 @@ body {
 .newline {
   white-space: pre-line;
 }
+
+ul {
+  padding-left: 0.75rem;
+  margin: 0;
+}

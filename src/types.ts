@@ -11,3 +11,8 @@ export type BuildingProfile = {
   mapLink?: string;
   markerImage: string;
 };
+
+export type HistoryEntry = {
+  date: string;
+  description: string;
+};

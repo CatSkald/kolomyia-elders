@@ -10,6 +10,12 @@
 .leaflet-control-attribution{
   display: none;
 }
+.leaflet-popup{
+  max-width: fit-content;
+}
+.leaflet-popup-content-wrapper .leaflet-popup-content{
+  width: 25rem;
+}
 
 .header {
   position: absolute;
@@ -75,7 +81,7 @@
   color: cyan;
 }
 /* TODO Add theme switcher
-Dark mode 
+Dark mode
 .leaflet-layer,
 .leaflet-control-zoom-in,
 .leaflet-control-zoom-out,

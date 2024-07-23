@@ -20,17 +20,40 @@ export default function BuildingMarker({ data }: { data: BuildingProfile }) {
         }
       />
       <Popup>
-        <div className="newline" style={{ fontWeight: "bold" }}>
-          {data.name}
+        <div
+          className="newline"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+        >
+          <span
+            style={{
+              fontWeight: "bold",
+              textDecoration: "underline",
+              fontSize: "1rem",
+            }}
+          >
+            {data.name}
+          </span>
+          <span
+            style={{
+              fontWeight: "bold",
+              fontSize: "0.9rem",
+            }}
+          >
+            {data.date}
+          </span>
+          {data.description && (
+            <span style={{ marginTop: "0.9rem" }}>{data.description}</span>
+          )}
+          <span style={{ marginTop: "0.9rem", fontStyle: "italic" }}>
+            {data.address}
+          </span>
         </div>
-        <div className="newline" style={{ fontWeight: "bold" }}>
-          {data.date}
-        </div>
-        <div className="newline" style={{ fontStyle: "italic" }}>
-          {data.address}
-        </div>
-        {data.description && <div className="newline">{data.description}</div>}
-        {/* TODO Show dynamically */}
+        {data.history && <hr style={{ margin: "0.9rem 0" }} />}
         {data.history && <BuildingHistory data={data.history} />}
       </Popup>
     </>

@@ -7,6 +7,10 @@
   top: 20rem;
   right: 0.5rem;
 }
+.leaflet-control-zoom .leaflet-control-zoom-in,
+.leaflet-control-zoom .leaflet-control-zoom-out {
+  color: darkcyan;
+}
 .leaflet-control-attribution{
   display: none;
 }

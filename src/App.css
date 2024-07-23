@@ -25,7 +25,8 @@
   box-sizing: border-box;
   top: 0;
   width: 100vw;
-  padding: 1rem;
+  padding: 0.9rem;
+  padding-bottom: 0.5rem;
 }
 
 .header h1 {
@@ -35,7 +36,7 @@
 }
 
 .header hr {
-  margin: 0.9rem 0;
+  margin: 0.7rem 0;
 }
 
 .legend{
@@ -46,7 +47,7 @@
 
 .legend div{
   display: flex;
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
 }
 
 .legend img{
@@ -62,7 +63,7 @@
   box-sizing: border-box;
   bottom: 0;
   right: 0;
-  padding: 0.5rem;
+  padding: 0.4rem;
   font-size: smaller;
   display: flex;
   flex-direction: column;
@@ -80,6 +81,7 @@
 .footer a:hover {
   color: cyan;
 }
+
 /* TODO Add theme switcher
 Dark mode
 .leaflet-layer,

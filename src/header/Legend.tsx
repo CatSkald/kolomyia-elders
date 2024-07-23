@@ -13,10 +13,10 @@ const Legend = () => {
         <img src={elderIconUrl} alt="XIX століття" /> XIX ст.
       </div>
       <div>
-        <img src={oldIconUrl} alt="початок XX століття" /> початок XX ст.
+        <img src={oldIconUrl} alt="початок XX століття" /> поч. XX ст.
       </div>
       <div>
-        <img src={modernIconUrl} alt="сучасний" /> з 1919 року
+        <img src={modernIconUrl} alt="сучасний" /> з 1919 р.
       </div>
     </div>
   );

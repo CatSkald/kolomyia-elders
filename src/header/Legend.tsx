@@ -7,7 +7,7 @@ const Legend = () => {
   return (
     <div className="legend">
       <div>
-        <img src={ancientIconUrl} alt="до XVIII століття" /> до XVIII ст.
+        <img src={ancientIconUrl} alt="XVIII століття" /> XVIII ст.
       </div>
       <div>
         <img src={elderIconUrl} alt="XIX століття" /> XIX ст.

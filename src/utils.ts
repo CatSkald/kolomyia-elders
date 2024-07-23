@@ -15,7 +15,7 @@ export const getAge =
     else if (date.includes("XIX ст.")) year = 1801;
     else if (date.includes("XX ст.")) year = 1901;
     else if (date.endsWith("-ті"))
-      year = parseInt(date.split("-")[0]);
+      year = parseInt(date.split("-ті")[0]);
     else if (date.startsWith("після"))
       year = 1 + parseInt(date.split(" ")[1]);
 
@@ -65,11 +65,12 @@ export const mapBuildings = (buildings: Array<{
     const date = b["Дата"];
     const age = getAge(date);
     const coordinates = b["Координати"];
+    const history = b["Історія"];
     return ({
       name: b["Назва"],
       date: typeof date === "number" ? date : date.replace(" - ", "—"),
       description: b["Опис"],
-      history: b["Історія"],
+      history: history ? parseHistory(history) : undefined,
       age: age,
       address: b["Адреса"],
       coordinates: coordinates

@@ -1,11 +1,10 @@
-import { parseHistory } from "../utils";
+import { HistoryEntry } from "../types";
 
-const BuildingHistory = ({ data }: { data: string }) => {
-  const history = parseHistory(data);
+const BuildingHistory = ({ data }: { data: HistoryEntry[] }) => {
   // TODO Show dynamically
   return (
     <ul>
-      {history.map((item, index) => (
+      {data.map((item, index) => (
         <li key={index}>
           <span
             style={
@@ -16,7 +15,7 @@ const BuildingHistory = ({ data }: { data: string }) => {
           >
             {item.date}
           </span>
-          {item.date && item.description && " - "}
+          {item.date && item.description && " — "}
           <span>{item.description}</span>
         </li>
       ))}

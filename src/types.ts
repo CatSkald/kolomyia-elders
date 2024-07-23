@@ -4,7 +4,7 @@ export type BuildingProfile = {
   name: string;
   date: number | string;
   description?: string;
-  history?: string;
+  history?: HistoryEntry[];
   address: string;
   coordinates?: LatLngExpression;
   age?: string;

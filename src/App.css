@@ -11,6 +11,10 @@
 .leaflet-control-zoom .leaflet-control-zoom-out {
   color: darkcyan;
 }
+.leaflet-control-zoom .leaflet-control-zoom-in:hover,
+.leaflet-control-zoom .leaflet-control-zoom-out:hover {
+  color: cyan;
+}
 .leaflet-control-attribution{
   display: none;
 }
@@ -41,6 +45,13 @@
 
 .header hr {
   margin: 0.7rem 0;
+}
+.header .button {
+  color: lightcyan;
+  cursor: pointer;
+}
+.header .button:hover {
+  color: cyan;
 }
 
 .legend{

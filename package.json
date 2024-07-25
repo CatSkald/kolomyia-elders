@@ -8,7 +8,8 @@
     "build": "tsc && vite build --watch",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "tsc && vite build && vite preview",
-    "deploy": "npx gh-pages -d dist"
+    "deploy": "npx gh-pages -d dist",
+    "upgrade": "npx npm-check-updates --upgrade && npm install"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

@@ -14,10 +14,10 @@ export const getAge =
     else if (date.includes("XVIII ст.")) year = 1701;
     else if (date.includes("XIX ст.")) year = 1801;
     else if (date.includes("XX ст.")) year = 1901;
-    else if (date.endsWith("-ті") || date.endsWith("-х"))
-      year = parseInt(date.split("-")[0]);
+    else if (date.includes("-ті") || date.includes("-х"))
+      year = parseInt(date.split("-")[0].slice(-4));
     else if (date.startsWith("після"))
-      year = 1 + parseInt(date.split(" ")[1]);
+      year = 1 + parseInt(date.split(" ")[1].substring(0, 4));
 
     if (!year || year < 1701) return undefined;
     else if (year < 1801) return "ancient";

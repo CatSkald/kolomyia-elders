@@ -97,11 +97,9 @@
   color: cyan;
 }
 
-/* TODO Add theme switcher
-Dark mode
-.leaflet-layer,
-.leaflet-control-zoom-in,
-.leaflet-control-zoom-out,
-.leaflet-control-attribution {
+.dark-mode .leaflet-layer,
+.dark-mode .leaflet-control-zoom-in,
+.dark-mode .leaflet-control-zoom-out,
+.dark-mode .leaflet-control-attribution {
   filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
-} */
+}

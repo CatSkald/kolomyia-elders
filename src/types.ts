@@ -16,3 +16,8 @@ export type HistoryEntry = {
   date: string;
   description: string;
 };
+
+export enum Theme {
+  Light = "light",
+  Dark = "dark"
+}

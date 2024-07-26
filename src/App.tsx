@@ -2,11 +2,16 @@ import "./App.css";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import Map from "./map/Map";
+import { Theme } from "./types";
 
 function App() {
+  const toggleTheme = (): void => {
+    document.querySelector(".app")?.classList.toggle("dark-mode");
+  };
+
   return (
-    <div className="app">
-      <Header />
+    <div className="app dark-mode">
+      <Header theme={Theme.Dark} onChangeTheme={toggleTheme} />
       <section className="map-container">
         <Map />
       </section>

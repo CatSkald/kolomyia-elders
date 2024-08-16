@@ -19,5 +19,11 @@ export type HistoryEntry = {
 
 export enum Theme {
   Light = "light",
-  Dark = "dark"
+  Dark = "dark",
 }
+
+export type SourceProfile = {
+  title: string;
+  isbn: string;
+  link?: string;
+};

@@ -2,6 +2,7 @@ import { MoonStarsFill, SunFill } from "react-bootstrap-icons";
 import Legend from "./Legend";
 import { useState } from "react";
 import { Theme } from "../types";
+import InfoPopup from "../info/InfoPopup";
 
 const Header = ({
   theme,
@@ -31,16 +32,25 @@ const Header = ({
           <ListFill />
         </div> */}
         <h1>Історичні будівлі Коломиї</h1>
-        <div
-          className="button"
-          style={{ marginRight: "0.5rem" }}
-          onClick={toggleSelectedTheme}
-        >
-          {selectedTheme === "dark" ? <MoonStarsFill /> : <SunFill />}
+        <div className="button" onClick={toggleSelectedTheme}>
+          {selectedTheme === "dark" ? (
+            <MoonStarsFill size="18px" />
+          ) : (
+            <SunFill size="18px" />
+          )}
         </div>
       </div>
       <hr />
-      <Legend />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+        }}
+      >
+        <Legend />
+        <InfoPopup />
+      </div>
     </div>
   );
 };

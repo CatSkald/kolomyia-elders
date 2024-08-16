@@ -1,0 +1,10 @@
+[role="tooltip"].popup-content {
+  background-color: rgba(100, 100, 100, 0.75);
+  font-size: 14px;
+  color: white;
+  padding: 1rem;
+  z-index: 1000;
+  border-radius: 5px;
+  margin-top: 0.8rem;
+  right: 1.7rem;
+}

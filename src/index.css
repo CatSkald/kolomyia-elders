@@ -11,3 +11,16 @@ ul {
   padding-left: 0.75rem;
   margin: 0;
 }
+
+a,
+.button {
+  color: lightcyan;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a:hover,
+.button:hover {
+  color: cyan;
+}

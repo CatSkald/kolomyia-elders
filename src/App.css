@@ -5,7 +5,7 @@
 .leaflet-control-zoom {
   position: absolute;
   top: 20rem;
-  right: 0.5rem;
+  right: 0.25rem;
 }
 .leaflet-control-zoom .leaflet-control-zoom-in,
 .leaflet-control-zoom .leaflet-control-zoom-out {
@@ -15,14 +15,15 @@
 .leaflet-control-zoom .leaflet-control-zoom-out:hover {
   color: cyan;
 }
-.leaflet-control-attribution{
+.leaflet-control-attribution {
   display: none;
 }
-.leaflet-popup{
+.leaflet-popup {
   max-width: fit-content;
 }
-.leaflet-popup-content-wrapper .leaflet-popup-content{
+.leaflet-popup-content-wrapper .leaflet-popup-content {
   width: 25rem;
+  font-size: 0.8rem;
 }
 
 .header {
@@ -43,29 +44,25 @@
   margin: 0;
 }
 
-.header hr {
+hr {
   margin: 0.7rem 0;
 }
-.header .button {
-  color: lightcyan;
-  cursor: pointer;
-}
-.header .button:hover {
-  color: cyan;
-}
 
-.legend{
+.header .button {
+  padding: 0.25rem;
+}
+.legend {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.legend div{
+.legend div {
   display: flex;
   margin-top: 0.1rem;
 }
 
-.legend img{
+.legend img {
   width: 25px;
   height: 25px;
 }
@@ -88,20 +85,10 @@
   display: inline-block;
 }
 
-.footer a {
-  color: lightcyan;
-  text-decoration: none;
-  font-weight: bold;
-}
-.footer a:hover {
-  color: cyan;
-}
-
 .dark-mode .leaflet-layer,
 .dark-mode .leaflet-control-zoom-in,
 .dark-mode .leaflet-control-zoom-out,
 .dark-mode .leaflet-popup-content-wrapper,
-.dark-mode .leaflet-popup-tip
- {
+.dark-mode .leaflet-popup-tip {
   filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }

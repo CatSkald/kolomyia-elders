@@ -9,3 +9,7 @@
 1. Run `npm run preview`
 1. Add `.` to the paths in `.\dist\index.html`. TODO: remove the need for this.
 1. `npm run deploy`
+
+## Upgrade packages
+
+`npx npm-check-updates --upgrade`

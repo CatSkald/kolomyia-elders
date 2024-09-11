@@ -2,15 +2,20 @@ import { LatLngExpression } from "leaflet";
 import { BuildingProfile, HistoryEntry, SourceProfile } from "./types";
 // TODO Make this dynamic https://stackoverflow.com/a/70024111/8242328
 import defaultIconUrl from "./assets/pin.png";
-import ancientIconUrl from "./assets/ancient.png";
-import elderIconUrl from "./assets/elder.png";
-import oldIconUrl from "./assets/old.png";
-import modernIconUrl from "./assets/modern.png";
+import ancientIconUrl from "./assets/purple.png";
+import elderIconUrl from "./assets/red.png";
+import antiqueIconUrl from "./assets/orange.png";
+import venerableIconUrl from "./assets/yellow.png";
+import vintageIconUrl from "./assets/cyan.png";
 
 export const getAge = (date: string | number): string | undefined => {
   let year = undefined;
   if (typeof date === "number") year = date;
+  else if (date.includes("II пол. XVIII ст.")) year = 1751;
+  else if (date.includes("кін. XVIII ст.")) year = 1800;
   else if (date.includes("XVIII ст.")) year = 1701;
+  else if (date.includes("II пол. XIX ст.")) year = 1851;
+  else if (date.includes("кін. XIX ст.")) year = 1900;
   else if (date.includes("XIX ст.")) year = 1801;
   else if (date.includes("XX ст.")) year = 1901;
   else if (date.includes("-ті") || date.includes("-х"))
@@ -18,11 +23,12 @@ export const getAge = (date: string | number): string | undefined => {
   else if (date.startsWith("після"))
     year = 1 + parseInt(date.split(" ")[1].substring(0, 4));
 
-  if (!year || year < 1701) return undefined;
-  else if (year < 1801) return "ancient";
-  else if (year < 1901) return "elder";
-  else if (year < 1919) return "old";
-  else return "modern";
+  if (!year || year < 1650) return undefined;
+  else if (year < 1751) return "ancient";
+  else if (year < 1851) return "elder";
+  else if (year < 1914) return "antique";
+  else if (year < 1919) return "venerable";
+  else return "vintage";
 };
 
 export const getImageUrl = (age?: string): string => {
@@ -31,10 +37,12 @@ export const getImageUrl = (age?: string): string => {
       return ancientIconUrl;
     case "elder":
       return elderIconUrl;
-    case "old":
-      return oldIconUrl;
-    case "modern":
-      return modernIconUrl;
+    case "antique":
+      return antiqueIconUrl;
+    case "venerable":
+      return venerableIconUrl;
+    case "vintage":
+      return vintageIconUrl;
     default:
       return defaultIconUrl;
   }

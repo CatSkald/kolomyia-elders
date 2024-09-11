@@ -1,22 +1,26 @@
-import ancientIconUrl from "../assets/ancient.png";
-import elderIconUrl from "../assets/elder.png";
-import oldIconUrl from "../assets/old.png";
-import modernIconUrl from "../assets/modern.png";
+import ancientIconUrl from "../assets/purple.png";
+import elderIconUrl from "../assets/red.png";
+import antiqueIconUrl from "../assets/orange.png";
+import venerableIconUrl from "../assets/yellow.png";
+import vintageIconUrl from "../assets/cyan.png";
 
 const Legend = () => {
   return (
     <div className="legend">
       <div>
-        <img src={ancientIconUrl} alt="XVIII століття" /> XVIII ст.
+        <img src={ancientIconUrl} alt="1650—1750" /> 1650—1750
       </div>
       <div>
-        <img src={elderIconUrl} alt="XIX століття" /> XIX ст.
+        <img src={elderIconUrl} alt="1751—1850" /> 1751—1850
       </div>
       <div>
-        <img src={oldIconUrl} alt="початок XX століття" /> поч. XX ст.
+        <img src={antiqueIconUrl} alt="1851—1913" /> 1851—1913
       </div>
       <div>
-        <img src={modernIconUrl} alt="сучасний" /> з 1919 р.
+        <img src={venerableIconUrl} alt="1914—1918" /> 1914—1918
+      </div>
+      <div>
+        <img src={vintageIconUrl} alt="1919—1944" /> 1919—1944
       </div>
     </div>
   );

@@ -2,10 +2,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <span>
-        Востаннє оновлено: <b>вересень 2024</b> ⨳ Детективна робота по збору
-        даних: <b>Hans</b> ⨳ Технічна розробка:{" "}
-        <a href="https://github.com/CatSkald">CatSkald</a> ⨳ Дані та сирцевий
-        код:{" "}
+        Оновлено у <b>вересні 2024</b>{" "}
         <a href="https://github.com/CatSkald/kolomyia-elders" className="logo">
           <svg
             width="14"
@@ -21,29 +18,13 @@ const Footer = () => {
               fill="currentColor"
             />
           </svg>
-        </a>
-      </span>
-      <span>
-        <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> ⨳{" "}
-        <a
-          href="https://leafletjs.com"
-          title="A JavaScript library for interactive maps"
-        >
-          <svg
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="12"
-            height="8"
-            viewBox="0 0 12 8"
-            className="leaflet-attribution-flag"
-          >
-            <path fill="#4C7BE1" d="M0 0h12v4H0z"></path>
-            <path fill="#FFD500" d="M0 4h12v3H0z"></path>
-            <path fill="#E0BC00" d="M0 7h12v1H0z"></path>
-          </svg>{" "}
-          Leaflet
         </a>{" "}
-        ⨳ <a href="https://www.esri.com/">Esri</a> | Intermap, NASA, NGA, USGS |
+        ⨳ Детективна робота по збору даних: <b>Hans</b> ⨳ Технічна розробка:{" "}
+        <a href="https://github.com/CatSkald">CatSkald</a>
+      </span>
+      <span style={{ fontSize: "smaller" }}>
+        <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> ⨳{" "}
+        <a href="https://www.esri.com/">Esri</a> | Intermap, NASA, NGA, USGS |
         Esri, TomTom, Garmin, Foursquare, GeoTechnologies, Inc, METI/NASA, USGS
       </span>
     </div>

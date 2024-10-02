@@ -3,6 +3,7 @@ import Legend from "./Legend";
 import { useState } from "react";
 import { Theme } from "../types";
 import InfoPopup from "../info/InfoPopup";
+import { buttonSize } from "../style-utils";
 
 const Header = ({
   theme,
@@ -13,9 +14,7 @@ const Header = ({
 }) => {
   const [selectedTheme, setSelectedTheme] = useState(theme);
   const toggleSelectedTheme = () => {
-    selectedTheme === Theme.Light
-      ? setSelectedTheme(Theme.Dark)
-      : setSelectedTheme(Theme.Light);
+    setSelectedTheme(selectedTheme === Theme.Light ? Theme.Dark : Theme.Light);
     onChangeTheme();
   };
   return (
@@ -34,9 +33,9 @@ const Header = ({
         <h1>Історичні будівлі Коломиї</h1>
         <div className="button" onClick={toggleSelectedTheme}>
           {selectedTheme === "dark" ? (
-            <MoonStarsFill size="18px" />
+            <MoonStarsFill size={buttonSize} />
           ) : (
-            <SunFill size="18px" />
+            <SunFill size={buttonSize} />
           )}
         </div>
       </div>
@@ -46,6 +45,7 @@ const Header = ({
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
+          alignItems: "end",
         }}
       >
         <Legend />

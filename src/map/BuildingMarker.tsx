@@ -5,7 +5,13 @@ import "leaflet/dist/leaflet.css";
 import { BuildingProfile } from "../types";
 import BuildingHistory from "./BuildingHistory";
 
-export default function BuildingMarker({ data }: { data: BuildingProfile }) {
+export default function BuildingMarker({
+  data,
+  markerSize,
+}: {
+  data: BuildingProfile;
+  markerSize: number;
+}) {
   return !data.coordinates ? (
     <></>
   ) : (
@@ -15,7 +21,7 @@ export default function BuildingMarker({ data }: { data: BuildingProfile }) {
         icon={
           new Icon({
             iconUrl: data.markerImage,
-            iconSize: [36, 36],
+            iconSize: [markerSize, markerSize],
           })
         }
       />

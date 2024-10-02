@@ -3,12 +3,13 @@ import { InfoCircleFill } from "react-bootstrap-icons";
 import Popup from "reactjs-popup";
 import { mapSources } from "../utils";
 import { sources } from "../data/sources";
+import { buttonSize } from "../style-utils";
 
 const InfoPopup = () => (
   <Popup
     trigger={
       <div className="button">
-        <InfoCircleFill size="18px" />
+        <InfoCircleFill size={buttonSize} />
       </div>
     }
     position="bottom right"

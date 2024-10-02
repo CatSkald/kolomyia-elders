@@ -3,9 +3,15 @@ import "leaflet/dist/leaflet.css";
 import BuildingMarker from "./BuildingMarker";
 import { BuildingProfile } from "../types";
 
-const MapBuilding = ({ data }: { data: BuildingProfile }) => (
+const MapBuilding = ({
+  data,
+  markerSize,
+}: {
+  data: BuildingProfile;
+  markerSize: number;
+}) => (
   <FeatureGroup>
-    <BuildingMarker data={data} />
+    <BuildingMarker data={data} markerSize={markerSize} />
   </FeatureGroup>
 );
 

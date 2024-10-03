@@ -16,7 +16,7 @@ export default function Map() {
     <MapContainer
       center={[48.525, 25.0373]}
       zoom={initialZoom}
-      minZoom={13}
+      minZoom={14}
       zoomControl={false}
       maxBoundsViscosity={0.7}
       maxBounds={kolomyiaBounds}

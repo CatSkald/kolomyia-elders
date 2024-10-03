@@ -1,8 +1,8 @@
 import "leaflet/dist/leaflet.css";
+import * as L from "leaflet";
 import "leaflet-hash";
 import { TileLayer, MapContainer, ZoomControl } from "react-leaflet";
 import { latLngBounds } from "leaflet";
-import * as L from "leaflet";
 import BuildingsOverlay from "./BuildingsOverlay.tsx";
 
 export default function Map() {

@@ -1,5 +1,6 @@
 export const buttonSize = "23px";
 
 export const getMarkerSize = (zoom: number): number => {
-  return zoom * 2;
+  if (zoom >= 17) return zoom * 2;
+  return zoom - 5;
 };

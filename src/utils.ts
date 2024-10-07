@@ -17,7 +17,7 @@ export const getAge = (date: string | number): Age | undefined => {
   else if (date.startsWith("після"))
     year = 1 + parseInt(date.split(" ")[1].substring(0, 4));
 
-  if (!year || year < 1650) return undefined;
+  if (!year || year < 1550) return undefined;
   if (year < 1751) return Age.Ancient;
   if (year < 1851) return Age.Elder;
   if (year < 1914) return Age.Antique;

@@ -16,7 +16,7 @@ const Legend = () => {
 
   return (
     <div className="legend">
-      {getImage("1650—1750", Age.Ancient)}
+      {getImage("1550—1750", Age.Ancient)}
       {getImage("1751—1850", Age.Elder)}
       {getImage("1851—1913", Age.Antique)}
       {getImage("1914—1918", Age.Venerable)}

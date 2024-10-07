@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <span>
-        Оновлено у <b>вересні 2024</b>{" "}
+        Оновлено у <b>жовтні 2024</b>{" "}
         <a
           href="https://github.com/CatSkald/kolomyia-elders"
           className="logo"

@@ -3,7 +3,12 @@ const Footer = () => {
     <div className="footer">
       <span>
         Оновлено у <b>вересні 2024</b>{" "}
-        <a href="https://github.com/CatSkald/kolomyia-elders" className="logo">
+        <a
+          href="https://github.com/CatSkald/kolomyia-elders"
+          className="logo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg
             width="14"
             height="14"
@@ -20,12 +25,32 @@ const Footer = () => {
           </svg>
         </a>{" "}
         ⨳ Детективна робота по збору даних: <b>Hans</b> ⨳ Технічна розробка:{" "}
-        <a href="https://github.com/CatSkald">CatSkald</a>
+        <a
+          href="https://github.com/CatSkald"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CatSkald
+        </a>
       </span>
       <span style={{ fontSize: "smaller" }}>
-        <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> ⨳{" "}
-        <a href="https://www.esri.com/">Esri</a> | Intermap, NASA, NGA, USGS |
-        Esri, TomTom, Garmin, Foursquare, GeoTechnologies, Inc, METI/NASA, USGS
+        <a
+          href="https://openstreetmap.org/copyright"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          OpenStreetMap
+        </a>{" "}
+        ⨳{" "}
+        <a
+          href="https://www.esri.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Esri
+        </a>{" "}
+        | Intermap, NASA, NGA, USGS | Esri, TomTom, Garmin, Foursquare,
+        GeoTechnologies, Inc, METI/NASA, USGS
       </span>
     </div>
   );

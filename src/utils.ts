@@ -1,14 +1,8 @@
 import { LatLngExpression } from "leaflet";
-import { BuildingProfile, HistoryEntry, SourceProfile } from "./types";
-// TODO Make this dynamic https://stackoverflow.com/a/70024111/8242328
-import defaultIconUrl from "./assets/pin.png";
-import ancientIconUrl from "./assets/purple.png";
-import elderIconUrl from "./assets/red.png";
-import antiqueIconUrl from "./assets/orange.png";
-import venerableIconUrl from "./assets/yellow.png";
-import vintageIconUrl from "./assets/cyan.png";
+import { Age, BuildingProfile, HistoryEntry, SourceProfile } from "./types";
+import { getAgeColor } from "./style-utils";
 
-export const getAge = (date: string | number): string | undefined => {
+export const getAge = (date: string | number): Age | undefined => {
   let year = undefined;
   if (typeof date === "number") year = date;
   else if (date.includes("II пол. XVIII ст.")) year = 1751;
@@ -24,28 +18,11 @@ export const getAge = (date: string | number): string | undefined => {
     year = 1 + parseInt(date.split(" ")[1].substring(0, 4));
 
   if (!year || year < 1650) return undefined;
-  else if (year < 1751) return "ancient";
-  else if (year < 1851) return "elder";
-  else if (year < 1914) return "antique";
-  else if (year < 1919) return "venerable";
-  else return "vintage";
-};
-
-export const getImageUrl = (age?: string): string => {
-  switch (age) {
-    case "ancient":
-      return ancientIconUrl;
-    case "elder":
-      return elderIconUrl;
-    case "antique":
-      return antiqueIconUrl;
-    case "venerable":
-      return venerableIconUrl;
-    case "vintage":
-      return vintageIconUrl;
-    default:
-      return defaultIconUrl;
-  }
+  if (year < 1751) return Age.Ancient;
+  if (year < 1851) return Age.Elder;
+  if (year < 1914) return Age.Antique;
+  if (year < 1919) return Age.Venerable;
+  return Age.Vintage;
 };
 
 export const parseHistory = (history: string): HistoryEntry[] =>
@@ -84,7 +61,7 @@ export const mapBuildings = (
         ? (coordinates.split("/") as unknown as LatLngExpression)
         : undefined,
       link: b["Посилання на карту"],
-      markerImage: getImageUrl(age),
+      color: getAgeColor(age),
     };
   });
 

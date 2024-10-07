@@ -1,5 +1,13 @@
 import { LatLngExpression } from "leaflet";
 
+export enum Age {
+  Ancient = "ancient",
+  Elder = "elder",
+  Antique = "antique",
+  Venerable = "venerable",
+  Vintage = "vintage",
+}
+
 export type BuildingProfile = {
   name: string;
   date: number | string;
@@ -7,9 +15,9 @@ export type BuildingProfile = {
   history?: HistoryEntry[];
   address: string;
   coordinates?: LatLngExpression;
-  age?: string;
+  age?: Age;
   mapLink?: string;
-  markerImage: string;
+  color: string;
 };
 
 export type HistoryEntry = {

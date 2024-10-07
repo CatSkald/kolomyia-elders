@@ -1,9 +1,10 @@
-import { Marker, Popup } from "react-leaflet";
-import { Icon } from "leaflet";
+import { CircleMarker, Marker, Popup } from "react-leaflet";
+import { DivIcon } from "leaflet";
 
 import "leaflet/dist/leaflet.css";
 import { BuildingProfile } from "../types";
 import BuildingHistory from "./BuildingHistory";
+import { getMarkerImage, markerImageStrokeColor } from "../style-utils";
 
 export default function BuildingMarker({
   data,
@@ -16,15 +17,30 @@ export default function BuildingMarker({
     <></>
   ) : (
     <>
-      <Marker
-        position={data.coordinates}
-        icon={
-          new Icon({
-            iconUrl: data.markerImage,
-            iconSize: [markerSize, markerSize],
-          })
-        }
-      />
+      {markerSize < 30 ? (
+        <CircleMarker
+          center={data.coordinates}
+          radius={markerSize}
+          color={markerImageStrokeColor}
+          opacity={0.5}
+          fillColor={data.color}
+          fillOpacity={1}
+          stroke={true}
+          weight={1}
+        />
+      ) : (
+        <Marker
+          position={data.coordinates}
+          icon={
+            new DivIcon({
+              className: "marker",
+              iconSize: [markerSize, markerSize],
+              iconAnchor: [markerSize / 2, markerSize],
+              html: getMarkerImage(markerSize, data.color),
+            })
+          }
+        />
+      )}
       <Popup>
         <div
           className="newline"

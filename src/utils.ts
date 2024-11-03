@@ -1,8 +1,8 @@
 import { LatLngExpression } from "leaflet";
-import { Age, BuildingProfile, HistoryEntry, SourceProfile } from "./types";
-import { getAgeColor } from "./style-utils";
+import { BuildingProfile, HistoryEntry, Period, SourceProfile } from "./types";
+import { periods } from "./data/periods";
 
-export const getAge = (date: string | number): Age | undefined => {
+export const getPeriod = (date: string | number): Period | undefined => {
   let year = undefined;
   if (typeof date === "number") year = date;
   else if (date.includes("II пол. XVIII ст.")) year = 1751;
@@ -17,12 +17,8 @@ export const getAge = (date: string | number): Age | undefined => {
   else if (date.startsWith("після"))
     year = 1 + parseInt(date.split(" ")[1].substring(0, 4));
 
-  if (!year || year < 1550) return undefined;
-  if (year < 1751) return Age.Ancient;
-  if (year < 1851) return Age.Elder;
-  if (year < 1914) return Age.Antique;
-  if (year < 1919) return Age.Venerable;
-  return Age.Vintage;
+  if (!year) return undefined;
+  return periods.find((p) => p.startDate <= year && p.endDate >= year);
 };
 
 export const parseHistory = (history: string): HistoryEntry[] =>
@@ -47,7 +43,6 @@ export const mapBuildings = (
 ): BuildingProfile[] =>
   buildings.map((b) => {
     const date = b["Дата"];
-    const age = getAge(date);
     const coordinates = b["Координати"];
     const history = b["Історія"];
     return {
@@ -55,13 +50,12 @@ export const mapBuildings = (
       date: typeof date === "number" ? date : date.replace(" - ", "—"),
       description: b["Опис"],
       history: history ? parseHistory(history) : undefined,
-      age: age,
+      period: getPeriod(date),
       address: b["Адреса"],
       coordinates: coordinates
         ? (coordinates.split("/") as unknown as LatLngExpression)
         : undefined,
       link: b["Посилання на карту"],
-      color: getAgeColor(age),
     };
   });
 

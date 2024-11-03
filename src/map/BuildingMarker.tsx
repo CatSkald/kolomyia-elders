@@ -4,7 +4,11 @@ import { DivIcon } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { BuildingProfile } from "../types";
 import BuildingHistory from "./BuildingHistory";
-import { getMarkerImage, markerImageStrokeColor } from "../style-utils";
+import {
+  getMarkerImage,
+  markerImageStrokeColor,
+  periodUnknownColor,
+} from "../style-utils";
 
 export default function BuildingMarker({
   data,
@@ -13,6 +17,7 @@ export default function BuildingMarker({
   data: BuildingProfile;
   markerSize: number;
 }) {
+  const markerColor = data.period?.color ?? periodUnknownColor;
   return !data.coordinates ? (
     <></>
   ) : (
@@ -23,7 +28,7 @@ export default function BuildingMarker({
           radius={markerSize}
           color={markerImageStrokeColor}
           opacity={0.5}
-          fillColor={data.color}
+          fillColor={markerColor}
           fillOpacity={1}
           stroke={true}
           weight={1}
@@ -36,7 +41,7 @@ export default function BuildingMarker({
               className: "marker",
               iconSize: [markerSize, markerSize],
               iconAnchor: [markerSize / 2, markerSize],
-              html: getMarkerImage(markerSize, data.color),
+              html: getMarkerImage(markerSize, markerColor),
             })
           }
         />

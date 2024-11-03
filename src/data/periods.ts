@@ -1,4 +1,9 @@
+// https://digitalherald.org/2021/01/hexcodes-for-heraldic-tinctures/
 export const periods = [
-  { name: "Період 1", imageUrl: "", startYear: 1914, endYear: 1918 },
-  { name: "Період 2", imageUrl: "", startYear: 1919, endYear: 1944 },
+  { startDate: 1550, endDate: 1650, color: "#8811DD" },
+  { startDate: 1651, endDate: 1750, color: "violet" },
+  { startDate: 1751, endDate: 1850, color: "#D60000" },
+  { startDate: 1851, endDate: 1913, color: "orange" },
+  { startDate: 1914, endDate: 1918, color: "gold" },
+  { startDate: 1919, endDate: 1944, color: "cyan" },
 ];

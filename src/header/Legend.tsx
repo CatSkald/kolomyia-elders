@@ -1,5 +1,5 @@
 import { periods } from "../data/periods";
-import { getMarkerImage, periodUnknownColor } from "../themes";
+import { getMarkerImage, palette, periodUnknownColor } from "../themes";
 
 const Legend = () => {
   const getImage = (text: string, color: string) => (

@@ -3,7 +3,7 @@ import { CircleMarker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { BuildingProfile } from "../types/types";
 import BuildingHistory from "./BuildingHistory";
-import { markerImageStrokeColor, periodUnknownColor } from "../themes";
+import { palette, periodUnknownColor } from "../themes";
 
 export default function BuildingMarker({
   data,
@@ -20,7 +20,7 @@ export default function BuildingMarker({
       <CircleMarker
         center={data.coordinates}
         radius={markerSize}
-        color={markerImageStrokeColor}
+        color={palette.overlay}
         opacity={0.5}
         fillColor={markerColor}
         fillOpacity={1}

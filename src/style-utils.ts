@@ -4,7 +4,7 @@ export const markerImageStrokeColor = "#646464bf";
 export const periodUnknownColor = "green";
 
 export const getMarkerSize = (zoom: number): number => {
-  if (zoom >= 18) return 38;
+  if (zoom >= 18) return zoom - 6;
   return zoom - 11;
 };
 

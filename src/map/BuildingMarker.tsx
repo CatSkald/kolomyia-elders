@@ -22,30 +22,16 @@ export default function BuildingMarker({
     <></>
   ) : (
     <>
-      {markerSize < 30 ? (
-        <CircleMarker
-          center={data.coordinates}
-          radius={markerSize}
-          color={markerImageStrokeColor}
-          opacity={0.5}
-          fillColor={markerColor}
-          fillOpacity={1}
-          stroke={true}
-          weight={1}
-        />
-      ) : (
-        <Marker
-          position={data.coordinates}
-          icon={
-            new DivIcon({
-              className: "marker",
-              iconSize: [markerSize, markerSize],
-              iconAnchor: [markerSize / 2, markerSize],
-              html: getMarkerImage(markerSize, markerColor),
-            })
-          }
-        />
-      )}
+      <CircleMarker
+        center={data.coordinates}
+        radius={markerSize}
+        color={markerImageStrokeColor}
+        opacity={0.5}
+        fillColor={markerColor}
+        fillOpacity={1}
+        stroke={true}
+        weight={1}
+      />
       <Popup>
         <div
           className="newline"

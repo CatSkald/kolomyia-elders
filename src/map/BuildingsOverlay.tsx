@@ -3,7 +3,7 @@ import { useMapEvents } from "react-leaflet";
 import { mapBuildings } from "../utils";
 import { buildings } from "../data/buildings";
 import Building from "./Building";
-import { getMarkerSize } from "../style-utils";
+import { getMarkerSize } from "../themes";
 
 const BuildingsOverlay = ({ initialZoom }: { initialZoom: number }) => {
   const [markerSize, setMarkerSize] = useState(getMarkerSize(initialZoom));

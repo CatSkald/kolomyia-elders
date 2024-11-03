@@ -1,14 +1,9 @@
-import { CircleMarker, Marker, Popup } from "react-leaflet";
-import { DivIcon } from "leaflet";
+import { CircleMarker, Popup } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
-import { BuildingProfile } from "../types";
+import { BuildingProfile } from "../types/types";
 import BuildingHistory from "./BuildingHistory";
-import {
-  getMarkerImage,
-  markerImageStrokeColor,
-  periodUnknownColor,
-} from "../style-utils";
+import { markerImageStrokeColor, periodUnknownColor } from "../themes";
 
 export default function BuildingMarker({
   data,

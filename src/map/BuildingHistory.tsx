@@ -1,4 +1,4 @@
-import { HistoryEntry } from "../types";
+import { HistoryEntry } from "../types/types";
 
 const BuildingHistory = ({ data }: { data: HistoryEntry[] }) => {
   // TODO Show dynamically

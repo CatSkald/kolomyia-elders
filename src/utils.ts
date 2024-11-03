@@ -1,5 +1,10 @@
 import { LatLngExpression } from "leaflet";
-import { BuildingProfile, HistoryEntry, Period, SourceProfile } from "./types";
+import {
+  BuildingProfile,
+  HistoryEntry,
+  Period,
+  SourceProfile,
+} from "./types/types";
 import { periods } from "./data/periods";
 
 export const getPeriod = (date: string | number): Period | undefined => {

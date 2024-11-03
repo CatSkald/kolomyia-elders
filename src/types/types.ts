@@ -22,11 +22,6 @@ export type HistoryEntry = {
   description: string;
 };
 
-export enum Theme {
-  Light = "light",
-  Dark = "dark",
-}
-
 export type SourceProfile = {
   title: string;
   isbn: string;

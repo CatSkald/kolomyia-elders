@@ -3,7 +3,7 @@ import { InfoCircleFill } from "react-bootstrap-icons";
 import Popup from "reactjs-popup";
 import { mapSources } from "../utils";
 import { sources } from "../data/sources";
-import { buttonSize } from "../style-utils";
+import { buttonSize } from "../themes";
 
 const InfoPopup = () => (
   <Popup

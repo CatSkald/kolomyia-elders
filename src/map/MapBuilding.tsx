@@ -1,7 +1,7 @@
 import { FeatureGroup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import BuildingMarker from "./BuildingMarker";
-import { BuildingProfile } from "../types";
+import { BuildingProfile } from "../types/types";
 
 const MapBuilding = ({
   data,

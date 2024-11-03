@@ -1,9 +1,8 @@
 import { MoonStarsFill, SunFill } from "react-bootstrap-icons";
 import Legend from "./Legend";
 import { useState } from "react";
-import { Theme } from "../types";
 import InfoPopup from "../info/InfoPopup";
-import { buttonSize } from "../style-utils";
+import { buttonSize, Theme } from "../themes";
 
 const Header = ({
   theme,

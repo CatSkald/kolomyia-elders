@@ -2,7 +2,8 @@
 
 ## Local development
 
-`npm run preview`
+1. `npm run preview` to view.
+1. Optionally in a separate terminal: `npm run build` to watch.
 
 ## Deploy
 

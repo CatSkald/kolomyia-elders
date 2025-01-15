@@ -29,7 +29,7 @@
 .header {
   position: absolute;
   z-index: 500;
-  background-color: rgba(100, 100, 100, 0.75);
+  background-color: rgba(100, 100, 100, 0.8);
   color: white;
   box-sizing: border-box;
   top: 0;
@@ -74,7 +74,7 @@ hr {
 .footer {
   position: absolute;
   z-index: 500;
-  background-color: rgba(100, 100, 100, 0.75);
+  background-color: rgba(100, 100, 100, 0.8);
   color: white;
   box-sizing: border-box;
   bottom: 0;
@@ -83,16 +83,25 @@ hr {
   font-size: smaller;
   display: flex;
   flex-direction: column;
+  gap: 0.2rem;
 }
 
 .footer .logo {
   display: inline-block;
 }
 
+/* logoPosition: "bottom-right" does not work with React */
+/* https://github.com/maptiler/leaflet-maptilersdk/blob/3d7b122d8e6315d0fcc27a74dfdfe47fcd8848fe/src/leaflet-maptilersdk.ts#L324 */
+.map-container a:has(img[alt="MapTiler logo"]) {
+  left: unset !important;
+  right: 0.4rem;
+}
+
+/* 
 .dark-mode .leaflet-layer,
 .dark-mode .leaflet-control-zoom-in,
 .dark-mode .leaflet-control-zoom-out,
 .dark-mode .leaflet-popup-content-wrapper,
 .dark-mode .leaflet-popup-tip {
   filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
-}
+} */

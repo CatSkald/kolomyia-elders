@@ -1,18 +1,50 @@
 const Footer = () => {
+  const separator = " ⨳ ";
+
   return (
     <div className="footer">
       <span>
-        Оновлено у <b>жовтні 2024</b>{" "}
+        Детектив-архіваріус: <b>Hans</b>
+        {separator}Розробник-відьмар:{" "}
+        <a
+          href="https://github.com/CatSkald"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CatSkald
+        </a>
+      </span>
+      <span>
+        <a
+          href="https://www.maptiler.com/copyright/"
+          target="_blank"
+          rel="noopener"
+        >
+          &copy; MapTiler
+        </a>
+        {separator}
+        <a
+          href="https://openstreetmap.org/copyright"
+          target="_blank"
+          rel="noopener"
+        >
+          &copy; OpenStreetMap
+        </a>
+      </span>
+      <span>
+        Оновлено у{" "}
         <a
           href="https://github.com/CatSkald/kolomyia-elders"
           className="logo"
           target="_blank"
           rel="noopener noreferrer"
         >
+          <b>січні 2025</b>{" "}
           <svg
-            width="14"
-            height="14"
+            width="15"
+            height="15"
             viewBox="0 0 98 96"
+            style={{ verticalAlign: "bottom" }}
             preserveAspectRatio="xMidYMid meet"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -23,34 +55,7 @@ const Footer = () => {
               fill="currentColor"
             />
           </svg>
-        </a>{" "}
-        ⨳ Детективна робота по збору даних: <b>Hans</b> ⨳ Технічна розробка:{" "}
-        <a
-          href="https://github.com/CatSkald"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          CatSkald
         </a>
-      </span>
-      <span style={{ fontSize: "smaller" }}>
-        <a
-          href="https://openstreetmap.org/copyright"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          OpenStreetMap
-        </a>{" "}
-        ⨳{" "}
-        <a
-          href="https://www.esri.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Esri
-        </a>{" "}
-        | Intermap, NASA, NGA, USGS | Esri, TomTom, Garmin, Foursquare,
-        GeoTechnologies, Inc, METI/NASA, USGS
       </span>
     </div>
   );

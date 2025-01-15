@@ -1,21 +1,17 @@
 import { MoonStarsFill, SunFill } from "react-bootstrap-icons";
 import Legend from "./Legend";
-import { useState } from "react";
 import InfoPopup from "../info/InfoPopup";
 import { buttonSize, Theme } from "../themes";
 
 const Header = ({
   theme,
-  onChangeTheme,
+  setTheme,
 }: {
   theme: Theme;
-  onChangeTheme: () => void;
+  setTheme: (theme: Theme) => void;
 }) => {
-  const [selectedTheme, setSelectedTheme] = useState(theme);
-  const toggleSelectedTheme = () => {
-    setSelectedTheme(selectedTheme === Theme.Light ? Theme.Dark : Theme.Light);
-    onChangeTheme();
-  };
+  const isDarkTheme = theme === "dark";
+
   return (
     <div className="header">
       <div
@@ -30,13 +26,15 @@ const Header = ({
           <ListFill />
         </div> */}
         <h1>Історичні будівлі Коломиї</h1>
-        <div className="button" onClick={toggleSelectedTheme}>
-          {selectedTheme === "dark" ? (
+        {isDarkTheme ? (
+          <div className="button" onClick={() => setTheme(Theme.Light)}>
             <MoonStarsFill size={buttonSize} />
-          ) : (
+          </div>
+        ) : (
+          <div className="button" onClick={() => setTheme(Theme.Dark)}>
             <SunFill size={buttonSize} />
-          )}
-        </div>
+          </div>
+        )}
       </div>
       <hr />
       <div

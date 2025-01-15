@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
@@ -5,15 +6,13 @@ import Map from "./map/Map";
 import { Theme } from "./themes";
 
 function App() {
-  const toggleTheme = (): void => {
-    document.querySelector(".app")?.classList.toggle("dark-mode");
-  };
+  const [theme, setTheme] = useState(Theme.Dark);
 
   return (
-    <div className="app dark-mode">
-      <Header theme={Theme.Dark} onChangeTheme={toggleTheme} />
+    <div className="app">
+      <Header theme={theme} setTheme={setTheme} />
       <section className="map-container">
-        <Map />
+        <Map theme={theme} />
       </section>
       <Footer />
     </div>

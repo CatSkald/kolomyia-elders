@@ -20,34 +20,31 @@ const Map = ({ theme }: { theme: Theme }) => {
   const enableCoordinatesInUrl = (map: L.Map) => {
     L.hash(map);
   };
-  const x = atob(config.x);
-
-  const getStyle = (theme: Theme, x: string) =>
-    theme === Theme.Dark
-      ? `${config.darkStyle}?key=${x}`
-      : `${config.lightStyle}?key=${x}`;
 
   useEffect(() => {
-    const enableMaptiler = (map: L.Map) => {
+    const style = theme === Theme.Dark ? config.darkStyle : config.lightStyle;
+    const x = atob(config.x);
+    const createMaptiler = (map: L.Map): MaptilerLayerInterface => {
       const maptilerOptions = {
         apiKey: x,
-        style: getStyle(theme, x),
+        style: style,
       };
 
       const layer = new MaptilerLayer(maptilerOptions);
       layer.addTo(map);
-      setMaptiler(layer);
-    };
-    if (map) {
-      enableCoordinatesInUrl(map);
-      enableMaptiler(map);
-    }
-  }, [map, theme, x]);
 
-  useEffect(() => {
-    const style = getStyle(theme, x);
-    maptiler?.setStyle(style);
-  }, [maptiler, theme, x]);
+      return layer;
+    };
+
+    if (map) {
+      if (!maptiler) {
+        enableCoordinatesInUrl(map);
+        setMaptiler(createMaptiler(map));
+      } else {
+        maptiler.setStyle(style);
+      }
+    }
+  }, [map, maptiler, theme]);
 
   return (
     <MapContainer

@@ -7,10 +7,19 @@ import { Theme } from "./themes";
 
 function App() {
   const [theme, setTheme] = useState(Theme.Dark);
+  const toggleTheme = (): void => {
+    document.querySelector(".app")?.classList.toggle("dark-mode");
+  };
 
   return (
-    <div className="app">
-      <Header theme={theme} setTheme={setTheme} />
+    <div className="app dark-mode">
+      <Header
+        theme={theme}
+        setTheme={(theme) => {
+          setTheme(theme);
+          toggleTheme();
+        }}
+      />
       <section className="map-container">
         <Map theme={theme} />
       </section>

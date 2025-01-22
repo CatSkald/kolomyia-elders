@@ -29,7 +29,7 @@
 .header {
   position: absolute;
   z-index: 500;
-  background-color: rgba(100, 100, 100, 0.8);
+  background-color: rgba(100, 100, 100, 0.85);
   color: white;
   box-sizing: border-box;
   top: 0;
@@ -74,7 +74,7 @@ hr {
 .footer {
   position: absolute;
   z-index: 500;
-  background-color: rgba(100, 100, 100, 0.8);
+  background-color: rgba(100, 100, 100, 0.85);
   color: white;
   box-sizing: border-box;
   bottom: 0;

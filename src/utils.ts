@@ -39,11 +39,11 @@ export const mapBuildings = (
   buildings: Array<{
     Назва: string;
     Дата: string | number;
-    Опис: string;
-    Історія: string;
+    Опис?: string;
+    Архітектура?: string;
+    Історія?: string;
     Адреса: string;
     Координати?: string;
-    "Посилання на карту"?: string;
   }>
 ): BuildingProfile[] =>
   buildings.map((b) => {
@@ -54,13 +54,13 @@ export const mapBuildings = (
       name: b["Назва"],
       date: typeof date === "number" ? date : date.replace(" - ", "—"),
       description: b["Опис"],
+      architecture: b["Архітектура"],
       history: history ? parseHistory(history) : undefined,
       period: getPeriod(date),
       address: b["Адреса"],
       coordinates: coordinates
         ? (coordinates.split("/") as unknown as LatLngExpression)
         : undefined,
-      link: b["Посилання на карту"],
     };
   });
 

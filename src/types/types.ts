@@ -10,11 +10,11 @@ export type BuildingProfile = {
   name: string;
   date: number | string;
   description?: string;
+  architecture?: string;
   history?: HistoryEntry[];
   address: string;
   coordinates?: LatLngExpression;
   period?: Period;
-  mapLink?: string;
 };
 
 export type HistoryEntry = {

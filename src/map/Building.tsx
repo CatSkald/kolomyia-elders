@@ -6,13 +6,15 @@ import { BuildingProfile } from "../types/types";
 const Building = ({
   data,
   markerSize,
+  onClick,
 }: {
   data: BuildingProfile;
   markerSize: number;
+  onClick: () => void;
 }) => {
   return (
     <FeatureGroup>
-      <BuildingMarker data={data} markerSize={markerSize} />
+      <BuildingMarker data={data} markerSize={markerSize} onClick={onClick} />
     </FeatureGroup>
   );
 };

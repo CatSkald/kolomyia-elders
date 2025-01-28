@@ -97,6 +97,17 @@ hr {
   right: 0.4rem;
 }
 
+/* Open popup below */
+.marker-popup.leaflet-popup {
+  top: 2.2rem;
+}
+.marker-popup .leaflet-popup-tip-container {
+  top: 0;
+  overflow: visible;
+  margin-top: 0;
+}
+
+/* Dark theme */
 .dark-mode .leaflet-control-zoom-in,
 .dark-mode .leaflet-control-zoom-out,
 .dark-mode .leaflet-popup-content-wrapper,

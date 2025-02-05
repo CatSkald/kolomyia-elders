@@ -43,13 +43,18 @@ export const mapBuildings = (
     Архітектура?: string;
     Історія?: string;
     Адреса: string;
-    Координати?: string;
+    Довгота?: number | string;
+    Широта?: number | string;
   }>
 ): BuildingProfile[] =>
   buildings.map((b) => {
     const date = b["Дата"];
-    const coordinates = b["Координати"];
     const history = b["Історія"];
+    const lat = b["Широта"] as number | undefined;
+    const lan = b["Довгота"] as number | undefined;
+    const coordinates: LatLngExpression | undefined =
+      lat && lan ? [lat, lan] : undefined;
+
     return {
       name: b["Назва"],
       date: typeof date === "number" ? date : date.replace(" - ", "—"),
@@ -58,9 +63,7 @@ export const mapBuildings = (
       history: history ? parseHistory(history) : undefined,
       period: getPeriod(date),
       address: b["Адреса"],
-      coordinates: coordinates
-        ? (coordinates.split("/") as unknown as LatLngExpression)
-        : undefined,
+      coordinates: coordinates,
     };
   });
 

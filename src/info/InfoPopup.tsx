@@ -17,13 +17,13 @@ const InfoPopup = () => (
     arrow={false}
   >
     <span style={{ fontWeight: "bold" }}>Використані джерела:</span>
-    <ul style={{ marginTop: "0.5rem" }}>
+    <ol style={{ marginTop: "0.5rem" }}>
       {mapSources(sources).map((item, index) => (
         <li key={index}>
           <span>{item.title}</span>
         </li>
       ))}
-    </ul>
+    </ol>
     <hr />
     <span style={{ fontStyle: "italic" }}>Ідея сайту навіяна проектом</span> “
     <a href="https://map.klym.uk/" rel="external" target="_blank">

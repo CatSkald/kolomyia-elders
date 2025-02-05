@@ -39,7 +39,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <b>лютому 2025</b>{" "}
+          <b>лютому&nbsp;2025</b>{" "}
           <svg
             width="15"
             height="15"

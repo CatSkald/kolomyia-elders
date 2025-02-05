@@ -27,7 +27,7 @@ const InfoPopup = () => (
     <hr />
     <span style={{ fontStyle: "italic" }}>Ідея сайту навіяна проектом</span> “
     <a href="https://map.klym.uk/" rel="external" target="_blank">
-      Вік будинків Станиславова
+      Вік&nbsp;будинків&nbsp;Станиславова
     </a>
     ”
   </Popup>

@@ -27,3 +27,17 @@ a:hover,
 .button:hover {
   color: cyan;
 }
+
+hr {
+  margin: 0.7rem 0;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 0.9rem;
+  font-weight: bold;
+}

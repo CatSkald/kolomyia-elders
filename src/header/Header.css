@@ -1,0 +1,41 @@
+.header {
+  position: absolute;
+  z-index: 500;
+  background-color: rgba(100, 100, 100, 0.85);
+  color: white;
+  box-sizing: border-box;
+  top: 0;
+  width: 100vw;
+  padding: 0.9rem;
+  padding-bottom: 0.5rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header .button {
+  padding-right: 0.25rem;
+  padding-left: 0.5rem;
+}
+
+.legend {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.legend div {
+  display: flex;
+  margin-top: 0.25rem;
+  margin-right: 0.25rem;
+  align-items: center;
+}
+
+.legend div img {
+  width: 24px;
+  height: 24px;
+}

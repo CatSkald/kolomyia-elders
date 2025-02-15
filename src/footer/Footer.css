@@ -1,0 +1,18 @@
+.footer {
+  position: absolute;
+  z-index: 500;
+  background-color: rgba(100, 100, 100, 0.85);
+  color: white;
+  box-sizing: border-box;
+  bottom: 0;
+  right: 0;
+  padding: 0.4rem;
+  font-size: smaller;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.footer .logo {
+  display: inline-block;
+}

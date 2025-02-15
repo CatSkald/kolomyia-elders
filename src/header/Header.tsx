@@ -1,3 +1,5 @@
+import "./Header.css";
+
 import { MoonStarsFill, SunFill } from "react-bootstrap-icons";
 import Legend from "./Legend";
 import InfoPopup from "../info/InfoPopup";

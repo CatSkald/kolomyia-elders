@@ -27,13 +27,16 @@ export const getPeriod = (date: string | number): Period | undefined => {
 };
 
 export const parseHistory = (history: string): HistoryEntry[] =>
-  history.split(";").map((h) => {
-    const parts = h.trim().split(" - ");
-    return {
-      date: parts[0],
-      description: parts[1],
-    };
-  });
+  history
+    .split(";")
+    .filter((h) => !!h)
+    .map((h) => {
+      const parts = h.trim().split(" - ");
+      return {
+        date: parts[0],
+        description: parts[1],
+      };
+    });
 
 export const mapBuildings = (
   buildings: Array<{

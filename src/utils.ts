@@ -43,7 +43,7 @@ export const mapBuildings = (
     Назва: string;
     Дата: string | number;
     Опис?: string;
-    Архітектура?: string;
+    "Архітектурний стиль"?: string;
     Історія?: string;
     Адреса: string;
     Довгота?: number | string;
@@ -62,7 +62,7 @@ export const mapBuildings = (
       name: b["Назва"],
       date: typeof date === "number" ? date : date.replace(" - ", "—"),
       description: b["Опис"],
-      architecture: b["Архітектура"],
+      architecture: b["Архітектурний стиль"],
       history: history ? parseHistory(history) : undefined,
       period: getPeriod(date),
       address: b["Адреса"],

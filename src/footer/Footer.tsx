@@ -41,7 +41,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <b>лютому&nbsp;2025</b>{" "}
+          <b>березні&nbsp;2025</b>{" "}
           <svg
             width="15"
             height="15"

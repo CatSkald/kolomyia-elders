@@ -1,4 +1,5 @@
 import "./Header.css";
+import CoatOfArmsUrl from "../assets/coat_of_arms.svg";
 
 import { MoonStarsFill, SunFill } from "react-bootstrap-icons";
 import Legend from "./Legend";
@@ -13,6 +14,7 @@ const Header = ({
   setTheme: (theme: Theme) => void;
 }) => {
   const isDarkTheme = theme === "dark";
+  const toggleTheme = () => setTheme(isDarkTheme ? Theme.Light : Theme.Dark);
 
   return (
     <div className="header">
@@ -28,27 +30,32 @@ const Header = ({
           <ListFill />
         </div> */}
         <h1>Історичні будівлі Коломиї</h1>
-        {isDarkTheme ? (
-          <div className="button" onClick={() => setTheme(Theme.Light)}>
-            <MoonStarsFill size={buttonSize} />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "end",
+            columnGap: "0.5rem",
+          }}
+        >
+          <div className="button" onClick={toggleTheme}>
+            {isDarkTheme ? (
+              <MoonStarsFill size={buttonSize} />
+            ) : (
+              <SunFill size={buttonSize} />
+            )}
           </div>
-        ) : (
-          <div className="button" onClick={() => setTheme(Theme.Dark)}>
-            <SunFill size={buttonSize} />
-          </div>
-        )}
+          <InfoPopup />
+        </div>
       </div>
       <hr />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "end",
-        }}
-      >
+      <div style={{ display: "flex", flexDirection: "row" }}>
+        <img
+          src={CoatOfArmsUrl}
+          alt="Герб міста Коломия"
+          style={{ maxWidth: "5vh", paddingRight: "0.5rem" }}
+        />
         <Legend />
-        <InfoPopup />
       </div>
     </div>
   );

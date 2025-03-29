@@ -27,7 +27,7 @@ const Header = ({
         }}
       >
         {/* <div className="button" style={{ marginRight: "0.5rem" }}>
-          <ListFill />
+          <List />
         </div> */}
         <h1>Історичні будівлі Коломиї</h1>
         <div

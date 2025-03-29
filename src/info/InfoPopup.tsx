@@ -40,11 +40,15 @@ const InfoPopup = () => {
           ))}
         </ol>
         <hr />
-        <span>Ідея сайту навіяна проектом</span> “
+        <span>Ідея сайту навіяна проектами</span> “
         <a href="https://map.klym.uk/" rel="external" target="_blank">
           Вік&nbsp;будинків&nbsp;Станиславова
         </a>
-        ”
+        ” та “
+        <a href="https://kolobramy.com.ua/" rel="external" target="_blank">
+          коло&nbsp;брами
+        </a>
+        ”.
       </Popup>
     </>
   );

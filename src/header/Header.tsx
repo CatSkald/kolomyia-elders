@@ -51,9 +51,14 @@ const Header = ({
       <hr />
       <div style={{ display: "flex", flexDirection: "row" }}>
         <img
+          className="preview"
           src={CoatOfArmsUrl}
           alt="Герб міста Коломия"
-          style={{ maxWidth: "5vh", paddingRight: "0.5rem" }}
+          style={{
+            maxWidth: "5vh",
+            padding: "0.1rem 0.2rem",
+            marginRight: "0.3rem",
+          }}
         />
         <Legend />
       </div>

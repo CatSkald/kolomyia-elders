@@ -39,3 +39,12 @@
   width: 24px;
   height: 24px;
 }
+
+.preview:hover {
+  background: rgba(100, 100, 100, 0.9);
+  border-radius: 3px;
+  transition: all 0.3s ease-out;
+  opacity: 1;
+  transform-origin: left top;
+  transform: scale(7, 7);
+}

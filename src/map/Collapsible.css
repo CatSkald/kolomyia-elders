@@ -1,0 +1,27 @@
+.collapsible-header {
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  background: darkcyan;
+  border-radius: 3px;
+}
+.collapsible-header:hover {
+  background: cyan;
+}
+.collapsible-header::before {
+  content: "▼ ";
+}
+
+.collapsed .collapsible-header::before {
+  content: "◆ ";
+}
+
+.collapsible-content {
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsed .collapsible-content {
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+}

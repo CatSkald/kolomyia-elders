@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import { BuildingProfile } from "../types/types";
 import BuildingHistory from "./BuildingHistory";
 import { palette, periodUnknownColor } from "../themes";
+import Collapsible from "./Collapsible";
 
 export default function BuildingMarker({
   data,
@@ -47,7 +48,6 @@ export default function BuildingMarker({
           <span
             style={{
               fontWeight: "bold",
-              textDecoration: "underline",
               fontSize: "1rem",
             }}
           >
@@ -55,37 +55,41 @@ export default function BuildingMarker({
           </span>
           <span
             style={{
-              fontWeight: "bold",
               fontSize: "0.9rem",
             }}
           >
             {data.date}
           </span>
           <span style={{ fontStyle: "italic" }}>{data.address}</span>
-          {data.description && (
-            <span style={{ marginTop: "0.9rem" }}>{data.description}</span>
-          )}
         </div>
-        {data.architecture && (
-          <>
-            <hr style={{ margin: "0.9rem 0" }} />
-            <div
-              className="newline"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                textAlign: "center",
-              }}
-            >
-              <span>
-                Архітектурний стиль:&nbsp;
-                <span style={{ fontStyle: "italic" }}>{data.architecture}</span>
-              </span>
-            </div>
-          </>
+        {(data.description || data.architecture) && (
+          <Collapsible header="Опис">
+            {data.description && (
+              <div style={{ textAlign: "center" }}>{data.description}</div>
+            )}
+            {data.architecture && (
+              <>
+                <hr style={{ margin: "0.9rem 0" }} />
+                <div
+                  className="newline"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    textAlign: "center",
+                  }}
+                >
+                  <span>
+                    Архітектурний стиль:&nbsp;
+                    <span style={{ fontStyle: "italic" }}>
+                      {data.architecture}
+                    </span>
+                  </span>
+                </div>
+              </>
+            )}
+          </Collapsible>
         )}
-        {data.history && <hr style={{ margin: "0.9rem 0" }} />}
         {data.history && <BuildingHistory data={data.history} />}
       </Popup>
     </CircleMarker>

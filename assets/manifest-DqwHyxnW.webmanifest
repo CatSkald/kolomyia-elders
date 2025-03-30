@@ -3,7 +3,7 @@
   "name": "Історичні будівлі Коломиї",
   "start_url": "/kolomyia-elders/",
   "scope": "/kolomyia-elders/",
-  "display": "minimal-ui",
+  "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#000000"
 }

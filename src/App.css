@@ -1,52 +1,56 @@
-.leaflet-container {
+.app .leaflet-container {
   width: 100vw;
   height: 100vh;
 }
-.leaflet-control-zoom {
+.app .leaflet-control-zoom {
   position: absolute;
   top: 20rem;
   right: 0.25rem;
 }
-.leaflet-control-zoom .leaflet-control-zoom-in,
-.leaflet-control-zoom .leaflet-control-zoom-out {
-  color: darkcyan;
-}
-.leaflet-control-zoom .leaflet-control-zoom-in:hover,
-.leaflet-control-zoom .leaflet-control-zoom-out:hover {
-  color: cyan;
-}
-.leaflet-control-attribution {
+.app .leaflet-control-attribution {
   display: none;
 }
-.leaflet-popup {
+.app .leaflet-popup {
   max-width: fit-content;
 }
-.leaflet-popup-content-wrapper .leaflet-popup-content {
+.app .leaflet-popup-content-wrapper .leaflet-popup-content {
   width: 25rem;
   font-size: 0.8rem;
 }
 
 /* logoPosition: "bottom-right" does not work with React */
 /* https://github.com/maptiler/leaflet-maptilersdk/blob/3d7b122d8e6315d0fcc27a74dfdfe47fcd8848fe/src/leaflet-maptilersdk.ts#L324 */
-.map-container a:has(img[alt="MapTiler logo"]) {
+.app .map-container a:has(img[alt="MapTiler logo"]) {
   left: unset !important;
   right: 0.4rem;
 }
 
 /* Open popup below */
-.marker-popup.leaflet-popup {
+.app .marker-popup.leaflet-popup {
   top: 2.2rem;
 }
-.marker-popup .leaflet-popup-tip-container {
+.app .marker-popup .leaflet-popup-tip-container {
   top: 0;
   overflow: visible;
   margin-top: 0;
 }
 
-/* Dark theme */
-.dark-mode .leaflet-control-zoom-in,
-.dark-mode .leaflet-control-zoom-out,
-.dark-mode .leaflet-popup-content-wrapper,
-.dark-mode .leaflet-popup-tip {
-  filter: invert(100%) hue-rotate(180deg) brightness(90%);
+.app .leaflet-popup-content-wrapper,
+.app .leaflet-bar,
+.app .leaflet-popup-tip {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  /* TODO border, on hover */
+}
+
+.app .leaflet-control-zoom .leaflet-control-zoom-in,
+.app .leaflet-control-zoom .leaflet-control-zoom-out {
+  background-color: var(--color-background);
+  color: var(--color-accent);
+}
+
+.app .leaflet-control-zoom .leaflet-control-zoom-in:hover,
+.app .leaflet-control-zoom .leaflet-control-zoom-out:hover {
+  background-color: var(--color-background);
+  color: var(--color-secondary);
 }

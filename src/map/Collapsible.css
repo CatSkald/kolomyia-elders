@@ -1,12 +1,12 @@
 .collapsible-header {
   cursor: pointer;
   text-align: center;
-  color: white;
-  background: darkcyan;
+  color: var(--color-foreground);
+  background-color: var(--color-accent);
   border-radius: 3px;
 }
 .collapsible-header:hover {
-  background: cyan;
+  background-color: var(--color-secondary);
 }
 .collapsible-header::before {
   content: "▼ ";

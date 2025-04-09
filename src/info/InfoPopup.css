@@ -1,6 +1,6 @@
 .popup-content {
-  background-color: rgba(100, 100, 100, 1);
   font-size: 14px;
+  background-color: rgba(100, 100, 100, 1);
   color: white;
   padding: 1rem;
   z-index: 1000;

@@ -16,15 +16,13 @@ export enum Theme {
 // https://digitalherald.org/2021/01/hexcodes-for-heraldic-tinctures/
 // https://digitalherald.org/wp-content/uploads/2021/01/Tincture-Hexcodes-Full.png
 export const palette = {
+  i: "darkseagreen",
+  ii: "gold",
+  iii: "crimson",
+  iv: "coral",
+  v: "deepskyblue",
+  vi: "royalblue",
+  vii: "mediumslateblue",
+  unknown: "slategrey",
   overlay: "#666666bf",
-  // periods
-  green: "#00A400",
-  purple: "#8811DD",
-  red: "#D60000",
-  orange: "#EE8800",
-  yellow: "#FFFF00",
-  blue: "#0000D6",
-  grey: "#666666",
-  brown: "#AA6600",
 };
-export const periodUnknownColor = palette.brown;

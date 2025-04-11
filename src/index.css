@@ -2,15 +2,19 @@
 
 body {
   --color-background: #fff;
-  --color-foreground: rgba(0, 0, 0, 0.87);
-  --color-accent: darkcyan;
-  --color-secondary: cyan;
+  /* --color-foreground: rgba(0, 0, 0, 0.87); */
+  --color-foreground: #000000de;
+  --color-accent: #210003;
+  --color-accent2: crimson;
+  --color-accent-background: #fc979f;
 }
 body.dark-mode {
   --color-background: #121212;
-  --color-foreground: rgba(255, 255, 255, 0.87);
-  --color-accent: cyan;
-  --color-secondary: lightcyan;
+  /* --color-foreground: rgba(255, 255, 255, 0.87); */
+  --color-foreground: #ffffffde;
+  --color-accent: crimson;
+  --color-accent2: #fc979f;
+  --color-accent-background: #210003;
 }
 
 body {
@@ -28,9 +32,12 @@ ul {
   margin: 0;
 }
 
+a {
+  color: var(--color-accent2);
+}
+
 a,
 .button {
-  color: var(--color-secondary);
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;

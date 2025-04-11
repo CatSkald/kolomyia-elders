@@ -1,5 +1,5 @@
 import { periods } from "../data/periods";
-import { getMarkerImage, periodUnknownColor } from "../themes";
+import { getMarkerImage, palette } from "../themes";
 
 const Legend = () => {
   const getImage = (text: string, color: string) => (
@@ -17,7 +17,7 @@ const Legend = () => {
   return (
     <div className="legend">
       {periods.map((p) => getImage(`${p.startDate}—${p.endDate}`, p.color))}
-      {getImage("збудовані до 1944", periodUnknownColor)}
+      {getImage("збудовані до 1944", palette.unknown)}
     </div>
   );
 };

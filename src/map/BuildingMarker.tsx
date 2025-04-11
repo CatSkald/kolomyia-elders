@@ -3,7 +3,7 @@ import { CircleMarker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { BuildingProfile } from "../types/types";
 import BuildingHistory from "./BuildingHistory";
-import { palette, periodUnknownColor } from "../themes";
+import { palette } from "../themes";
 import Collapsible from "./Collapsible";
 
 export default function BuildingMarker({
@@ -15,7 +15,7 @@ export default function BuildingMarker({
   markerSize: number;
   onClick: () => void;
 }) {
-  const markerColor = data.period?.color ?? periodUnknownColor;
+  const markerColor = data.period?.color ?? palette.unknown;
   return !data.coordinates ? (
     <></>
   ) : (

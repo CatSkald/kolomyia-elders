@@ -1,8 +1,8 @@
 .header {
   position: absolute;
   z-index: 500;
-  background-color: rgba(100, 100, 100, 0.85);
-  color: white;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
   box-sizing: border-box;
   top: 0;
   width: 100vw;
@@ -41,7 +41,7 @@
 }
 
 .preview:hover {
-  background-color: rgba(100, 100, 100, 0.9);
+  background-color: var(--color-accent2);
   border-radius: 3px;
   transition: all 0.3s ease-out;
   opacity: 1;

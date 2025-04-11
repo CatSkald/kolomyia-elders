@@ -46,11 +46,11 @@
 .app .leaflet-control-zoom .leaflet-control-zoom-in,
 .app .leaflet-control-zoom .leaflet-control-zoom-out {
   background-color: var(--color-background);
-  color: var(--color-accent);
+  color: var(--color-accent2);
 }
 
 .app .leaflet-control-zoom .leaflet-control-zoom-in:hover,
 .app .leaflet-control-zoom .leaflet-control-zoom-out:hover {
   background-color: var(--color-background);
-  color: var(--color-secondary);
+  color: var(--color-accent);
 }

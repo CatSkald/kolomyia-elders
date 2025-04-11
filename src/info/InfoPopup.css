@@ -1,10 +1,11 @@
 .popup-content {
   font-size: 14px;
-  background-color: rgba(100, 100, 100, 1);
-  color: white;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
   padding: 1rem;
   z-index: 1000;
   border-radius: 3px;
+  border: 1px solid var(--color-accent-background);
 }
 
 .popup-overlay {

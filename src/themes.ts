@@ -16,13 +16,12 @@ export enum Theme {
 // https://digitalherald.org/2021/01/hexcodes-for-heraldic-tinctures/
 // https://digitalherald.org/wp-content/uploads/2021/01/Tincture-Hexcodes-Full.png
 export const palette = {
-  i: "darkseagreen",
-  ii: "gold",
+  i: "gold",
+  ii: "coral",
   iii: "crimson",
-  iv: "coral",
-  v: "deepskyblue",
-  vi: "royalblue",
-  vii: "mediumslateblue",
-  unknown: "slategrey",
+  iv: "deepskyblue",
+  v: "royalblue",
+  vi: "mediumslateblue",
+  unknown: "darkseagreen",
   overlay: "#666666bf",
 };

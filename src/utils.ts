@@ -41,6 +41,7 @@ export const parseHistory = (history: string): HistoryEntry[] =>
 export const mapBuildings = (
   buildings: Array<{
     Назва: string;
+    "Стара назва"?: string;
     Дата: string | number;
     Опис?: string;
     "Архітектурний стиль"?: string;
@@ -60,6 +61,7 @@ export const mapBuildings = (
 
     return {
       name: b["Назва"],
+      oldNames: b["Стара назва"]?.split("; "),
       date: typeof date === "number" ? date : date.replace(" - ", "—"),
       description: b["Опис"],
       architecture: b["Архітектурний стиль"],

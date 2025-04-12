@@ -2,6 +2,7 @@ import { LatLngExpression } from "leaflet";
 import {
   BuildingProfile,
   HistoryEntry,
+  MonumentProfile,
   Period,
   SourceProfile,
 } from "./types/types";
@@ -62,12 +63,41 @@ export const mapBuildings = (
     return {
       name: b["Назва"],
       oldNames: b["Стара назва"]?.split("; "),
-      date: typeof date === "number" ? date : date.replace(" - ", "—"),
+      date: cleanDate(b["Дата"])!,
       description: b["Опис"],
       architecture: b["Архітектурний стиль"],
       history: history ? parseHistory(history) : undefined,
       period: getPeriod(date),
       address: b["Адреса"],
+      coordinates: coordinates,
+    };
+  });
+
+export const mapMonuments = (
+  monuments: Array<{
+    Назва: string;
+    "Стара назва"?: string;
+    Збудовано: string | number;
+    Зруйновано?: string | number;
+    Історія?: string;
+    Довгота?: number | string;
+    Широта?: number | string;
+  }>
+): MonumentProfile[] =>
+  monuments.map((m) => {
+    const date = m["Збудовано"];
+    const lat = m["Широта"] as number | undefined;
+    const lan = m["Довгота"] as number | undefined;
+    const coordinates: LatLngExpression | undefined =
+      lat && lan ? [lat, lan] : undefined;
+
+    return {
+      name: m["Назва"],
+      oldNames: m["Стара назва"]?.split("; "),
+      date: cleanDate(date)!,
+      destroyed: cleanDate(m["Зруйновано"]),
+      history: m["Історія"],
+      period: getPeriod(date),
       coordinates: coordinates,
     };
   });
@@ -86,3 +116,6 @@ export const mapSources = (
       link: s["Посилання"],
     };
   });
+
+const cleanDate = (date?: string | number): string | number | undefined =>
+  typeof date === "number" ? date : date?.replace(" - ", "—");

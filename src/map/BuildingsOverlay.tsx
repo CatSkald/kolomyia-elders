@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { useMapEvents } from "react-leaflet";
-import { mapBuildings } from "../utils";
+import { FeatureGroup, useMapEvents } from "react-leaflet";
+import { mapBuildings, mapMonuments } from "../utils";
 import { buildings } from "../data/buildings";
-import Building from "./Building";
 import { getMarkerSize } from "../themes";
 import { LatLngExpression } from "leaflet";
+import BuildingMarker from "./BuildingMarker";
+import { monuments } from "../data/monuments";
+import MonumentMarker from "./MonumentMarker";
 
 const BuildingsOverlay = ({ initialZoom }: { initialZoom: number }) => {
   const [markerSize, setMarkerSize] = useState(getMarkerSize(initialZoom));
@@ -25,11 +27,24 @@ const BuildingsOverlay = ({ initialZoom }: { initialZoom: number }) => {
       {mapBuildings(buildings)
         .filter((b) => !!b.coordinates)
         .map((b) => (
-          <Building
-            data={b}
-            markerSize={markerSize}
-            onClick={() => onMarkerClick(b.coordinates!)}
-          />
+          <FeatureGroup key={b.coordinates?.toString()}>
+            <BuildingMarker
+              data={b}
+              markerSize={markerSize}
+              onClick={() => onMarkerClick(b.coordinates!)}
+            />
+          </FeatureGroup>
+        ))}
+      {mapMonuments(monuments)
+        .filter((b) => !!b.coordinates)
+        .map((b) => (
+          <FeatureGroup key={b.coordinates?.toString()}>
+            <MonumentMarker
+              data={b}
+              markerSize={markerSize}
+              onClick={() => onMarkerClick(b.coordinates!)}
+            />
+          </FeatureGroup>
         ))}
     </>
   );

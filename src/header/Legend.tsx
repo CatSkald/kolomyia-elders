@@ -18,6 +18,7 @@ const Legend = () => {
     <div className="legend">
       {periods.map((p) => getImage(`${p.startDate}—${p.endDate}`, p.color))}
       {getImage("збудовані до 1944", palette.unknown)}
+      {getImage("Пам'ятники", palette.overlay)}
     </div>
   );
 };

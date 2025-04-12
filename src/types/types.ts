@@ -18,6 +18,16 @@ export type BuildingProfile = {
   period?: Period;
 };
 
+export type MonumentProfile = {
+  name: string;
+  oldNames?: string[];
+  date: number | string;
+  destroyed?: number | string;
+  history?: string;
+  coordinates?: LatLngExpression;
+  period?: Period;
+};
+
 export type HistoryEntry = {
   date: string;
   description: string;

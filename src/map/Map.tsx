@@ -11,7 +11,6 @@ import {
 } from "@maptiler/leaflet-maptilersdk";
 import { Theme } from "../themes.ts";
 import { config } from "./MaptilerConfig.ts";
-import MonumentsOverlay from "./MonumentsOverlay.tsx";
 
 const Map = ({ theme }: { theme: Theme }) => {
   const kolomyiaBounds = latLngBounds([48.6184, 24.9379], [48.4868, 25.1415]);

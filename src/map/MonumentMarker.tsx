@@ -1,8 +1,9 @@
-import { CircleMarker, Popup } from "react-leaflet";
+import { Marker, Popup } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
 import { MonumentProfile } from "../types/types";
-import { palette } from "../themes";
+import { getMonumentMarkerImage, palette } from "../themes";
+import { DivIcon } from "leaflet";
 
 export default function MonumentMarker({
   data,
@@ -17,21 +18,22 @@ export default function MonumentMarker({
   return !data.coordinates ? (
     <></>
   ) : (
-    <CircleMarker
-      center={data.coordinates}
-      radius={markerSize / 2}
-      color={palette.unknown}
-      opacity={0.5}
-      fillColor={markerColor}
-      fillOpacity={1}
-      stroke={true}
-      weight={3}
+    <Marker
+      position={data.coordinates}
       eventHandlers={{
         click: (event) => {
           onClick();
           event.target.openPopup(data.coordinates);
         },
       }}
+      icon={
+        new DivIcon({
+          className: "marker",
+          iconSize: [markerSize, markerSize],
+          iconAnchor: [markerSize / 2, markerSize],
+          html: getMonumentMarkerImage(markerSize, markerColor),
+        })
+      }
     >
       <Popup className="marker-popup" autoPan={false}>
         <div
@@ -64,6 +66,6 @@ export default function MonumentMarker({
           <div style={{ textAlign: "center" }}>{data.history}</div>
         )}
       </Popup>
-    </CircleMarker>
+    </Marker>
   );
 }

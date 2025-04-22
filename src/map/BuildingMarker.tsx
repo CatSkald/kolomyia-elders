@@ -21,7 +21,7 @@ export default function BuildingMarker({
   ) : (
     <CircleMarker
       center={data.coordinates}
-      radius={markerSize}
+      radius={markerSize / 2}
       color={palette.overlay}
       opacity={0.5}
       fillColor={markerColor}

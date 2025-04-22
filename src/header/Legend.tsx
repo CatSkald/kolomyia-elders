@@ -1,13 +1,12 @@
 import { periods } from "../data/periods";
-import { getMarkerImage, palette } from "../themes";
+import { getMarkerImage, getMonumentMarkerImage, palette } from "../themes";
 
 const Legend = () => {
-  const getImage = (text: string, color: string) => (
+  const imageWidth = 24;
+  const getImage = (text: string, image: string) => (
     <div key={text}>
       <img
-        src={`data:image/svg+xml;utf8,${encodeURIComponent(
-          getMarkerImage(24, color)
-        )}`}
+        src={`data:image/svg+xml;utf8,${encodeURIComponent(image)}`}
         alt={text}
       />
       {text}
@@ -16,9 +15,20 @@ const Legend = () => {
 
   return (
     <div className="legend">
-      {periods.map((p) => getImage(`${p.startDate}—${p.endDate}`, p.color))}
-      {getImage("збудовані до 1944", palette.unknown)}
-      {getImage("Пам'ятники", palette.overlay)}
+      {periods.map((p) =>
+        getImage(
+          `${p.startDate}—${p.endDate}`,
+          getMarkerImage(imageWidth, p.color)
+        )
+      )}
+      {getImage(
+        "збудовані до 1944",
+        getMarkerImage(imageWidth, palette.unknown)
+      )}
+      {getImage(
+        "пам'ятники",
+        getMonumentMarkerImage(imageWidth, palette.overlay)
+      )}
     </div>
   );
 };

@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "build+preview": "tsc && vite build && vite preview",
-    "deploy": "npx gh-pages -d dist",
+    "deploy": "tsc && vite build && npx gh-pages -d dist",
     "upgrade": "npx npm-check-updates --upgrade && npm install"
   },
   "dependencies": {

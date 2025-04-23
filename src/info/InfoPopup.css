@@ -11,3 +11,11 @@
 .popup-overlay {
   overflow-y: scroll;
 }
+
+.button.close {
+  position: absolute;
+  display: block;
+  padding: 0.3rem;
+  right: 0;
+  top: 0;
+}

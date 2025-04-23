@@ -28,16 +28,13 @@ export const getPeriod = (date: string | number): Period | undefined => {
 };
 
 export const parseHistory = (history: string): HistoryEntry[] =>
-  history
-    .split(";")
-    .filter((h) => !!h)
-    .map((h) => {
-      const parts = h.trim().split(" - ");
-      return {
-        date: parts[0],
-        description: parts[1],
-      };
-    });
+  parseArray(history, ";")!.map((h) => {
+    const parts = h.trim().split(" - ");
+    return {
+      date: parts[0],
+      description: parts[1],
+    };
+  });
 
 export const mapBuildings = (
   buildings: Array<{
@@ -62,7 +59,7 @@ export const mapBuildings = (
 
     return {
       name: b["Назва"],
-      oldNames: b["Стара назва"]?.split("; "),
+      oldNames: parseArray(b["Стара назва"], ";"),
       date: cleanDate(b["Дата"])!,
       description: b["Опис"],
       architecture: b["Архітектурний стиль"],
@@ -93,7 +90,7 @@ export const mapMonuments = (
 
     return {
       name: m["Назва"],
-      oldNames: m["Стара назва"]?.split("; "),
+      oldNames: parseArray(m["Стара назва"], ";"),
       date: cleanDate(date)!,
       destroyed: cleanDate(m["Зруйновано"]),
       history: m["Історія"],
@@ -119,3 +116,14 @@ export const mapSources = (
 
 const cleanDate = (date?: string | number): string | number | undefined =>
   typeof date === "number" ? date : date?.replace(" - ", "—");
+
+const parseArray = (
+  value: string | undefined,
+  delimiter: string
+): string[] | undefined => {
+  const result = value
+    ?.split(delimiter)
+    .map((s) => s.trim())
+    .filter((s) => !!s);
+  return result?.length ? result : undefined;
+};

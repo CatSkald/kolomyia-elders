@@ -67,27 +67,6 @@ export default function BuildingMarker({
             {data.description && (
               <div style={{ textAlign: "center" }}>{data.description}</div>
             )}
-            {/* TODO
-             {data.oldNames && (
-              <>
-                <hr style={{ margin: "0.9rem 0" }} />
-                <div
-                  className="newline"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    textAlign: "center",
-                  }}
-                >
-                  {data.oldNames.map((name, index) => (
-                    <div key={index} style={{ textAlign: "center" }}>
-                      {name}
-                    </div>
-                  ))}
-                </div>
-              </>
-            )} */}
             {data.architecture && (
               <>
                 <hr style={{ margin: "0.9rem 0" }} />
@@ -109,6 +88,25 @@ export default function BuildingMarker({
                 </div>
               </>
             )}
+          </Collapsible>
+        )}
+        {data.oldNames && (
+          <Collapsible header="Назва в джерелах">
+            <div
+              className="newline"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+              }}
+            >
+              {data.oldNames.map((name, index) => (
+                <div key={index} style={{ textAlign: "center" }}>
+                  {name}
+                </div>
+              ))}
+            </div>
           </Collapsible>
         )}
         {data.history && <BuildingHistory data={data.history} />}

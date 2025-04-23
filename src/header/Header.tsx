@@ -29,7 +29,7 @@ const Header = ({
         {/* <div className="button" style={{ marginRight: "0.5rem" }}>
           <List />
         </div> */}
-        <h1>Історичні будівлі Коломиї</h1>
+        <h1>Архітектурна спадщина міста Коломиї</h1>
         <div
           style={{
             display: "flex",

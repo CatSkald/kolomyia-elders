@@ -27,7 +27,7 @@ const Legend = () => {
       )}
       {getImage(
         "пам'ятники",
-        getMonumentMarkerImage(imageWidth, palette.overlay)
+        getMonumentMarkerImage(imageWidth, palette.unknown)
       )}
     </div>
   );

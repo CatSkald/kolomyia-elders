@@ -29,10 +29,10 @@ export const getPeriod = (date: string | number): Period | undefined => {
 
 export const parseHistory = (history: string): HistoryEntry[] =>
   parseArray(history, ";")!.map((h) => {
-    const parts = h.trim().split(" - ");
+    const dateEndIndex = h.trim().indexOf(" - ");
     return {
-      date: parts[0],
-      description: parts[1],
+      date: h.slice(0, dateEndIndex),
+      description: h.slice(dateEndIndex + 3),
     };
   });
 

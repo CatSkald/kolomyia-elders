@@ -8,6 +8,9 @@ import {
 } from "./types/types";
 import { periods } from "./data/periods";
 
+const itemSeparator = ";";
+const dateSeparator = " - ";
+
 export const getPeriod = (date: string | number): Period | undefined => {
   let year = undefined;
   if (typeof date === "number") year = date;
@@ -28,11 +31,11 @@ export const getPeriod = (date: string | number): Period | undefined => {
 };
 
 export const parseHistory = (history: string): HistoryEntry[] =>
-  parseArray(history, ";")!.map((h) => {
-    const dateEndIndex = h.trim().indexOf(" - ");
+  parseArray(history, itemSeparator)!.map((h) => {
+    const dateEndIndex = h.trim().indexOf(dateSeparator);
     return {
       date: h.slice(0, dateEndIndex),
-      description: h.slice(dateEndIndex + 3),
+      description: h.slice(dateEndIndex + dateSeparator.length),
     };
   });
 
@@ -59,7 +62,7 @@ export const mapBuildings = (
 
     return {
       name: b["Назва"],
-      oldNames: parseArray(b["Стара назва"], ";"),
+      oldNames: parseArray(b["Стара назва"], itemSeparator),
       date: cleanDate(b["Дата"])!,
       description: b["Опис"],
       architecture: b["Архітектурний стиль"],
@@ -90,7 +93,7 @@ export const mapMonuments = (
 
     return {
       name: m["Назва"],
-      oldNames: parseArray(m["Стара назва"], ";"),
+      oldNames: parseArray(m["Стара назва"], itemSeparator),
       date: cleanDate(date)!,
       destroyed: cleanDate(m["Зруйновано"]),
       history: m["Історія"],
@@ -115,7 +118,7 @@ export const mapSources = (
   });
 
 const cleanDate = (date?: string | number): string | number | undefined =>
-  typeof date === "number" ? date : date?.replace(" - ", "—");
+  typeof date === "number" ? date : date?.replace(dateSeparator, "—");
 
 const parseArray = (
   value: string | undefined,

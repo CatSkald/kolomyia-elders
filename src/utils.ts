@@ -39,8 +39,8 @@ export const parseHistory = (history: string): HistoryEntry[] =>
       description = description.slice(noDateMarker.length).trim();
     } else {
       const dateEndIndex = h.indexOf(dateSeparator);
-      if (dateEndIndex) {
-        date = description.slice(0, dateEndIndex).trim();
+      if (dateEndIndex !== -1) {
+        date = description.slice(0, dateEndIndex).trim() || undefined;
         description = description
           .slice(dateEndIndex + dateSeparator.length)
           .trim();

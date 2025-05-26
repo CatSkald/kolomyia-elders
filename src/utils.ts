@@ -32,10 +32,24 @@ export const getPeriod = (date: string | number): Period | undefined => {
 
 export const parseHistory = (history: string): HistoryEntry[] =>
   parseArray(history, itemSeparator)!.map((h) => {
-    const dateEndIndex = h.trim().indexOf(dateSeparator);
+    const noDateMarker = "? - ";
+    let date = undefined;
+    let description = h.replaceAll(" - ", " — ");
+    if (h.startsWith(noDateMarker)) {
+      description = description.slice(noDateMarker.length).trim();
+    } else {
+      const dateEndIndex = h.indexOf(dateSeparator);
+      if (dateEndIndex) {
+        date = description.slice(0, dateEndIndex).trim();
+        description = description
+          .slice(dateEndIndex + dateSeparator.length)
+          .trim();
+      }
+    }
+
     return {
-      date: h.slice(0, dateEndIndex),
-      description: h.slice(dateEndIndex + dateSeparator.length),
+      date: date,
+      description: description,
     };
   });
 
@@ -118,7 +132,7 @@ export const mapSources = (
   });
 
 const cleanDate = (date?: string | number): string | number | undefined =>
-  typeof date === "number" ? date : date?.replace(dateSeparator, "—");
+  typeof date === "number" ? date : date?.replaceAll(dateSeparator, "—");
 
 const parseArray = (
   value: string | undefined,

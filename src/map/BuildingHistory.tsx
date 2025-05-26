@@ -7,15 +7,11 @@ const BuildingHistory = ({ data }: { data: HistoryEntry[] }) => {
       <ul>
         {data.map((item, index) => (
           <li key={index}>
-            <span
-              style={
-                item.description
-                  ? { fontWeight: "bold", fontStyle: "italic" }
-                  : {}
-              }
-            >
-              {item.date}
-            </span>
+            {item.date && (
+              <span style={{ fontWeight: "bold", fontStyle: "italic" }}>
+                {item.date}
+              </span>
+            )}
             {item.date && item.description && " — "}
             <span>{item.description}</span>
           </li>

@@ -29,7 +29,7 @@ export type MonumentProfile = {
 };
 
 export type HistoryEntry = {
-  date: string;
+  date?: string;
   description: string;
 };
 

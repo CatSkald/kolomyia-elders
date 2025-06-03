@@ -91,7 +91,7 @@ export default function BuildingMarker({
           </Collapsible>
         )}
         {data.oldNames && (
-          <Collapsible header="Назва в джерелах">
+          <Collapsible header="Давні назви">
             <div
               className="newline"
               style={{

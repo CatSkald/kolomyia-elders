@@ -57,6 +57,7 @@ export const mapBuildings = (
   buildings: Array<{
     Назва: string;
     "Стара назва"?: string;
+    "Старі назви вулиці"?: string;
     Дата: string | number;
     Опис?: string;
     "Архітектурний стиль"?: string;
@@ -77,6 +78,7 @@ export const mapBuildings = (
     return {
       name: b["Назва"],
       oldNames: parseArray(b["Стара назва"], itemSeparator),
+      oldStreetNames: parseArray(b["Старі назви вулиці"], itemSeparator),
       date: cleanDate(b["Дата"])!,
       description: b["Опис"],
       architecture: b["Архітектурний стиль"],

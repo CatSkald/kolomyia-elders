@@ -9,6 +9,7 @@ export type Period = {
 export type BuildingProfile = {
   name: string;
   oldNames?: string[];
+  oldStreetNames?: string[];
   date: number | string;
   description?: string;
   architecture?: string;

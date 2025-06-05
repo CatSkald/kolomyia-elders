@@ -109,6 +109,25 @@ export default function BuildingMarker({
             </div>
           </Collapsible>
         )}
+        {data.oldStreetNames && (
+          <Collapsible header="Давні назви вулиці">
+            <div
+              className="newline"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+              }}
+            >
+              {data.oldStreetNames.map((name, index) => (
+                <div key={index} style={{ textAlign: "center" }}>
+                  {name}
+                </div>
+              ))}
+            </div>
+          </Collapsible>
+        )}
         {data.history && <BuildingHistory data={data.history} />}
       </Popup>
     </CircleMarker>

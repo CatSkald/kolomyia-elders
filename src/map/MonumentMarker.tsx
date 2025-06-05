@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import { MonumentProfile } from "../types/types";
 import { getMonumentMarkerImage, palette } from "../themes";
 import { DivIcon } from "leaflet";
+import Collapsible from "./Collapsible";
 
 export default function MonumentMarker({
   data,
@@ -64,6 +65,25 @@ export default function MonumentMarker({
         </div>
         {data.history && (
           <div style={{ textAlign: "center" }}>{data.history}</div>
+        )}
+        {data.oldNames && (
+          <Collapsible header="Давні назви">
+            <div
+              className="newline"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+              }}
+            >
+              {data.oldNames.map((name, index) => (
+                <div key={index} style={{ textAlign: "center" }}>
+                  {name}
+                </div>
+              ))}
+            </div>
+          </Collapsible>
         )}
       </Popup>
     </Marker>

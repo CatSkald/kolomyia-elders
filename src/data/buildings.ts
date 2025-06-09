@@ -4,7 +4,7 @@ export const buildings = [
     "Стара назва":
       "C. k. Gimnazyum I (1908); Ц. к. Гімназиа II (поч. XX ст.); Gimnazium Państwowe (1930); Państw. Gimn. im. Króla K. Jagiellończyka (1939); Państw. Gimnazjum m. ukr. (1939)",
     "Старі назви вулиці":
-      "Mickiewicza Adama (Königreich Galizien und Lodomerien, 1772-1918); Mickiewicza Adama (Rzeczpospolita Polska, 1919-1939)",
+      "Lelowa / Лельова (XVI ст. - кін. XIX ст.); Mickiewicza Adama / Міцкевича Адама (кін. XIX ст. - )",
     Дата: 1861,
     Опис: "",
     "Архітектурний стиль": "",
@@ -2295,7 +2295,7 @@ export const buildings = [
     Назва: "Вілла",
     "Стара назва": "",
     "Старі назви вулиці": "",
-    Дата: "кін. XIX - поч. XX ст.",
+    Дата: 1896,
     Опис: "Згідно Історико-архітектурного опорного плану, збудований як вілла",
     "Архітектурний стиль": "",
     Історія: "",

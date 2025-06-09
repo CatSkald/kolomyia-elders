@@ -77,8 +77,12 @@ export const mapBuildings = (
 
     return {
       name: b["Назва"],
-      oldNames: parseArray(b["Стара назва"], itemSeparator),
-      oldStreetNames: parseArray(b["Старі назви вулиці"], itemSeparator),
+      oldNames: parseArray(b["Стара назва"], itemSeparator)?.map((x) =>
+        x.replaceAll(" - ", " — ")
+      ),
+      oldStreetNames: parseArray(b["Старі назви вулиці"], itemSeparator)?.map(
+        (x) => x.replaceAll(" - ", " — ")
+      ),
       date: cleanDate(b["Дата"])!,
       description: b["Опис"],
       architecture: b["Архітектурний стиль"],

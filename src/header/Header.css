@@ -33,11 +33,13 @@
   margin-top: 0.25rem;
   margin-right: 0.25rem;
   align-items: center;
+  color: var(--color-accent2);
 }
 
 .legend div img {
   width: 24px;
   height: 24px;
+  padding-right: 0.25rem;
 }
 
 .preview:hover {

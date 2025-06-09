@@ -1,10 +1,21 @@
 import { periods } from "../data/periods";
-import { getMarkerImage, getMonumentMarkerImage, palette } from "../themes";
+import { Filters } from "../Filters";
+import {
+  getDeselectedImage,
+  getMarkerImage,
+  getMonumentMarkerImage,
+  palette,
+} from "../themes";
 
-const Legend = () => {
-  const imageWidth = 24;
-  const getImage = (text: string, image: string) => (
-    <div key={text}>
+const Legend = ({
+  filters,
+  setFilters,
+}: {
+  filters: Filters;
+  setFilters: (filters: Filters) => void;
+}) => {
+  const getImage = (text: string, image: string, onClick: () => void) => (
+    <div key={text} className="button" onClick={onClick}>
       <img
         src={`data:image/svg+xml;utf8,${encodeURIComponent(image)}`}
         alt={text}
@@ -12,22 +23,38 @@ const Legend = () => {
       {text}
     </div>
   );
-
+  const imageWidth = 24;
   return (
     <div className="legend">
-      {periods.map((p) =>
-        getImage(
-          `${p.startDate}—${p.endDate}`,
-          getMarkerImage(imageWidth, p.color)
-        )
-      )}
+      {periods.map((p) => {
+        const isSelected = filters.periods.find((x) => x.name === p.name);
+        return getImage(
+          p.name,
+          isSelected
+            ? getMarkerImage(imageWidth, p.color)
+            : getDeselectedImage(imageWidth, p.color),
+          () =>
+            setFilters({
+              ...filters,
+              periods: isSelected
+                ? filters.periods.filter((x) => x.name !== p.name)
+                : periods.concat([p]),
+            })
+        );
+      })}
       {getImage(
         "збудовані до 1944",
-        getMarkerImage(imageWidth, palette.unknown)
+        filters.unknown
+          ? getMarkerImage(imageWidth, palette.unknown)
+          : getDeselectedImage(imageWidth, palette.unknown),
+        () => setFilters({ ...filters, unknown: !filters.unknown })
       )}
       {getImage(
         "пам'ятники",
-        getMonumentMarkerImage(imageWidth, palette.unknown)
+        filters.monuments
+          ? getMonumentMarkerImage(imageWidth, palette.unknown)
+          : getDeselectedImage(imageWidth, palette.unknown),
+        () => setFilters({ ...filters, monuments: !filters.monuments })
       )}
     </div>
   );

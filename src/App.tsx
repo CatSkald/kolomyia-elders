@@ -4,9 +4,16 @@ import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import Map from "./map/Map";
 import { Theme } from "./themes";
+import { Filters } from "./Filters";
+import { periods } from "./data/periods";
 
 function App() {
   const [theme, setTheme] = useState(Theme.Dark);
+  const [filters, setFilters] = useState<Filters>({
+    periods: periods,
+    monuments: true,
+    unknown: true,
+  });
 
   const toggleTheme = (): void => {
     document.body.classList.toggle("dark-mode");
@@ -20,9 +27,11 @@ function App() {
           setTheme(theme);
           toggleTheme();
         }}
+        filters={filters}
+        setFilters={setFilters}
       />
       <section className="map-container">
-        <Map theme={theme} />
+        <Map theme={theme} filters={filters} />
       </section>
       <Footer />
     </div>

@@ -5,13 +5,18 @@ import { MoonStarsFill, SunFill } from "react-bootstrap-icons";
 import Legend from "./Legend";
 import InfoPopup from "../info/InfoPopup";
 import { buttonSize, Theme } from "../themes";
+import { Filters } from "../Filters";
 
 const Header = ({
   theme,
   setTheme,
+  filters,
+  setFilters,
 }: {
   theme: Theme;
   setTheme: (theme: Theme) => void;
+  filters: Filters;
+  setFilters: (filters: Filters) => void;
 }) => {
   const isDarkTheme = theme === "dark";
   const toggleTheme = () => setTheme(isDarkTheme ? Theme.Light : Theme.Dark);
@@ -60,7 +65,7 @@ const Header = ({
             marginRight: "0.3rem",
           }}
         />
-        <Legend />
+        <Legend filters={filters} setFilters={setFilters} />
       </div>
     </div>
   );

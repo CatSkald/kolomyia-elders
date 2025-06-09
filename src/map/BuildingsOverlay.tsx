@@ -7,8 +7,15 @@ import { LatLngExpression } from "leaflet";
 import BuildingMarker from "./BuildingMarker";
 import { monuments } from "../data/monuments";
 import MonumentMarker from "./MonumentMarker";
+import { Filters } from "../Filters";
 
-const BuildingsOverlay = ({ initialZoom }: { initialZoom: number }) => {
+const BuildingsOverlay = ({
+  initialZoom,
+  filters,
+}: {
+  initialZoom: number;
+  filters: Filters;
+}) => {
   const [markerSize, setMarkerSize] = useState(getMarkerSize(initialZoom));
 
   const map = useMapEvents({
@@ -25,7 +32,12 @@ const BuildingsOverlay = ({ initialZoom }: { initialZoom: number }) => {
   return (
     <>
       {mapBuildings(buildings)
-        .filter((b) => !!b.coordinates)
+        .filter(
+          (b) =>
+            !!b.coordinates &&
+            ((filters.unknown && !b.period) ||
+              filters.periods.find((p) => p.name === b.period?.name))
+        )
         .map((b) => (
           <FeatureGroup key={b.coordinates?.toString()}>
             <BuildingMarker
@@ -35,17 +47,18 @@ const BuildingsOverlay = ({ initialZoom }: { initialZoom: number }) => {
             />
           </FeatureGroup>
         ))}
-      {mapMonuments(monuments)
-        .filter((b) => !!b.coordinates)
-        .map((b) => (
-          <FeatureGroup key={b.coordinates?.toString()}>
-            <MonumentMarker
-              data={b}
-              markerSize={markerSize}
-              onClick={() => onMarkerClick(b.coordinates!)}
-            />
-          </FeatureGroup>
-        ))}
+      {filters.monuments &&
+        mapMonuments(monuments)
+          .filter((b) => !!b.coordinates)
+          .map((b) => (
+            <FeatureGroup key={b.coordinates?.toString()}>
+              <MonumentMarker
+                data={b}
+                markerSize={markerSize}
+                onClick={() => onMarkerClick(b.coordinates!)}
+              />
+            </FeatureGroup>
+          ))}
     </>
   );
 };

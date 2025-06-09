@@ -11,8 +11,9 @@ import {
 } from "@maptiler/leaflet-maptilersdk";
 import { Theme } from "../themes.ts";
 import { config } from "./MaptilerConfig.ts";
+import { Filters } from "../Filters.ts";
 
-const Map = ({ theme }: { theme: Theme }) => {
+const Map = ({ theme, filters }: { theme: Theme; filters: Filters }) => {
   const kolomyiaBounds = latLngBounds([48.6184, 24.9379], [48.4868, 25.1415]);
   const initialZoom = 16;
   const [map, setMap] = useState<L.Map | null>(null);
@@ -57,7 +58,7 @@ const Map = ({ theme }: { theme: Theme }) => {
       ref={setMap}
     >
       <ZoomControl position="topright" />
-      <BuildingsOverlay initialZoom={initialZoom} />
+      <BuildingsOverlay initialZoom={initialZoom} filters={filters} />
     </MapContainer>
   );
 };

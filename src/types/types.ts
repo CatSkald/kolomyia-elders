@@ -1,6 +1,7 @@
 import { LatLngExpression } from "leaflet";
 
 export type Period = {
+  name: string;
   startDate: number;
   endDate: number;
   color: string;

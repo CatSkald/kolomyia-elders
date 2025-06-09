@@ -38,7 +38,7 @@ const Legend = ({
               ...filters,
               periods: isSelected
                 ? filters.periods.filter((x) => x.name !== p.name)
-                : periods.concat([p]),
+                : filters.periods.concat([p]),
             })
         );
       })}

@@ -27,9 +27,9 @@ export const periods = [
     color: palette.iii,
   },
   {
-    name: "1914—1914",
+    name: "1914—1918",
     startDate: 1914,
-    endDate: 1914,
+    endDate: 1918,
     color: palette.ii,
   },
   {

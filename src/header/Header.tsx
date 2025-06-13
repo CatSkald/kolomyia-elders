@@ -55,16 +55,17 @@ const Header = ({
       </div>
       <hr />
       <div style={{ display: "flex", flexDirection: "row" }}>
-        <img
-          className="preview"
-          src={CoatOfArmsUrl}
-          alt="Герб міста Коломия"
-          style={{
-            maxWidth: "5vh",
-            padding: "0.1rem 0.2rem",
-            marginRight: "0.3rem",
-          }}
-        />
+        <div className="captioned">
+          <div>Герб міста Коломия</div>
+          <img
+            className="preview"
+            src={CoatOfArmsUrl}
+            alt="Герб міста Коломия"
+            style={{
+              maxWidth: "5vh",
+            }}
+          />
+        </div>
         <Legend filters={filters} setFilters={setFilters} />
       </div>
     </div>

@@ -50,7 +50,7 @@ img.preview:hover {
   transform-origin: left top;
   transform: scale(7, 7);
   padding: 0.2rem 0.1rem 0.1rem 0.1rem;
-  z-index: 999;
+  z-index: 1000;
 }
 .captioned > div {
   margin: 0.25rem 0.5rem;
@@ -60,7 +60,7 @@ img.preview:hover {
   position: absolute;
   transition: all 0.3s ease-out;
   transform-origin: left top;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .captioned:hover > div {

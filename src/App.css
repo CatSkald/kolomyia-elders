@@ -22,7 +22,8 @@
 /* https://github.com/maptiler/leaflet-maptilersdk/blob/3d7b122d8e6315d0fcc27a74dfdfe47fcd8848fe/src/leaflet-maptilersdk.ts#L324 */
 .app .map-container a:has(img[alt="MapTiler logo"]) {
   left: unset !important;
-  right: 0.4rem;
+  right: 0.3rem;
+  bottom: -6px !important;
 }
 
 /* Open popup below */

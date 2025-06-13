@@ -33,9 +33,6 @@ const Footer = () => {
           &copy; OpenStreetMap
         </a>
       </span>
-      <span>
-        Оновлено у <b>червні&nbsp;2025</b>
-      </span>
     </div>
   );
 };

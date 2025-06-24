@@ -1,6 +1,7 @@
 import { LatLngExpression } from "leaflet";
 import {
   BuildingProfile,
+  LostBuildingProfile,
   HistoryEntry,
   MonumentProfile,
   Period,
@@ -117,6 +118,40 @@ export const mapMonuments = (
       date: cleanDate(date)!,
       destroyed: cleanDate(m["Зруйновано"]),
       history: m["Історія"],
+      period: getPeriod(date),
+      coordinates: coordinates,
+    };
+  });
+
+export const mapLostBuildings = (
+  buildings: Array<{
+    Назва: string;
+    "Стара назва"?: string;
+    Збудовано: string | number;
+    Зруйновано?: string | number;
+    Опис?: string;
+    "Архітектурний стиль"?: string;
+    Історія?: string;
+    Довгота?: number | string;
+    Широта?: number | string;
+  }>
+): LostBuildingProfile[] =>
+  buildings.map((b) => {
+    const history = b["Історія"];
+    const date = b["Збудовано"];
+    const lat = b["Широта"] as number | undefined;
+    const lan = b["Довгота"] as number | undefined;
+    const coordinates: LatLngExpression | undefined =
+      lat && lan ? [lat, lan] : undefined;
+
+    return {
+      name: b["Назва"],
+      oldNames: parseArray(b["Стара назва"], itemSeparator),
+      date: cleanDate(date)!,
+      destroyed: cleanDate(b["Зруйновано"]),
+      description: b["Опис"],
+      architecture: b["Архітектурний стиль"],
+      history: history ? parseHistory(history) : undefined,
       period: getPeriod(date),
       coordinates: coordinates,
     };

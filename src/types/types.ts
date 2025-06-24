@@ -30,6 +30,18 @@ export type MonumentProfile = {
   period?: Period;
 };
 
+export type LostBuildingProfile = {
+  name: string;
+  oldNames?: string[];
+  date: number | string;
+  destroyed?: number | string;
+  architecture?: string;
+  description?: string;
+  history?: HistoryEntry[];
+  coordinates?: LatLngExpression;
+  period?: Period;
+};
+
 export type HistoryEntry = {
   date?: string;
   description: string;

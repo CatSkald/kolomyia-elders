@@ -2,6 +2,7 @@ import { periods } from "../data/periods";
 import { Filters } from "../Filters";
 import {
   getDeselectedImage,
+  getLostBuildingMarkerImage,
   getMarkerImage,
   getMonumentMarkerImage,
   palette,
@@ -48,6 +49,13 @@ const Legend = ({
           ? getMarkerImage(imageWidth, palette.unknown)
           : getDeselectedImage(imageWidth, palette.unknown),
         () => setFilters({ ...filters, unknown: !filters.unknown })
+      )}
+      {getImage(
+        "втрачені",
+        filters.lost
+          ? getLostBuildingMarkerImage(imageWidth, palette.unknown)
+          : getDeselectedImage(imageWidth, palette.unknown),
+        () => setFilters({ ...filters, lost: !filters.lost })
       )}
       {getImage(
         "пам'ятники",

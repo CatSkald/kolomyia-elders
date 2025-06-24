@@ -13,6 +13,7 @@ function App() {
     periods: periods,
     monuments: true,
     unknown: true,
+    lost: false,
   });
 
   const toggleTheme = (): void => {

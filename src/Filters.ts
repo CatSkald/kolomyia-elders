@@ -4,4 +4,5 @@ export type Filters = {
   periods: Period[];
   monuments: boolean;
   unknown: boolean;
+  lost: boolean;
 };

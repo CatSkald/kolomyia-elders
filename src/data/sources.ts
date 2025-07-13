@@ -156,4 +156,14 @@ export const sources = [
     Назва: "Андріїшин С., Вулиці старовинної Коломиї. Вік, 2017",
     ISBN: "966-550-064-3",
   },
+  {
+    "№": 30,
+    Назва: "Nowa GAZETA KOŁOMYJSKA. Rok II. Kołomyja, dnia 30 września 1922.",
+    ISBN: "",
+  },
+  {
+    "№": 31,
+    Назва: "Zbigniew Skotarczak., Moja Ulica. Wrocław, 1997",
+    ISBN: "",
+  },
 ];

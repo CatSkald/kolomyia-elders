@@ -286,4 +286,10 @@ export const sources = [
       "GŁOS POKUCIA. Organ Regionalny Pokucia i Huculszczyzny. Rok II. Kołomyja, niedziela, dnia 1. maja 1938. Nr. 16",
     ISBN: "",
   },
+  {
+    "№": 52,
+    Назва:
+      "Kuryer kołomyjski. Dwutygodnik polityczno - społeczno - ekonomiczny. Rok V. Kołomyja, niedziela dnia 24. marca 1889. Nr. 6",
+    ISBN: "",
+  },
 ];

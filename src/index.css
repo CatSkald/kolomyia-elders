@@ -61,3 +61,21 @@ h2 {
   font-size: 0.9rem;
   font-weight: bold;
 }
+
+@media (pointer: coarse), (hover: none) {
+  [title] {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+  }
+  [title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: 90%;
+    color: var(--color-background);
+    background-color: var(--color-foreground);
+    border: 1px solid;
+    width: fit-content;
+    padding: 3px;
+  }
+}

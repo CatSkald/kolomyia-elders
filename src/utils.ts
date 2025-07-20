@@ -34,8 +34,10 @@ export const getPeriod = (date: string | number): Period | undefined => {
 export const parseHistory = (history: string): HistoryEntry[] =>
   parseArray(history, itemSeparator)!.map((h) => {
     const noDateMarker = "? - ";
+    const sourceMarker = "[";
     let date = undefined;
     let description = h.replaceAll(" - ", " — ");
+    let sources = undefined;
     if (h.startsWith(noDateMarker)) {
       description = description.slice(noDateMarker.length).trim();
     } else {
@@ -48,9 +50,19 @@ export const parseHistory = (history: string): HistoryEntry[] =>
       }
     }
 
+    if (description.indexOf(sourceMarker) !== -1) {
+      const all = description.split("[");
+      description = all[0];
+      sources = all[1]
+        .slice(0, -1)
+        .split(",")
+        .map((x) => Number(x));
+    }
+
     return {
       date: date,
       description: description,
+      sources: sources,
     };
   });
 

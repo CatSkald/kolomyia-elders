@@ -13,7 +13,20 @@ const BuildingHistory = ({ data }: { data: HistoryEntry[] }) => {
               </span>
             )}
             {item.date && item.description && " — "}
-            <span>{item.description}</span>
+            <span>
+              {item.description}
+              {item.sources && (
+                <sup
+                  style={{
+                    fontStyle: "italic",
+                    textDecoration: "underline dotted",
+                  }}
+                  title="Використані джерела"
+                >
+                  {item.sources.join(",")}
+                </sup>
+              )}
+            </span>
           </li>
         ))}
       </ul>

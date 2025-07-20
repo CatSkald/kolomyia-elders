@@ -45,6 +45,7 @@ export type LostBuildingProfile = {
 export type HistoryEntry = {
   date?: string;
   description: string;
+  sources?: number[];
 };
 
 export type SourceProfile = {

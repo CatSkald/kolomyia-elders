@@ -72,9 +72,10 @@ h2 {
     content: attr(title);
     position: absolute;
     top: 90%;
-    color: var(--color-background);
-    background-color: var(--color-foreground);
-    border: 1px solid;
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-accent-background);
+    border-radius: 1px;
     width: fit-content;
     padding: 3px;
   }

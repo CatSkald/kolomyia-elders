@@ -21,9 +21,11 @@ const BuildingHistory = ({ data }: { data: HistoryEntry[] }) => {
                     fontStyle: "italic",
                     textDecoration: "underline dotted",
                   }}
-                  title="Використані джерела"
+                  title={`Джерел${
+                    item.sources.length === 1 ? "о" : "а"
+                  }: ${item.sources.map((s) => s.title).join("; ")}`}
                 >
-                  {item.sources.join(",")}
+                  {item.sources.map((s) => s.number).join(",")}
                 </sup>
               )}
             </span>

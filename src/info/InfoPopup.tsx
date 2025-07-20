@@ -2,8 +2,7 @@ import "./InfoPopup.css";
 
 import { InfoCircleFill, XCircleFill } from "react-bootstrap-icons";
 import Popup from "reactjs-popup";
-import { mapSources } from "../utils";
-import { sources } from "../data/sources";
+import { mappedSources } from "../utils";
 import { buttonSize } from "../themes";
 import { ReactNode, useState } from "react";
 
@@ -41,7 +40,7 @@ const InfoPopup = () => {
               <hr />
               <span style={{ fontWeight: "bold" }}>Використані джерела:</span>
               <ol style={{ marginTop: "0.5rem", paddingLeft: "1.5rem" }}>
-                {mapSources(sources).map((item, index) => (
+                {mappedSources.map((item, index) => (
                   <li key={index}>
                     <span>{item.title}</span>
                   </li>

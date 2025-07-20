@@ -8,9 +8,40 @@ import {
   SourceProfile,
 } from "./types/types";
 import { periods } from "./data/periods";
+import { buildings } from "./data/buildings";
+import { monuments } from "./data/monuments";
+import { lostBuildings } from "./data/lost-buildings";
+import { sources } from "./data/sources";
 
 const itemSeparator = ";";
 const dateSeparator = " - ";
+
+const cleanDate = (date?: string | number): string | number | undefined =>
+  typeof date === "number" ? date : date?.replaceAll(dateSeparator, "—");
+
+const parseArray = (
+  value: string | undefined,
+  delimiter: string
+): string[] | undefined => {
+  const result = value
+    ?.split(delimiter)
+    .map((s) => s.trim())
+    .filter((s) => !!s);
+  return result?.length ? result : undefined;
+};
+
+const getSources = (): SourceProfile[] =>
+  sources.map(
+    (s: { "№": number; Назва: string; ISBN: string; Посилання?: string }) => {
+      return {
+        number: Number(s["№"]),
+        title: s["Назва"],
+        isbn: s["ISBN"],
+        link: s["Посилання"],
+      };
+    }
+  );
+export const mappedSources = getSources();
 
 export const getPeriod = (date: string | number): Period | undefined => {
   let year = undefined;
@@ -31,7 +62,7 @@ export const getPeriod = (date: string | number): Period | undefined => {
   return periods.find((p) => p.startDate <= year && p.endDate >= year);
 };
 
-export const parseHistory = (history: string): HistoryEntry[] =>
+const parseHistory = (history: string): HistoryEntry[] =>
   parseArray(history, itemSeparator)!.map((h) => {
     const noDateMarker = "? - ";
     const sourceMarker = "[";
@@ -56,7 +87,16 @@ export const parseHistory = (history: string): HistoryEntry[] =>
       sources = all[1]
         .slice(0, -1)
         .split(",")
-        .map((x) => Number(x));
+        .map((x) => {
+          const number = Number(x);
+          return (
+            mappedSources.find((s) => s.number === number) ??
+            ({
+              number: number,
+              title: "Unknown",
+            } as SourceProfile)
+          );
+        });
     }
 
     return {
@@ -66,134 +106,108 @@ export const parseHistory = (history: string): HistoryEntry[] =>
     };
   });
 
-export const mapBuildings = (
-  buildings: Array<{
-    Назва: string;
-    "Стара назва"?: string;
-    "Старі назви вулиці"?: string;
-    Дата: string | number;
-    Опис?: string;
-    "Архітектурний стиль"?: string;
-    Історія?: string;
-    Адреса: string;
-    Довгота?: number | string;
-    Широта?: number | string;
-  }>
-): BuildingProfile[] =>
-  buildings.map((b) => {
-    const date = b["Дата"];
-    const history = b["Історія"];
-    const lat = b["Широта"] as number | undefined;
-    const lan = b["Довгота"] as number | undefined;
-    const coordinates: LatLngExpression | undefined =
-      lat && lan ? [lat, lan] : undefined;
+const getBuildings = (): BuildingProfile[] =>
+  buildings.map(
+    (b: {
+      Назва: string;
+      "Стара назва"?: string;
+      "Старі назви вулиці"?: string;
+      Дата: string | number;
+      Опис?: string;
+      "Архітектурний стиль"?: string;
+      Історія?: string;
+      Адреса: string;
+      Довгота?: number | string;
+      Широта?: number | string;
+    }) => {
+      const date = b["Дата"];
+      const history = b["Історія"];
+      const lat = b["Широта"] as number | undefined;
+      const lan = b["Довгота"] as number | undefined;
+      const coordinates: LatLngExpression | undefined =
+        lat && lan ? [lat, lan] : undefined;
 
-    return {
-      name: b["Назва"],
-      oldNames: parseArray(b["Стара назва"], itemSeparator)?.map((x) =>
-        x.replaceAll(" - ", " — ")
-      ),
-      oldStreetNames: parseArray(b["Старі назви вулиці"], itemSeparator)?.map(
-        (x) => x.replaceAll(" - ", " — ")
-      ),
-      date: cleanDate(b["Дата"])!,
-      description: b["Опис"],
-      architecture: b["Архітектурний стиль"],
-      history: history ? parseHistory(history) : undefined,
-      period: getPeriod(date),
-      address: b["Адреса"],
-      coordinates: coordinates,
-    };
-  });
+      return {
+        name: b["Назва"],
+        oldNames: parseArray(b["Стара назва"], itemSeparator)?.map((x) =>
+          x.replaceAll(" - ", " — ")
+        ),
+        oldStreetNames: parseArray(b["Старі назви вулиці"], itemSeparator)?.map(
+          (x) => x.replaceAll(" - ", " — ")
+        ),
+        date: cleanDate(b["Дата"])!,
+        description: b["Опис"],
+        architecture: b["Архітектурний стиль"],
+        history: history ? parseHistory(history) : undefined,
+        period: getPeriod(date),
+        address: b["Адреса"],
+        coordinates: coordinates,
+      };
+    }
+  );
+export const mappedBuildings = getBuildings();
 
-export const mapMonuments = (
-  monuments: Array<{
-    Назва: string;
-    "Стара назва"?: string;
-    Збудовано: string | number;
-    Зруйновано?: string | number;
-    Історія?: string;
-    Довгота?: number | string;
-    Широта?: number | string;
-  }>
-): MonumentProfile[] =>
-  monuments.map((m) => {
-    const date = m["Збудовано"];
-    const lat = m["Широта"] as number | undefined;
-    const lan = m["Довгота"] as number | undefined;
-    const coordinates: LatLngExpression | undefined =
-      lat && lan ? [lat, lan] : undefined;
+const getMonuments = (): MonumentProfile[] =>
+  monuments.map(
+    (m: {
+      Назва: string;
+      "Стара назва"?: string;
+      Збудовано: string | number;
+      Зруйновано?: string | number;
+      Історія?: string;
+      Довгота?: number | string;
+      Широта?: number | string;
+    }) => {
+      const date = m["Збудовано"];
+      const lat = m["Широта"] as number | undefined;
+      const lan = m["Довгота"] as number | undefined;
+      const coordinates: LatLngExpression | undefined =
+        lat && lan ? [lat, lan] : undefined;
 
-    return {
-      name: m["Назва"],
-      oldNames: parseArray(m["Стара назва"], itemSeparator),
-      date: cleanDate(date)!,
-      destroyed: cleanDate(m["Зруйновано"]),
-      history: m["Історія"],
-      period: getPeriod(date),
-      coordinates: coordinates,
-    };
-  });
+      return {
+        name: m["Назва"],
+        oldNames: parseArray(m["Стара назва"], itemSeparator),
+        date: cleanDate(date)!,
+        destroyed: cleanDate(m["Зруйновано"]),
+        history: m["Історія"],
+        period: getPeriod(date),
+        coordinates: coordinates,
+      };
+    }
+  );
+export const mappedMonuments = getMonuments();
 
-export const mapLostBuildings = (
-  buildings: Array<{
-    Назва: string;
-    "Стара назва"?: string;
-    Збудовано: string | number;
-    Зруйновано?: string | number;
-    Опис?: string;
-    "Архітектурний стиль"?: string;
-    Історія?: string;
-    Довгота?: number | string;
-    Широта?: number | string;
-  }>
-): LostBuildingProfile[] =>
-  buildings.map((b) => {
-    const history = b["Історія"];
-    const date = b["Збудовано"];
-    const lat = b["Широта"] as number | undefined;
-    const lan = b["Довгота"] as number | undefined;
-    const coordinates: LatLngExpression | undefined =
-      lat && lan ? [lat, lan] : undefined;
+const getLostBuildings = (): LostBuildingProfile[] =>
+  lostBuildings.map(
+    (b: {
+      Назва: string;
+      "Стара назва"?: string;
+      Збудовано: string | number;
+      Зруйновано?: string | number;
+      Опис?: string;
+      "Архітектурний стиль"?: string;
+      Історія?: string;
+      Довгота?: number | string;
+      Широта?: number | string;
+    }) => {
+      const history = b["Історія"];
+      const date = b["Збудовано"];
+      const lat = b["Широта"] as number | undefined;
+      const lan = b["Довгота"] as number | undefined;
+      const coordinates: LatLngExpression | undefined =
+        lat && lan ? [lat, lan] : undefined;
 
-    return {
-      name: b["Назва"],
-      oldNames: parseArray(b["Стара назва"], itemSeparator),
-      date: cleanDate(date)!,
-      destroyed: cleanDate(b["Зруйновано"]),
-      description: b["Опис"],
-      architecture: b["Архітектурний стиль"],
-      history: history ? parseHistory(history) : undefined,
-      period: getPeriod(date),
-      coordinates: coordinates,
-    };
-  });
-
-export const mapSources = (
-  sources: Array<{
-    Назва: string;
-    ISBN: string;
-    Посилання?: string;
-  }>
-): SourceProfile[] =>
-  sources.map((s) => {
-    return {
-      title: s["Назва"],
-      isbn: s["ISBN"],
-      link: s["Посилання"],
-    };
-  });
-
-const cleanDate = (date?: string | number): string | number | undefined =>
-  typeof date === "number" ? date : date?.replaceAll(dateSeparator, "—");
-
-const parseArray = (
-  value: string | undefined,
-  delimiter: string
-): string[] | undefined => {
-  const result = value
-    ?.split(delimiter)
-    .map((s) => s.trim())
-    .filter((s) => !!s);
-  return result?.length ? result : undefined;
-};
+      return {
+        name: b["Назва"],
+        oldNames: parseArray(b["Стара назва"], itemSeparator),
+        date: cleanDate(date)!,
+        destroyed: cleanDate(b["Зруйновано"]),
+        description: b["Опис"],
+        architecture: b["Архітектурний стиль"],
+        history: history ? parseHistory(history) : undefined,
+        period: getPeriod(date),
+        coordinates: coordinates,
+      };
+    }
+  );
+export const mappedLostBuildings = getLostBuildings();

@@ -1,19 +1,16 @@
 import { useState } from "react";
 import { FeatureGroup, useMapEvents } from "react-leaflet";
 import {
-  mapBuildings,
-  mapLostBuildings as mapLostBuildings,
-  mapMonuments,
+  mappedBuildings,
+  mappedLostBuildings,
+  mappedMonuments,
 } from "../utils";
-import { buildings } from "../data/buildings";
 import { getMarkerSize } from "../themes";
 import { LatLngExpression } from "leaflet";
 import BuildingMarker from "./BuildingMarker";
-import { monuments } from "../data/monuments";
 import MonumentMarker from "./MonumentMarker";
 import { Filters } from "../Filters";
 import LostBuildingMarker from "./LostBuildingMarker";
-import { lostBuildings } from "../data/lost-buildings";
 
 const BuildingsOverlay = ({
   initialZoom,
@@ -39,7 +36,7 @@ const BuildingsOverlay = ({
     <>
       {false && //TODO
         filters.lost &&
-        mapLostBuildings(lostBuildings)
+        mappedLostBuildings
           .filter((b) => !!b.coordinates)
           .map((b) => (
             <FeatureGroup key={b.coordinates?.toString()}>
@@ -50,7 +47,7 @@ const BuildingsOverlay = ({
               />
             </FeatureGroup>
           ))}
-      {mapBuildings(buildings)
+      {mappedBuildings
         .filter(
           (b) =>
             !!b.coordinates &&
@@ -67,7 +64,7 @@ const BuildingsOverlay = ({
           </FeatureGroup>
         ))}
       {filters.monuments &&
-        mapMonuments(monuments)
+        mappedMonuments
           .filter((b) => !!b.coordinates)
           .map((b) => (
             <FeatureGroup key={b.coordinates?.toString()}>

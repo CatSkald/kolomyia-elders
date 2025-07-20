@@ -1,16 +1,17 @@
 .footer {
+  width: 100%;
   position: absolute;
   z-index: 500;
   background-color: var(--color-background);
   color: var(--color-foreground);
+  opacity: 0.8;
   box-sizing: border-box;
   bottom: 0;
   right: 0;
-  padding: 0.4rem;
-  font-size: smaller;
+  padding: 0.1rem;
+  font-size: x-small;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
 }
 
 .footer .logo {

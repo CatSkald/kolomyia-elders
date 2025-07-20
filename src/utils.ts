@@ -36,7 +36,7 @@ export const parseHistory = (history: string): HistoryEntry[] =>
     const noDateMarker = "? - ";
     const sourceMarker = "[";
     let date = undefined;
-    let description = h.replaceAll(" - ", " — ");
+    let description = h.replaceAll(" - ", " — ").replaceAll("\\", "\n");
     let sources = undefined;
     if (h.startsWith(noDateMarker)) {
       description = description.slice(noDateMarker.length).trim();

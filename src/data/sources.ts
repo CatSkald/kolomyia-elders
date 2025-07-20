@@ -158,12 +158,132 @@ export const sources = [
   },
   {
     "№": 30,
-    Назва: "Nowa GAZETA KOŁOMYJSKA. Rok II. Kołomyja, dnia 30 września 1922.",
+    Назва:
+      "Nowa GAZETA KOŁOMYJSKA. Rok II. Kołomyja, dnia 30. września 1922. Nr. 40",
     ISBN: "",
   },
   {
     "№": 31,
-    Назва: "Zbigniew Skotarczak., Moja Ulica. Wrocław, 1997",
+    Назва: "Zbigniew Skotarczak, Moja Ulica. Wrocław, 1997",
+    ISBN: "",
+  },
+  {
+    "№": 32,
+    Назва:
+      "Nowa GAZETA KOŁOMYJSKA. Rok II. Kołomyja, dnia 13. maja 1922. Nr. 20",
+    ISBN: "",
+  },
+  {
+    "№": 33,
+    Назва:
+      "Nowa GAZETA KOŁOMYJSKA. Rok II. Kołomyja, dnia 27. maja 1922. Nr. 22",
+    ISBN: "",
+  },
+  {
+    "№": 34,
+    Назва:
+      "Nowa GAZETA KOŁOMYJSKA. Rok II. Kołomyja, dnia 16. września 1922. Nr. 38",
+    ISBN: "",
+  },
+  {
+    "№": 35,
+    Назва:
+      "Nowa GAZETA KOŁOMYJSKA. Rok II. Kołomyja, dnia 8. lipca 1922. Nr. 28",
+    ISBN: "",
+  },
+  {
+    "№": 36,
+    Назва:
+      "Nowa GAZETA KOŁOMYJSKA. Rok II. Kołomyja, dnia 15. lipca 1922. Nr. 29",
+    ISBN: "",
+  },
+  {
+    "№": 37,
+    Назва:
+      "Nowa GAZETA KOŁOMYJSKA. Rok II. Kołomyja, dnia 18. listopada 1922. Nr. 47",
+    ISBN: "",
+  },
+  {
+    "№": 38,
+    Назва:
+      "Nowa GAZETA KOŁOMYJSKA. Rok II. Kołomyja, dnia 25. listopada 1922. Nr. 48",
+    ISBN: "",
+  },
+  {
+    "№": 39,
+    Назва:
+      "GŁOS POKUCKI. Tygodnik Społeczno - Ekonomiczny. Rok I. Kołomyja 7. września 1899. Nr. 23",
+    ISBN: "",
+  },
+  {
+    "№": 40,
+    Назва:
+      "GONIEC POKUCKI. Czasopismo poświęcone polityce i sprawom społecznym Pokucia i okolicy. Rok I. Kołomyja, Czwartek dnia 28. marca 1907. Nr. 13",
+    ISBN: "",
+  },
+  {
+    "№": 41,
+    Назва:
+      "STANISŁAWOWSKI DZIENNIK WOJEWÓDZKI. Stanisławów, dnia 5 lutego 1931 r. Nr. 2",
+    ISBN: "",
+  },
+  {
+    "№": 42,
+    Назва:
+      "GŁOS POKUCIA. Organ Regionalny Pokucia i Huculszczyzny. Rok II. Kołomyja, niedziela, dnia 15. maja 1938. Nr. 17",
+    ISBN: "",
+  },
+  {
+    "№": 43,
+    Назва:
+      "GŁOS POKUCIA. Organ Regionalny Pokucia i Huculszczyzny. Rok III. Kołomyja, niedziela, dnia 23. kwietnia 1939. Nr. 14",
+    ISBN: "",
+  },
+  {
+    "№": 44,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 17 maja 1935. Nr. 21",
+    ISBN: "",
+  },
+  {
+    "№": 45,
+    Назва:
+      "TYGODNIK POKUCKI ZJEDNOCZENIE. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 25 marca 1934. Nr. 13",
+    ISBN: "",
+  },
+  {
+    "№": 46,
+    Назва: "Jednodniówka. Kołomyja, dnia 1. stycznia 1927. Nr. 2",
+    ISBN: "",
+  },
+  {
+    "№": 47,
+    Назва:
+      "GŁOS POKUCIA. Organ Regionalny Pokucia i Huculszczyzny. Rok III. Kołomyja, niedziela, dnia 9. lipca 1939. Nr. 28",
+    ISBN: "",
+  },
+  {
+    "№": 48,
+    Назва:
+      "Nowa GAZETA KOŁOMYJSKA. Rok II. Kołomyja, dnia 23. grudnia 1922. Nr. 52",
+    ISBN: "",
+  },
+  {
+    "№": 49,
+    Назва:
+      "Nowa GAZETA KOŁOMYJSKA. Rok II. Kołomyja, dnia 7. października 1922. Nr. 41",
+    ISBN: "",
+  },
+  {
+    "№": 50,
+    Назва:
+      "GŁOS POKUCIA. Organ Regionalny Pokucia i Huculszczyzny. Rok II. Kołomyja, niedziela, dnia 10. kwietnia 1938. Nr. 14",
+    ISBN: "",
+  },
+  {
+    "№": 51,
+    Назва:
+      "GŁOS POKUCIA. Organ Regionalny Pokucia i Huculszczyzny. Rok II. Kołomyja, niedziela, dnia 1. maja 1938. Nr. 16",
     ISBN: "",
   },
 ];

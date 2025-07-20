@@ -21,9 +21,7 @@ const BuildingHistory = ({ data }: { data: HistoryEntry[] }) => {
                     fontStyle: "italic",
                     textDecoration: "underline dotted",
                   }}
-                  title={`Джерел${
-                    item.sources.length === 1 ? "о" : "а"
-                  }: ${item.sources.map((s) => s.title).join("; ")}`}
+                  title={item.sources.map((s) => s.title).join("; ")}
                 >
                   {item.sources.map((s) => s.number).join(",")}
                 </sup>

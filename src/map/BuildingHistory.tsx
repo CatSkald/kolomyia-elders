@@ -13,7 +13,7 @@ const BuildingHistory = ({ data }: { data: HistoryEntry[] }) => {
               </span>
             )}
             {item.date && item.description && " — "}
-            <span>
+            <span style={{ whiteSpace: "pre-wrap" }}>
               {item.description}
               {item.sources && (
                 <sup

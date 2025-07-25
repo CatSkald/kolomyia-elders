@@ -7,14 +7,7 @@ const Footer = () => {
     <div className="footer">
       <span>
         Детектив-архіваріус: <b>Hans</b>
-        {separator}Розробник-відьмар:{" "}
-        <a
-          href="https://github.com/CatSkald"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          CatSkald
-        </a>
+        {separator}Розробник-відьмар: <b>CatSkald</b>
       </span>
       <span>
         <a

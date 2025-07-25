@@ -292,4 +292,280 @@ export const sources = [
       "Kuryer kołomyjski. Dwutygodnik polityczno - społeczno - ekonomiczny. Rok V. Kołomyja, niedziela dnia 24. marca 1889. Nr. 6",
     ISBN: "",
   },
+  {
+    "№": 53,
+    Назва:
+      "Kuryer kołomyjski. Dwutygodnik polityczno - społeczno - ekonomiczny. Rok V. Kołomyja, środa dnia 8. maja 1889. Nr. 9",
+    ISBN: "",
+  },
+  {
+    "№": 54,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom Pokucia i Huculszczyzny. Rok IX. Kołomyja, dnia 27. października 1935. Nr. 42",
+    ISBN: "",
+  },
+  {
+    "№": 55,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom Pokucia i Huculszczyzny. Rok IX. Kołomyja, dnia 3. listopada 1935. Nr. 43",
+    ISBN: "",
+  },
+  {
+    "№": 56,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom Pokucia i Huculszczyzny. Rok IX. Kołomyja, dnia 10. listopada 1935. Nr. 44",
+    ISBN: "",
+  },
+  {
+    "№": 57,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom Pokucia i Huculszczyzny. Rok IX. Kołomyja, dnia 24. listopada 1935. Nr. 45",
+    ISBN: "",
+  },
+  {
+    "№": 58,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom Pokucia i Huculszczyzny. Rok IX. Kołomyja, dnia 1. grudnia 1935. Nr. 46",
+    ISBN: "",
+  },
+  {
+    "№": 59,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom Pokucia i Huculszczyzny. Rok IX. Kołomyja, dnia 8. grudnia 1935. Nr. 47",
+    ISBN: "",
+  },
+  {
+    "№": 60,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom Pokucia i Huculszczyzny. Rok IX. Kołomyja, dnia 15. grudnia 1935. Nr. 48",
+    ISBN: "",
+  },
+  {
+    "№": 61,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom Pokucia i Huculszczyzny. Rok IX. Kołomyja, dnia 25. grudnia 1935. Nr. 49",
+    ISBN: "",
+  },
+  {
+    "№": 62,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 29 czerwca 1935. Nr. 27",
+    ISBN: "",
+  },
+  {
+    "№": 63,
+    Назва:
+      "TYGODNIK POKUCKI ZJEDNOCZENIE. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 7 lipca 1935. Nr. 28",
+    ISBN: "",
+  },
+  {
+    "№": 64,
+    Назва:
+      "TYGODNIK POKUCKI ZJEDNOCZENIE. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 14 lipca 1935. Nr. 29",
+    ISBN: "",
+  },
+  {
+    "№": 65,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 28 lipca 1935. Nr. 30",
+    ISBN: "",
+  },
+  {
+    "№": 66,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 4 sierpnia 1935. Nr. 31",
+    ISBN: "",
+  },
+  {
+    "№": 67,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 11 sierpnia 1935. Nr. 32",
+    ISBN: "",
+  },
+  {
+    "№": 68,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 18 sierpnia 1935. Nr. 33",
+    ISBN: "",
+  },
+  {
+    "№": 69,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 25 sierpnia 1935. Nr. 34",
+    ISBN: "",
+  },
+  {
+    "№": 70,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 1 września 1935. Nr. 35",
+    ISBN: "",
+  },
+  {
+    "№": 71,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 8 września 1935. Nr. 36",
+    ISBN: "",
+  },
+  {
+    "№": 72,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 15 września 1935. Nr. 37",
+    ISBN: "",
+  },
+  {
+    "№": 73,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 29 września 1935. Nr. 38",
+    ISBN: "",
+  },
+  {
+    "№": 74,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 6 października 1935. Nr. 39",
+    ISBN: "",
+  },
+  {
+    "№": 75,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 13 października 1935. Nr. 40",
+    ISBN: "",
+  },
+  {
+    "№": 76,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom Pokucia i Huculszczyzny. Rok IX. Kołomyja, dnia 20. października 1935. Nr. 41",
+    ISBN: "",
+  },
+  {
+    "№": 77,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 24 marca 1935. Nr. 13",
+    ISBN: "",
+  },
+  {
+    "№": 78,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 30 marca 1935. Nr. 14",
+    ISBN: "",
+  },
+  {
+    "№": 79,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 7 kwietnia 1935. Nr. 15",
+    ISBN: "",
+  },
+  {
+    "№": 80,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 14 kwietnia 1935. Nr. 16",
+    ISBN: "",
+  },
+  {
+    "№": 81,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 21 kwietnia 1935. Nr. 17",
+    ISBN: "",
+  },
+  {
+    "№": 82,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 28 kwietnia 1935. Nr. 18",
+    ISBN: "",
+  },
+  {
+    "№": 83,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 3 maja 1935. Nr. 19",
+    ISBN: "",
+  },
+  {
+    "№": 84,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 10 maja 1935. Nr. 20",
+    ISBN: "",
+  },
+  {
+    "№": 85,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 2. czerwca 1935. Nr. 23",
+    ISBN: "",
+  },
+  {
+    "№": 86,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 26 maja 1935. Nr. 24",
+    ISBN: "",
+  },
+  {
+    "№": 87,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 16 czerwca 1935. Nr. 25",
+    ISBN: "",
+  },
+  {
+    "№": 88,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 23 czerwca 1935. Nr. 26",
+    ISBN: "",
+  },
+  {
+    "№": 89,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 20 stycznia 1935. Nr. 4",
+    ISBN: "",
+  },
+  {
+    "№": 90,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 27 stycznia 1935. Nr. 5",
+    ISBN: "",
+  },
+  {
+    "№": 91,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 3 lutego 1935. Nr. 6",
+    ISBN: "",
+  },
+  {
+    "№": 92,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 10 lutego 1935. Nr. 7",
+    ISBN: "",
+  },
+  {
+    "№": 93,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 17 lutego 1935. Nr. 8",
+    ISBN: "",
+  },
+  {
+    "№": 94,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 3 marca 1935. Nr. 10",
+    ISBN: "",
+  },
+  {
+    "№": 95,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 10 marca 1935. Nr. 11",
+    ISBN: "",
+  },
+  {
+    "№": 96,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok IX. Kołomyja, dnia 17 marca 1935. Nr. 12",
+    ISBN: "",
+  },
+  {
+    "№": 97,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 22 kwietnia 1934. Nr. 17",
+    ISBN: "",
+  },
+  {
+    "№": 98,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 29 kwietnia 1934. Nr. 18",
+    ISBN: "",
+  },
 ];

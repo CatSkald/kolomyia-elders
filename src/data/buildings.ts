@@ -1409,7 +1409,7 @@ export const buildings = [
     Опис: "",
     "Архітектурний стиль": "",
     Історія:
-      '1931 р. - нічний клуб "Оаза" (відкритий з ініціативи власника цукерні Майєра) [19]',
+      '1931 р. - нічний клуб "Оаза" (відкритий з ініціативи власника цукерні Майєра) [19]; 1930-ті рр. - Uwaga! Wszyscy wiedzą, że najlepsze cukiernicze wyroby dostać można w " CUKIERNI WŁOSKIEJ". Godziennie świeże pączki i ciastka w 30 gatunkach! Niskie ceny! Świąteczne zamówienia przyjmuje się po cenach zniżonych! Cukiernia Włoska M. PISTYNERA / "Цукерня Волоська" М. Пістинера [59]',
     Адреса: "бульвар Лесі Українки, 3",
     Широта: 48.52989,
     Довгота: 25.04133,
@@ -1628,7 +1628,8 @@ export const buildings = [
     Дата: "кін. XIX ст.",
     Опис: "",
     "Архітектурний стиль": "",
-    Історія: "",
+    Історія:
+      "1930-ті рр. - KSIĘGARNIA POPULARNA posiada na składzie najnowsze książki we wszystkich językach. Warunki abonentu bardzo dogodne. Wielki wybór książek dla dzieci i młodzieży na podarunki za bezcen. Uwaga! Dla urzędników państwowych specjalne ulgi abonamentowe, w naszej wypożyczalni. / Книгарня Популярна [61]",
     Адреса: "В'ячеслава Чорновола, 13",
     Широта: 48.52724,
     Довгота: 25.0391,
@@ -1656,7 +1657,7 @@ export const buildings = [
     Опис: "Збережені старі вхідні дерев'яні двері",
     "Архітектурний стиль": "",
     Історія:
-      '1920-ті - 1930-ті рр. - Pierwszorzędna restauracja Jana Berga / готель і ресторація Яна Берґа (Obiady, kolacje, pokój do śniadań, kawa, herbata. Piwo okocimskie marcowe i diatkowieckie.) [35]; 1936 р. - фризієр (перукарня) Теофіля Галецького; 1930-ті рр. - Restaurację "GASTRONOMIA" Jakuba Kauka / ресторація "ГАСТРОНОМІЯ" Якуба Каука [43]',
+      '1920-ті - 1930-ті рр. - Pierwszorzędna restauracja Jana Berga / готель і ресторація Яна Берґа (Obiady, kolacje, pokój do śniadań, kawa, herbata. Piwo okocimskie marcowe i diatkowieckie.) [35]; 1930-ті рр. - Ważne dla Pań. W pierwszorzędnym salonie fryzjersk. dla Pań PARYŻANKA wykonuje się trwałą ondulację na pierwszorzędnych aparatach najnowszemi płynami co daje włosom piękny połysk, puszystość i szerokie fale. Pół roczna gwarancja. / жіночий салон "Парижанка" [60]; 1936 р. - фризієр (перукарня) Теофіля Галецького; 1930-ті рр. - Restaurację "GASTRONOMIA" Jakuba Kauka / ресторація "ГАСТРОНОМІЯ" Якуба Каука [43]',
     Адреса: "В'ячеслава Чорновола, 19",
     Широта: 48.52745,
     Довгота: 25.03938,
@@ -1684,7 +1685,7 @@ export const buildings = [
     Опис: "",
     "Архітектурний стиль": "",
     Історія:
-      '1922 р. - Bank Towarowy S. A. w Warszawie. Expozytura w Kołomyi. Kantor Wymiany kupuje waluty zagraniczne i sprzedaje przekazy na Wiedeń, Berlin, Gdańsk, Prage, Budapeszt, Czerniowce i t. p. po kursie dziennym / Банк Варшавський, кантор (обмін валют) - купує валюти заграничні і здійснює перекази на Відень, Берлін, Ґданьск, Прагу, Будапешт, Чернівці і т. д. по сьогоднішньому курсу [35]; 1920-ті - 1930-ті рр. - каварня "Рояль" [2]; 1930-ті рр. - аптека К. Вітославського "Під опікою"; 1930-ті рр. - CUKIERNIA JÓZEFA FEDUSIEWICZA poleca na święta Babki od 2 zł., Mazurki od 3 zł., Makowniki od 2 zł., Kruche placki od 3 zł., Serniki od 2 zł., Torty od 3 zł., Zawijańce z makiem lub serem od 2 zł., Zawijańce z masą orzechową od 3 zł. i t. d. Wszystkie wyroby tylko na desertowym maśle i pierwszej jakości surowcach / Цукерня Юзефа Федусєвича [50]; 1930-ті рр. - Ważne Dla Pań! Zawiadamia sie, że w Zakładzie Fryzjerskim "ANTONI" pracuje wraz z p. "Andzią" znana fryzjerka "Zosia" była pracownica firmy Gregorowicz, jak też długoletnia współpracownica znanych lwowskich firm Pitołaja, Prevendara i Maksa. / Заклад Фризієрський (перукарня) "Antoni" [44]; 1930-ті рр. - Przybory fotograficzne poleca M. Seńkowski / фотоґрафічні прилади М. Сеньковського [50]; 1930-ті рр. - dlaczego Fenomen?.. Bo jest wysokowartościową superheterodyną dostępną w cenie, zużywa tylko 25 watów prądu. Radio TELEFUNKEN. Harmonia tonów - symbol jakości. Odbiór i zalety demonstruje: firma M. SEŃKOWSKI / радіо Telefunken репрезентує фірма М. Сеньковського [50]; 1930-ті рр. - REWELACYJNE KIESZONKOWE APARATY FOTOGRAFICZNE na format 25x25 mm 6 zł. 50 gr., na format 4x4 cm. 24 zł., oraz aparaty do powiększeń 35 zł. poleca M. SEŃKOWSKI / Кишенькові фотоапарати рекомендує М. Сеньковський [51]; 1931 р. - гуртовня Державної монополії оптової торгівлі алкоголем; 1933 р. - редакція газети "Echo Pokucia"; 1935 р. - лікарський кабінет Нітана Крумгольца; 1936 р. - офіс Бровара Королівського (знаходився в с. Королівка); 1939 р. - редакція газети "Głos Pokucia" [2]',
+      '1922 р. - Bank Towarowy S. A. w Warszawie. Expozytura w Kołomyi. Kantor Wymiany kupuje waluty zagraniczne i sprzedaje przekazy na Wiedeń, Berlin, Gdańsk, Prage, Budapeszt, Czerniowce i t. p. po kursie dziennym / Банк Варшавський, кантор (обмін валют) - купує валюти заграничні і здійснює перекази на Відень, Берлін, Ґданьск, Прагу, Будапешт, Чернівці і т. д. по сьогоднішньому курсу [35]; 1920-ті - 1930-ті рр. - каварня "Рояль" [2]; 1930-ті рр. - аптека К. Вітославського "Під опікою"; 1930-ті рр. - CUKIERNIA JÓZEFA FEDUSIEWICZA poleca na święta Babki od 2 zł., Mazurki od 3 zł., Makowniki od 2 zł., Kruche placki od 3 zł., Serniki od 2 zł., Torty od 3 zł., Zawijańce z makiem lub serem od 2 zł., Zawijańce z masą orzechową od 3 zł. i t. d. Wszystkie wyroby tylko na desertowym maśle i pierwszej jakości surowcach / Цукерня Юзефа Федусєвича [50]; 1930-ті рр. - Ważne Dla Pań! Zawiadamia sie, że w Zakładzie Fryzjerskim "ANTONI" pracuje wraz z p. "Andzią" znana fryzjerka "Zosia" była pracownica firmy Gregorowicz, jak też długoletnia współpracownica znanych lwowskich firm Pitołaja, Prevendara i Maksa. / Заклад Фризієрський (перукарня) "Antoni" [44]; 1930-ті рр. - "3 ASY" Radjowe Olympic-2-Z (PZT), Ambasador (Telefunken), Philíps (44A). Tylko do nabycia we firmie: Radjo M. Seńkowski [59]; 1930-ті рр. - Przybory fotograficzne poleca M. Seńkowski / фотоґрафічні прилади М. Сеньковського [50]; 1930-ті рр. - dlaczego Fenomen?.. Bo jest wysokowartościową superheterodyną dostępną w cenie, zużywa tylko 25 watów prądu. Radio TELEFUNKEN. Harmonia tonów - symbol jakości. Odbiór i zalety demonstruje: firma M. SEŃKOWSKI / радіо Telefunken репрезентує фірма М. Сеньковського [50]; 1930-ті рр. - REWELACYJNE KIESZONKOWE APARATY FOTOGRAFICZNE na format 25x25 mm 6 zł. 50 gr., na format 4x4 cm. 24 zł., oraz aparaty do powiększeń 35 zł. poleca M. SEŃKOWSKI / Кишенькові фотоапарати рекомендує М. Сеньковський [51]; 1931 р. - гуртовня Державної монополії оптової торгівлі алкоголем; 1933 р. - редакція газети "Echo Pokucia"; 1935 р. - LEKARZ Dr. N. KRUMHOLZ powrócił i ordynuje jak przedtem / кабінет д-ра Н. Крумгольца [71]; 1936 р. - офіс Бровара Королівського (знаходився в с. Королівка); 1939 р. - редакція газети "Głos Pokucia" [2]',
     Адреса: "В'ячеслава Чорновола, 21",
     Широта: 48.52763,
     Довгота: 25.03946,
@@ -1698,7 +1699,7 @@ export const buildings = [
     Опис: "",
     "Архітектурний стиль": "",
     Історія:
-      '1920-ті рр. - MAGAZYN KAPELUSZY DAMSKICH. Niemkiewiczówna Izydora / Склад дамських капелюхів Ізидори Німкевич [48]; 1920-ті - 1930-ті рр. - фризієр (перукарня) "Антоні"; 1920-ті - 1930-ті рр. - склеп (крамниця) взуття "Саламандра"; 1920-ті - 1930-ті рр. - фотоательє А. Сеньковського (верхній поверх); 1920-ті - 1930-ті рр. - канцелярія Бровара Королівського (верхній поверх); 1930-ті рр. - Cukiernicze wyroby z CUKIERNI Józefa Fedusiewicza / кондитерські вироби з Цукерні Юзефа Федусєвича [42]',
+      '1920-ті рр. - MAGAZYN KAPELUSZY DAMSKICH. Niemkiewiczówna Izydora / Склад дамських капелюхів Ізидори Німкевич [48]; 1920-ті - 1930-ті рр. - фризієр (перукарня) "Антоні"; 1920-ті - 1930-ті рр. - склеп (крамниця) взуття "Саламандра"; 1920-ті - 1930-ті рр. - фотоательє А. Сеньковського (верхній поверх); 1920-ті - 1930-ті рр. - канцелярія Бровара Королівського (верхній поверх); 1930-ті рр. - Cukiernicze wyroby z CUKIERNI Józefa Fedusiewicza / кондитерські вироби з Цукерні Юзефа Федусєвича [42]; 1931 - 1938 рр. - DRUKARNIA SZYMONA TEICHERA poleca wszelkie druki ku najlepszemu zadowoleniu. / друкарня Шимона Тайхера [68]; 1935 р. - Mieszkanie składające się z 2 pokoi i kuchni na piętrze, oficyny murowanej, realności przy ul. Piłsudskiego 23 od zaraz do wynajęcia. Wiadomość u Dra Winklera przy ul. Jagiellońskiej Nr. 4, drzwi 6. / оренда помешкання, здає д-р Вінклєр [88]',
     Адреса: "В'ячеслава Чорновола, 23",
     Широта: 48.52775,
     Довгота: 25.03954,
@@ -1726,10 +1727,24 @@ export const buildings = [
     Опис: "",
     "Архітектурний стиль": "",
     Історія:
-      "1931 - 1938 рр. - друкарня Ш. Тайхера; 1920-ті - 1930-ті рр. - столярна майстерня Л. Гладунського - костьольні і високохудожні меблі (в подвір'ї кам'яниці) [29]",
+      "1920-ті - 1930-ті рр. - столярна майстерня Л. Гладунського - костьольні і високохудожні меблі (в подвір'ї кам'яниці) [29]; 1930-ті рр. - Pierwszorzędna wytwórnia Mebli S. ERSTER sprzedaje mebli różnego rodzaju po cenach bardzo przystępnych dogodne raty. / виробництво меблів, С. Ерстер [59]",
     Адреса: "В'ячеслава Чорновола, 25",
     Широта: 48.52789,
     Довгота: 25.0396,
+  },
+  {
+    Назва: "Кам'яниця",
+    "Стара назва": "",
+    "Старі назви вулиці":
+      "Horodeńska / Городенська (? - 1870-ті рр.); Kolejowa / Колійова (1870-ті рр. - ?); Jagiellońska Niższa / Ягеллонська Нижня (? - 1928 р.); Józefa Piłsudskiego / Юзефа Пілсудського (1928 - 1939 рр.); Володимира Леніна (1939 - 1941 рр.); Гетьмана Івана Мазепи (1941 р.); Hauptstraße / Гауптштрассе (1941 - 1944 рр.)",
+    Дата: "кін. XIX ст.",
+    Опис: "",
+    "Архітектурний стиль": "",
+    Історія:
+      "1935 р. - Dr. J. SIEROTA wrócił i ordynuje jak dotychczas / кабінет д-ра Сєроти [67]",
+    Адреса: "В'ячеслава Чорновола, 26",
+    Широта: "",
+    Довгота: "",
   },
   {
     Назва: "Райтарня",
@@ -1740,7 +1755,7 @@ export const buildings = [
     Опис: " Зруйнована в 2023 р.",
     "Архітектурний стиль": "",
     Історія:
-      'кін. XIX ст. - розміщується один з підрозділів відділу кінного полку Кароля V Леопольда, князя Льотаринського та Бар [4]; 1927 р. - командир 49 піхотного полку, підполковник Максиміліан Мілан-Камський, за сприяння цісарсько-королівського фотографа Александра Кіблера розпочинає ремонт будівлі для проведення вистав та урочистих заходів; 1928 р. - Освітній дім 49 піхотного полку; 1928 р. - кінотеатр "Марс" (перший звуковий кінотеатр Коломиї); 1939—1941 рр. - кінотеатр ім. Кірова; 1941—1944 рр. - кінотеатр "Вікторія" [2]; 2023 р. - будівлю зруйновано',
+      'кін. XIX ст. - розміщується один з підрозділів відділу кінного полку Кароля V Леопольда, князя Льотаринського та Бар [4]; 1927 р. - командир 49 піхотного полку, підполковник Максиміліан Мілан-Камський, за сприяння цісарсько-королівського фотографа Александра Кіблера розпочинає ремонт будівлі для проведення вистав та урочистих заходів; 1928 р. - Освітній дім 49 піхотного полку; 1928 р. - Kino dźwiękowe "Mars" (перший звуковий кінотеатр Коломиї),\\ REPERTUAR KIN:\\ Nie chcę wiedzić kim jesteś. [54]\\ To lubią mężczyźni. [55]\\ Katiusza. [56]\\ Jej wysokość całuje. [57]\\ Sequoia. [58]\\ Czarna perła. [59]\\ Zew krwi. [60]\\ Bengali. [61]\\ Złodziej serc. [62]\\ Jestem zbiegem. [63]\\ Ludzie w bieli. [64]\\ Narzeczona z Wiednia. [65]\\ Julika. [66]\\ Żywy zastaw. [67]\\ Sobowtór królewski. [68]\\ ZUZU. [69]\\ Tarzan Nieustraszony. [70]\\ Bal w Sawoyu. [71]\\ Noce Wiedeńskie. [72]\\ Noce Egipskie. [73]\\ Cyrk Barnuma. [74]\\ Wonder Bar. [75]\\ Uwielbiana. [76]\\ Tu rządzi humor. [77]\\ Wyspa Skarbów. [78]\\ Kleopatra. [79]\\ Śmierć odpoczywa. [80]\\ Melodje Cygańskie. [81]\\ Don Juan. [82]\\ Córka Generała. [83]\\ Teraz i zawsze. [83]\\ Hrabia Monte Christo. [84]\\ Kobieta szuka miłości. [85]\\ Nasz chleb powszedni. [86]\\ Malowana zasłona. [87]\\ Szpieg Nr. 13. [88]\\ Miłość Tarzana. [89]\\ Przedmieście. [90]\\ Pieśń Kozaka. [91]\\ Świat się śmieje. [92]\\ Rodzina Rotszyldów. [93]\\ Kwiaciarka z prateru. [94]\\ Taniec miłości. [95]\\ Miłość Fräulein doktor. [96]\\ Wyrok życia. [97]\\ Kain i Artem. [98]; 1939—1941 рр. - кінотеатр ім. Кірова; 1941—1944 рр. - кінотеатр "Вікторія" [2]; 2023 р. - будівлю зруйновано',
     Адреса: "В'ячеслава Чорновола, 30",
     Широта: 48.5283,
     Довгота: 25.04137,
@@ -1783,7 +1798,7 @@ export const buildings = [
     Опис: "Під цегляним склепінням підвалу замурований вхід до ще глибшого підземелля",
     "Архітектурний стиль": "",
     Історія:
-      '1903 р. - ресторація "Gambrinus" / "Під ГАМБРІНУСОМ" Генрика Роттенберґа [18]; 1920-ті рр. - SKLEP SPOŻYWCZY. Passakas & Robak / склеп (крамниця) продуктовий Passakas & Robak [48]; 1930-ті рр. - Restaurację i pokój do śniadań "pod Gambrinusem" [42]; 1939 р. - редакція газети "Червоний прапор" [18]; 1941-1944 рр. - ресторація "Deutsches Eck" / "Німецький куток" (власник Дмитро Кваснюк) [29]; 1943 р. - біля будинку окружний староста з військовими комендантами приймає парад добровольців Стрілецької дивізії СС "Галичина" [18]',
+      '1920-ті рр. - SKLEP SPOŻYWCZY. Passakas & Robak / склеп (крамниця) продуктовий Passakas & Robak [48]; 1930-ті рр. - RESTAURACJA i POKÓJ DO ŚNIADAŃ pod "GAMBRINUSEM" Henryk Rottenberg. Poleca na święta Wina, wódki i likiery po cenach zniżonych. Rok założenia 1903 / Ресторація під "ҐАМБРІНУСОМ" Генрика Роттенберґа [61]; 1930-ті рр. - Restaurację i pokój do śniadań "pod Gambrinusem" [42]; 1939 р. - редакція газети "Червоний прапор" [18]; 1941-1944 рр. - ресторація "Deutsches Eck" / "Німецький куток" (власник Дмитро Кваснюк) [29]; 1943 р. - біля будинку окружний староста з військовими комендантами приймає парад добровольців Стрілецької дивізії СС "Галичина" [18]',
     Адреса: "В'ячеслава Чорновола, 43",
     Широта: 48.52859,
     Довгота: 25.03991,
@@ -2346,7 +2361,7 @@ export const buildings = [
     Опис: "Покрівля з червоної і чорної дахівки у вигляді орнаменту (не збереглась)",
     "Архітектурний стиль": "Неоромантизм",
     Історія:
-      '? - Будинок належав польському ремісничому товартству "Ґвязда". Кінотеатр "Ґвязда" (відкрив Антін Віммер); В будівлі розміщувалися  бібліотека, театральна зала, кінотеатр, 2 більярдні [2]; 1920-ті рр. - Zakład plakatowania Michała Roszczybiuka / заклад плакатів Михайла Рощиб\'юка [33]; 1935 р. - кінотеатр стає звуковим; 1939 р. - кінотеатр припиняє своє існування; 1941—1944 рр. - Український окружний театр; 1944 р. - відновлено роботу Коломийського драматичного театру [2]',
+      '? - Будинок належав польському ремісничому товартству "Ґвязда". Кінотеатр "Ґвязда" (відкрив Антін Віммер); В будівлі розміщувалися  бібліотека, театральна зала, кінотеатр, 2 більярдні [2]; 1920-ті рр. - Zakład plakatowania Michała Roszczybiuka / заклад плакатів Михайла Рощиб\'юка [33]; 1930-ті рр - Kino "Gwiazda", REPERTUAR KIN:\\ Człowiek wilk. [54]\\ Oczy czarne. [55]\\ Wacuś. [56]\\ Żyd Süss. [57]\\ Dziewczę z Budapesztu. [58]\\ Sing - Sing. [59]\\ Miłostki. [60]\\ Dwie Joasie. [61]\\ Poszukiwaczki złota. [62]\\ Sprzedany głos. [63]\\ Nowi ludzie. [64]\\ Dobra wróżka. [65]\\ Ulica szaleństw. [66]\\ Syn marnotrawny. [67]\\ Kapitan Korkoran. [68]\\ A-B-C Miłości. [69]\\ Powrót Frankensteina. [70]\\ Noc cudów. [71]\\ Młody las. [72]\\ Marzące usta. [73]\\ Antek Policmajster. [74]\\ Siostra Marta jest Szpiegiem. [75]\\ Pani i Szofer. [76]\\ Petersburskie noce. [77]\\ Chłopcy z placu broni. [78]\\ Śluby ułańskie. [79]\\ Azef. [80]\\ Piotruś. [81]\\ Urwis z Wiednia. [83]\\ Amok. [84]\\ Czerwony Sultan. [85]\\ Bella Donna. [86]\\ Człowiek bez twarzy. [87]\\ Dwie sieroty. [88]\\ Czy Lucyna to dżiewczyna. [89]\\ Marzenia miłosne. [90]\\ Ich Noce. [91]\\ Mężczyźni w Jej życiu. [92]\\ Czar wiedeńskiego walca. [93]\\ Pieśń zdobywa świat. [94]\\ Przeor Kordecki Na poranku Blond Venus z Marleną Dietrich. [95]\\ Pan bez mieszkania. [96]\\ Kocha... Lubi... Szanuje... [97]\\ Wielka Księżna Aleksandra. [98]; 1935 р. - кінотеатр стає звуковим; 1939 р. - кінотеатр припиняє своє існування; 1941—1944 рр. - Український окружний театр; 1944 р. - відновлено роботу Коломийського драматичного театру [2]',
     Адреса: "Вічевий майдан, 7",
     Широта: 48.52807,
     Довгота: 25.03713,
@@ -2387,7 +2402,7 @@ export const buildings = [
     Опис: "",
     "Архітектурний стиль": "",
     Історія:
-      "1906 р. - K. K. Landw. Inft. Reg. Nr. 36. (Ц. К. оборони кр. 36. полку); 1918 р. - 36-й полк імені Івана Мазепи; 1921-1939 рр. - 49 піхотний полк Війська Польського; 1941 р. - розмістилась частина мадярського гарнізону",
+      '1906 р. - K. K. Landw. Inft. Reg. Nr. 36. (Ц. К. оборони кр. 36. полку); 1918 р. - 36-й полк імені Івана Мазепи; 1921-1939 рр. - 49 піхотний полк Війська Польського; 1935 р. - Przetarg nieograniczony. 49 pułk piechoty w Kołomyi ogłasza na dzień 18 czerwca 1935 r. o godzinie 10:00 nieograniczony przetarg ofertowy w zgl. ustny na arendacyjną dostawę:\\ około: 26 000 kg. mięsa wołowego.\\ 2.000 kg. mięsa wieprzowego.\\ 5.000 kg. mięsa baraniego od l VIII. br. 2 razy na dekadę.\\ 7.000 kg. słoniny grzbietowej solonej.\\ 1.300 kg. wędzonki gotowanej,\\ 20 000 kg. jarzyny twardej (kasza hreczana, jaglana, jęczmienna, grysik kukur., pęcak, groch, fasola w równym gatunku).\\ 1.500 kg. mąki pszennej gat. I.\\ 1.000 kg. mąki pszennej gat. O.\\ 97.000 kg. ziemniaków.\\ 27.000 kg. jarzyny świeżej (marchew, kapusta, buraki i t. p.)\\ 2.100 kg. cebuli świeżej.\\ 48.000 kg. siana łąkowego słodkiego.\\ 30.000 kg. słomy na karme (owsiano-jęczmiennej).\\ 18.000 kg. słomy na ściółkę (żytnio pszennej)\\ na czas od 1-go lipca do 30-go września 1935 r. Reflektanci na powyższą dostawę częściowo lub w całości złożą swe pisemne oferty w kopertach zalakowanych do rąk Kwatermistrza 49 p. p. na pół godziny przed oznaczonym terminem. Ceny winne być podane słownie za kilogram loco magazyn żywnościowy 49 p. p. Oferty bez mięsa baraniego nie będą rozpatrywane. Do oferty należy dołączyć:\\ a) Świadectwo fachowego uzdolnienia i solidności kupieckiej,\\ b) świadectwo zasobności finansowej,\\ c) kwit na złożone wadjum w kasie urzędu skarbowego w wysokości 5 procent od należnej sumy za trzy miesięczną dostawę,\\ d) deklaracje, że warunki ogólne i szczegółowe są oferentowi znane,\\ e) zaświadczenie o zapłaceniu "Pożyczki Narodowej".\\ Komisja przetargowa zastrzega sobie prawo dowolnego wyboru oferenta. Przetarg odbędzie się 18 czerwca 1935 o godz. 10 w biurze Kwatermistrza. 49 p. p. w Kołomyi, ul. Paderewskiego. Bliższych informacyj można zasięgać u Kwatermistrza 49 p. p. przy ul. Paderewskiego względnie u Oficera żywnościowego 49 p. p. ul. Wilsona l. 30, godziennie w godzinach urzędowych z wyjątkiem niedziel i świąt. Kwartermistrz. / Необмежений тендер на поставки для 49 п. п. [86]; 1941 р. - розміщується частина мадярського гарнізону',
     Адреса: "Вольфґанґа Амадея Моцарта",
     Широта: 48.5276,
     Довгота: 25.04114,
@@ -4434,7 +4449,7 @@ export const buildings = [
     Опис: "",
     "Архітектурний стиль": "",
     Історія:
-      '1913 р. - склеп (крамниця) меблів, дзеркал та рам для картин Лехнера Ліфше; 1931 р. - FUTRA. Solidna pracownia kuśnierska Władysława Gregoraszczuka / кушнірська майстерня Владислава Грегоращука (wykonuje wszelkie roboty w zakres kuśnierstwa wchodzące po cenach najniższych. Najnowsze modele i formy! 1931 р.); 1926 р. - майстерня "дамської" кравчині Фані Цайхнер; 1930 р. - склеп тютюну Й. Філіпека; 1932 р. - склеп церковних речей (український); 1935 р. - лікарський кабінет дерматовенеролога д-ра Давида Вассермана [2]',
+      '1913 р. - склеп (крамниця) меблів, дзеркал та рам для картин Лехнера Ліфше; 1931 р. - FUTRA. Solidna pracownia kuśnierska Władysława Gregoraszczuka / кушнірська майстерня Владислава Грегоращука (wykonuje wszelkie roboty w zakres kuśnierstwa wchodzące po cenach najniższych. Najnowsze modele i formy! 1931 р.); 1926 р. - майстерня "дамської" кравчині Фані Цайхнер; 1930 р. - склеп тютюну Й. Філіпека; 1932 р. - склеп церковних речей (український); 1935 - 1939 рр. - Specjalista chorób skórnych i wenerycznych Dr. D. Wasserman przeprowadził się i ordynuje obecnie / спеціаліст хвороб шкірних і венеричних д-р Д. Вассерман [62]',
     Адреса: "Михайла Грушевського, 9",
     Широта: 48.52506,
     Довгота: 25.03624,
@@ -5655,7 +5670,7 @@ export const buildings = [
     Опис: "",
     "Архітектурний стиль": "",
     Історія:
-      "кін. XIX - поч. XX ст. - склеп (крамниця) ковбасних виробів (власник Візерканюк); кін. XIX - поч. XX ст. - Аптека Антона Сидоровича; кін. XIX - поч. XX ст. - Музичний склеп Кортца; 1939 р. - Аптека Вільгельма Найдера (Wilhelm Neider) [2]",
+      'кін. XIX - поч. XX ст. - Apteka J. Sidorowicza. "Bacherlin" istnieje tylko w flaszeczkach, przeto ostrożnie przy zakupnie! Gdyż wszystkie inne są bezwątpliwie naśladowane i fałszywe. [53]; кін. XIX - поч. XX ст. - склеп (крамниця) ковбасних виробів (власник Візерканюк) [2]; кін. XIX - поч. XX ст. - Музичний склеп Кортца [2]; 1939 р. - Аптека Вільгельма Найдера (Wilhelm Neider) [2]',
     Адреса: "Площа Відродження, 8",
     Широта: 48.52608,
     Довгота: 25.03756,
@@ -5683,7 +5698,7 @@ export const buildings = [
     Опис: "",
     "Архітектурний стиль": "",
     Історія:
-      'поч. XX ст.—1930-ті рр. - склеп (крамниця) виробництва та продажу цукерок Боруха Сейнфельда; 1913-1939 рр. - склеп текстильних виробів "сукно з фабрики в Ракшаві, бавовну і вату з фабрики Платцкера і Арнольда, Теодора Фелікса з Андрухова, вироби з ниток, сукно з фабрики Авраама Рапапорта з Бяли" (власник Юда Бер Зайдманн) [2]',
+      'поч. XX ст.—1930-ті рр. - B. Seinfeld. Wytwórnia cukierków oraz fabryczny skład czekolad i kakao. / Б. Сейнфельд. Фабрика цукерок також склад шоколаду і какао [60]; 1913-1939 рр. - склеп текстильних виробів "сукно з фабрики в Ракшаві, бавовну і вату з фабрики Платцкера і Арнольда, Теодора Фелікса з Андрухова, вироби з ниток, сукно з фабрики Авраама Рапапорта з Бяли" (власник Юда Бер Зайдманн) [2]',
     Адреса: "Площа Ринок, 22",
     Широта: 48.52465,
     Довгота: 25.04007,
@@ -6258,7 +6273,7 @@ export const buildings = [
     Довгота: 25.04305,
   },
   {
-    Назва: "Юдейська поліклініка",
+    Назва: "Юдейський шпиталь",
     "Стара назва": "Szpital Żydowski (1939)",
     "Старі назви вулиці":
       "Szpitalna / Шпитальна (XIX ст. - 1920-ті рр.); Strzelecka / Стрілецька (1920-ті рр. - 1933 р.); Majora Władysława Gniadego / Майора Владислава Гнядого (1933 - 1945 рр.)",
@@ -6266,7 +6281,7 @@ export const buildings = [
     Опис: "Будинок перебудований в 2022 р. На фронтоні був збережений рік добудови: 1913 (знищений при перебудові)",
     "Архітектурний стиль": "",
     Історія:
-      '1854 р. - частина приміщення де перше розташовується юдейська лікарня; 1898 р. - притулок для перестарілих та убогих юдеїв (зруйновані в 2022 р.); 1913 р. - будується північне крило кам\'яниці, спочатку будинок перестарілих "Moshav Zkenim", пізніше поліклініка (знищений при перебудові в 2022р.)',
+      '1854 р. - частина приміщення де перше розташовується юдейська лікарня; 1898 р. - притулок для перестарілих та убогих юдеїв (зруйновані в 2022 р.); 1913 р. - будується північне крило кам\'яниці, спочатку будинок перестарілих "Moshav Zkenim", пізніше поліклініка (знищений при перебудові в 2022р.); 1930-ті рр. - Zakład położniczo - ginekologiczny przy Szpitalu Żydowskim w Kołomyi (obok Rady Powiatowej). Przyjmuje zgłoszenia do porodu. Ryczałt I. kl. 100 zł., II. kl. 60 zł. Wolny wybór lekarza i akuszerki. / Заклад пологово - гінекологічний при юдейському шпиталю. [85]',
     Адреса: "Романа Шухевича, 76",
     Широта: 48.52797,
     Довгота: 25.0433,
@@ -7005,7 +7020,7 @@ export const buildings = [
     Опис: "Збережені старі вхідні дерев'яні двері",
     "Архітектурний стиль": "",
     Історія:
-      "1933—1949 рр. - Specjalista chorób wenerycznych i skórnych Dr. Tadeusz Loewner / кабінет дерматовенеролога д-ра Тадеуша Льовнера [44]",
+      "1933—1949 рр. - Specjalista chorób wenerycznych i skórnych Dr. Tadeusz Loewner / кабінет дерматовенеролога д-ра Тадеуша Льовнера [44]; 1935 р. - Mieszkanie składające się z 2 pokoi i kuchni na piętrze, oficyny murowanej, realności przy ul. Piłsudskiego 23 od zaraz do wynajęcia. Wiadomość u Dra Winklera przy ul. Jagiellońskiej Nr. 4, drzwi 6. / оренда помешкання, здає д-р Вінклєр [88]",
     Адреса: "Січових Стрільців, 4",
     Широта: 48.53014,
     Довгота: 25.04143,
@@ -7075,7 +7090,7 @@ export const buildings = [
     Опис: "Партеровий будинок",
     "Архітектурний стиль": "",
     Історія:
-      "1930-ті рр. - Uwaga! WP. Komendanci Bloku domów OPL. Przepisowe nosze dla drużyn ratowniczo - sanitarnych poleca: Odznaczona Polskim Krzyżem Zasługi - oraz Dyplomem Berlińskim - PRACOWNIA RYMARSKA M. Chomiaka / Майстерня римарська М. Хом'яка [47]",
+      "1930- ті рр. - Trwała ondulację parowa wykonuję się jedynie w zakładzie fryzjerskim J. BARANIUKA. Pozatem fryzjerstwo damskie i męskie. Farbowanie włosów, brwi i rzęs. Stawianie baniek i piawek na polecenie pp. Lekarzy i Ubezp. Społ. / фризієр (перукарня) І. Баранюка [60]; 1930-ті рр. - Uwaga! WP. Komendanci Bloku domów OPL. Przepisowe nosze dla drużyn ratowniczo - sanitarnych poleca: Odznaczona Polskim Krzyżem Zasługi - oraz Dyplomem Berlińskim - PRACOWNIA RYMARSKA M. Chomiaka / Майстерня римарська М. Хом'яка [47]; 1930-ті рр. - Pracownia rymarsko - siodlarska M. CHOMIAKA, mistrz egzaminowany. Posiada na składzie po niskich cenach NARTY wszelkiego rodzaju posiada również wielki wybór siodeł angielskich i zwykłych, miechy kowalskie, komplety dla koni i krów, protezy dla inwalidów, pasy brzuszne, pępkowe i przypuklinowe, piłki nożne, siatkówki, koszykówki, rękawice bokserskie, do hokieju, ubranie bramkarskie, kufry do podróży, walizki, teczki skórzane, portfele, pularesy różnego rodzaju. Wszelkie naprawki uskutecznia szybko, i solidnie / Майстерня римарсько - сідельна М. Хом'яка [59]",
     Адреса: "Січових Стрільців, 8",
     Широта: 48.53032,
     Довгота: 25.04189,
@@ -7647,7 +7662,7 @@ export const buildings = [
     Опис: "Збережені старі вхідні дерев'яні двері",
     "Архітектурний стиль": "",
     Історія:
-      '1930-ті рр. - BŁYSK - pralnia chemiczna, artystyczna farbiarnia odzieży i futer oraz pralnia bielizny białej / пральня БЛИСК [42]; 1930-ті рр. - Wszelkie futra jak: Lisy, kuny, wydry, tchórze, króliki, karakuły, bobry i td. WYPRAWIA i FARBUJE NA SPOSÓB LIPSKI renomowana PRALNIA chemiczna i farbiarnia odzieży i futer, oraz pralnia bielizny "BŁYSK", Stanisławów, filia w Kołomyi. Specjalność: wyprawa saren i jeleni na irchę. Pralnia "BŁYSK" rozporządzając  najnowszymi urządzeniami oraz licznym sztabem fachowców gwarantuje najwyższy poziom pracy przy niskich cenach. Pralnia "BŁYSK" pierze kołnierze bez szkodliwych domieszek, z pięknym srebrzystym połyskiem PO 10 GROSZY ZA SZTUKĘ. / Пральня і фарбярня "Błysk". Спеціальність: вичинка шкір сарн і оленів для виготовлення замші. Пере комірці без шкідливих домішок, з гарним сріблястим полиском по 10 ґрош за шт. [51]',
+      '1930-ті рр. - BAZAR KOLONJALNY M. A. TOFAN. Poleca swój specjalny skład cukierków, czekolady, pomadek deserowych, herbatników, biszkoptów, bombonierek luksusowych, delikatesów z pierwszorzędnych fabryk najtaniej i w największym wyborze. Wielki wybór nowości na podarki. Herbata Chińska i Rosyjska. Ceny konkurencyjne / склад солодощів М. А. Тофан (цукерки, шоколад, бомбоньєрки люксусові, чай та ін.) [60]; 1930-ті рр. - BŁYSK - pralnia chemiczna, artystyczna farbiarnia odzieży i futer oraz pralnia bielizny białej / пральня БЛИСК [42]; 1930-ті рр. - Wszelkie futra jak: Lisy, kuny, wydry, tchórze, króliki, karakuły, bobry i td. WYPRAWIA i FARBUJE NA SPOSÓB LIPSKI renomowana PRALNIA chemiczna i farbiarnia odzieży i futer, oraz pralnia bielizny "BŁYSK", Stanisławów, filia w Kołomyi. Specjalność: wyprawa saren i jeleni na irchę. Pralnia "BŁYSK" rozporządzając  najnowszymi urządzeniami oraz licznym sztabem fachowców gwarantuje najwyższy poziom pracy przy niskich cenach. Pralnia "BŁYSK" pierze kołnierze bez szkodliwych domieszek, z pięknym srebrzystym połyskiem PO 10 GROSZY ZA SZTUKĘ. / Пральня і фарбярня "Błysk". Спеціальність: вичинка шкір сарн і оленів для виготовлення замші. Пере комірці без шкідливих домішок, з гарним сріблястим полиском по 10 ґрош за шт. [51]',
     Адреса: "Театральна, 15",
     Широта: 48.52748,
     Довгота: 25.03785,
@@ -7662,7 +7677,7 @@ export const buildings = [
     Опис: "На фронтоні збережено рік побудови: 1896",
     "Архітектурний стиль": "",
     Історія:
-      '1907 р. - каварня "Центральна" (власник Гіршгорн) [2]; II пол. 1920-х рр. - каварня та ресторація "Рома" (будинок трохи перебудовується) [2]; 1932 р. - реконструкція I поверху (цукерня і ресторація, поєднані з вишуканим баром,танцювальна зала висотою 4 метри) [2]; 1932 р. - Komfortowy, na wzór zachodni urządzony "AMERICAN - BAR" przy restauracji "ROMA" / "Амерікен бар" при ресторації "Рома" [2]; AMERIKAN BAR. Codziennie koncertuje doborowa orkiestra. - W soboty, niedziele i święta Vive o\'clocki. Miły przybytek dla miłośników zabaw i tańca. Potrawy smaczne, dobre i tanie. Duży wybór napojów. Ceny niskie. [43]',
+      '1907 р. - каварня "Центральна" (власник Гіршгорн) [2]; II пол. 1920-х рр. - каварня та ресторація "Рома" (будинок трохи перебудовується) [2]; 1932 р. - реконструкція I поверху (цукерня і ресторація, поєднані з вишуканим баром,танцювальна зала висотою 4 метри) [2]; 1930-ті рр. - Nowa Cukiernia "ROMA". Poleca na święta. Bogaty wybór własnych wyrobów cukierniczych, jakoteż uskutecznia wszelkie zamówienia po nader niskich cenach / Нова Цукерня "Рома" [59]; 1932 р. - Komfortowy, na wzór zachodni urządzony "AMERICAN - BAR" przy restauracji "ROMA" / "Амерікен бар" при ресторації "Рома" [2]; AMERIKAN BAR. Codziennie koncertuje doborowa orkiestra. - W soboty, niedziele i święta Vive o\'clocki. Miły przybytek dla miłośników zabaw i tańca. Potrawy smaczne, dobre i tanie. Duży wybór napojów. Ceny niskie. [43]',
     Адреса: "Театральна, 17",
     Широта: 48.52772,
     Довгота: 25.03777,
@@ -7702,7 +7717,7 @@ export const buildings = [
     Опис: "Збережені старі вхідні дерев'яні двері",
     "Архітектурний стиль": "Віденський ренесанс",
     Історія:
-      '1931 р. - салон краси Оскара Адлера; 1932—1933 рр. - фрезієрня (перукарня) "Ренесанс" [2]',
+      '1931 р. - салон краси Оскара Адлера; 1932—1933 рр. - фризієр (перукарня) "Ренесанс" [2]; 1930-ті рр. - Elegancki pokój kawalerski do wynajęcia bliższa wiadomość ul. Kościuszki 21. l. piętro [55]',
     Адреса: "Театральна, 21",
     Широта: 48.52815,
     Довгота: 25.03768,
@@ -7760,7 +7775,7 @@ export const buildings = [
     Опис: "",
     "Архітектурний стиль": "Необароко, Віденська сецесія",
     Історія:
-      '1894 р. - інтер\'єр декорований в необароковому стилі з сецесійними настінними розписами. Виконав за власним проектом Валеріан Крицінський (директор гончарної школи у 1894—1896 рр.); 1898 р. - концерт Соломії Крушельницької; 1911р. - "артистичний кінематограф" (кінотеатр) "Гелїос", мав паризьку апаратуру фірми Pathe Freres та власну електростанцію; 1912 р. - літературний вечір др. Івана Франка; 1927 р. - зустріч письменниці Ольги Кобилянської; 1914 р. - канцелярія та управління начальника Коломийського повіту російського князя Лобанова-Ростовського; 1927 р. - Міська комунальна каса ощадності; 1930-ті рр. - Komunalna Kasa Oszczędności Miasta Kołomyi zapewnia Najwyższe oprocentowanie wkładòw - Pupilarne bezpieczeństwo  - Ustawową tajemnicę. Komunalna Kasa Oszczędności Miasta Kołomyi udziela pożyczek na dogodnych warunkach! / Комунальна Каса Ощадності Міста Коломиї гарантує найвищі проценти для вкладів, популярне страхування, банківську таємницю. Позики на вигідних умовах! [51]; 1940 р. - прикордонна комендатура Західного фронту СРСР [2]',
+      '1894 р. - інтер\'єр декорований в необароковому стилі з сецесійними настінними розписами. Виконав за власним проектом Валеріан Крицінський (директор гончарної школи у 1894—1896 рр.); 1898 р. - концерт Соломії Крушельницької; 1911р. - "артистичний кінематограф" (кінотеатр) "Гелїос", мав паризьку апаратуру фірми Pathe Freres та власну електростанцію; 1912 р. - літературний вечір др. Івана Франка; 1914 р. - канцелярія та управління начальника Коломийського повіту російського князя Лобанова-Ростовського; 1927 р. - зустріч письменниці Ольги Кобилянської; 1927 р. - Міська комунальна каса ощадності; 1930-ті рр. - Miejska Komunalna Kasa Oszczędności w Kołomyi. Zawiadamia że z dniem 12. kwietnia b. r. przyjmuje Subskrypcje na 3% Premjową Pożyczkę Inwestycyjną w godz. od 8-ej do 13:30 i od 17-ej do godz. 19-ej. Termin subskrypcji upływa z dniem 10. maja 1935 r. Wszyscy obywatele miasta Kołomyi subskrybują 3% Pożyczkę Inwestycyjną tylko w Miejskiej Komunalnej Kasie Oszczędności w Kołomyi / інвестиційна позика на 3% в Міській Комунальній Касі Ощадності [80]; 1930-ті рр. - Komunalna Kasa Oszczędności Miasta Kołomyi zapewnia Najwyższe oprocentowanie wkładòw - Pupilarne bezpieczeństwo  - Ustawową tajemnicę. Komunalna Kasa Oszczędności Miasta Kołomyi udziela pożyczek na dogodnych warunkach! / Комунальна Каса Ощадності Міста Коломиї гарантує найвищі проценти для вкладів, популярне страхування, банківську таємницю. Позики на вигідних умовах! [51]; 1940 р. - прикордонна комендатура Західного фронту СРСР [2]',
     Адреса: "Театральна, 27",
     Широта: 48.52928,
     Довгота: 25.03745,
@@ -7774,7 +7789,7 @@ export const buildings = [
     Опис: "",
     "Архітектурний стиль": "",
     Історія:
-      '1920-ті рр. - MAGAZYN KAPELUSZY DAMSKICH. Antoniewiczowa Emilja / Склад дамських капелюхів. Власниця Антоневич Емілія [48]; 1920-ті рр. - SKLEP KOMISOWY. Mazurowa Wanda / Склеп (крамниця) комісійний. Власниця Мазурова Ванда [48]; 1930-ті рр. - KAWA MROŻONA wytwarzana z nowoczesnego aparatu "Expresso" jedynie w SŁODKIM BAZARZE LAZARA / холодна кава приготована на сучасному апараті "Expresso" [42]',
+      '1920-ті рр. - MAGAZYN KAPELUSZY DAMSKICH. Antoniewiczowa Emilja / Склад дамських капелюхів. Власниця Антоневич Емілія [48]; 1920-ті рр. - SKLEP KOMISOWY. Mazurowa Wanda / Склеп (крамниця) комісійний. Власниця Мазурова Ванда [48]; 1930-ті рр. - KAWA MROŻONA wytwarzana z nowoczesnego aparatu "Expresso" jedynie w SŁODKIM BAZARZE LAZARA / холодна кава приготована на сучасному апараті "Expresso" [42]; 1930-ті рр. - Ceny znacznie zniżone. SŁODKI BAZAR LAZARA "SŁODZI ŻYCIE" poleca na czas przedświąteczny wszelkie wyroby czekolad po cenach najtańszych. Codziennie świeże ciastka oraz wszelkie wyroby z cukierni L. Zalewskiego Lwów, oraz torty, strucle plecione, strucle z makiem, babki, przekładańce owocowe, kołacze, chleb indyjski, owocowe marcep. czekoladki wszelkiego rodzaju, bombonierki we wielkim wyborze zawsze na składzie. Całe komplete na choinką, oraz wyroby czekoladowe z fabryk Wedla, Fuchsa, Zalewskiego, Sucharda, Pischingera, Domańskiego i tp. musi każdy zapamiętać, że najtaniej i świeże kupi tylko w Słodkim Bazarze. [60]',
     Адреса: "Театральна, 28",
     Широта: 48.52796,
     Довгота: 25.03809,
@@ -7788,7 +7803,7 @@ export const buildings = [
     Опис: "Будинок перебудований після 1918 р., фасад змінений. Ймовірно був пошкоджений під час Великої війни. На фронтоні збережена ліпнина у вигляді монограми: BCH",
     "Архітектурний стиль": "",
     Історія:
-      'поч. XX ст. - фризієр (перукарня) [2]; поч. XX ст. - склеп (крамниця) з вичинки шкіри "Йозеф Мальцер і син" [2]; 1920-ті рр. - кравецька майстерня Антіна Турянського [2]; 1920-ті рр. - KONFEKCJA DAMSKA. Gawletowa Marja / Кондитерські вироби. Ґавлєтова Марія [48]; 1920-ті - 1930-ті рр. - TANIO!! Ceny umiarkowane! Sypialnie, jadalnie, gabinety, saloniki i t. p. poleca na bardzo dogodnych warunkach SKŁAD MEBLI Hermana Scheinera / склад меблів Германа Шайнера [50]; 1930 р. - страхова агенція Едварда Фрухтера [2]; 1932 р. - склеп галантерейний Кароля Блехінгера [2]; 1935 р. - склад блаватних товарів Бергмана та Премінгера [2]; 1930-ті рр. - офіс власника млина Менделя Бреттлера (фірма заснована в 1890 р. мільйонером Якобом Бреттлером) [2]',
+      'поч. XX ст. - фризієр (перукарня) [2]; поч. XX ст. - склеп (крамниця) з вичинки шкіри "Йозеф Мальцер і син" [2]; 1920-ті рр. - кравецька майстерня Антіна Турянського [2]; 1920-ті рр. - KONFEKCJA DAMSKA. Gawletowa Marja / Кондитерські вироби. Ґавлєтова Марія [48]; 1920-ті - 1930-ті рр. - TANIO!! Ceny umiarkowane! Sypialnie, jadalnie, gabinety, saloniki i t. p. poleca na bardzo dogodnych warunkach SKŁAD MEBLI Hermana Scheinera / склад меблів Германа Шайнера [50]; 1930 р. - страхова агенція Едварда Фрухтера [2]; 1935 р. - склад блаватних товарів Бергмана та Премінгера [2]; 1930-ті рр. - офіс власника млина Менделя Бреттлера (фірма заснована в 1890 р. мільйонером Якобом Бреттлером) [2]; 1930-ті рр. - Koszule Krawaty Rękawiczki poleca: MAGAZYN NOWOŚCI Karola Blechingera / сорочки, краватки, рукавички Кароля Блєхінґера [92]',
     Адреса: "Театральна, 3",
     Широта: 48.52679,
     Довгота: 25.03772,
@@ -7802,7 +7817,7 @@ export const buildings = [
     Опис: "",
     "Архітектурний стиль": "",
     Історія:
-      '1920-ті рр.—1939 р. - кравецький заклад Маркуса Ляхса (власник кам\'яниці) - "Має в наявності великий вибір англійських матеріалів. Виконує всі чоловічі пошиття за останньою модою за помірними цінами. Він відправляє зразки в провінцію і вчасно доставляє замовлення в зазначену дату" (1925 р.), "Великий вибір вітчизняних та зарубіжних матеріалів. Найновіші товари кожного сезону. Рекомендує найновішу моду за дуже низькими цінами" (1935 р.)',
+      "1920-ті рр.—1939 р. - Markus Lachs krawiec męski. Wielki wybór krajowych i zagranicznych materyj. W każdym sezonie najnowsze towary. Poleca najnowszy krój obecnej mody po cenach nader niskich / Маркус Ляхс, кравець чоловічий [60]",
     Адреса: "Театральна, 30",
     Широта: 48.52807,
     Довгота: 25.03806,
@@ -7899,7 +7914,7 @@ export const buildings = [
     Опис: 'В будинку розміщувалось "Бюро Королівських броварів" (Паровий бровар Стефана Вейса, закладений в Королівці 15.V.1890р., мав власну колійову станцію і телефон)',
     "Архітектурний стиль": "",
     Історія:
-      "1912—1939 рр. - Dr. Leon, adwokat, ul. Kosciuszki I. 44 / адвокатська контора Леона Функенштайна [2]; 1920-ті рр. - CUKIERNIA Józefa Fedusiew / Цукерня Юзефа Федусєва [37]; 1938 р. - кабінет лікаря внутрішніх та дитячих хвороб і стоматолога Андрія Кокодинського [2]",
+      "1912—1939 рр. - Dr. Leon, adwokat, ul. Kosciuszki I. 44 / адвокатська контора Леона Функенштайна [2]; 1920-ті рр. - CUKIERNIA Józefa Fedusiew / Цукерня Юзефа Федусєва [37]; 1935 р. - Adwokat Mr. J. L. Wilf obrońca w sprawach karnych otworzył i prowadzi kancelarję naprzeciw Kasy Oszczędności. / адвокат м-р Л. Вільф [66]; 1938 р. - кабінет лікаря внутрішніх та дитячих хвороб і стоматолога Андрія Кокодинського [2]",
     Адреса: "Театральна, 44",
     Широта: 48.52935,
     Довгота: 25.03792,
@@ -7993,7 +8008,8 @@ export const buildings = [
     Дата: "кін. XIX - поч. XX ст.",
     Опис: "Партеровий будинок. Зруйновано в 2021 р.",
     "Архітектурний стиль": "",
-    Історія: "",
+    Історія:
+      '1930-ті рр. - Znany komfortowy salon fryzjerski dla pań "RENESANS" zawiadamia Szan. P. T., że wykonuje trwała ondulację najnowszym systemem. Najnowsze układanie włosów po trwałej ondulacji. Farbowanie włosów farba "Inecto Rapid" / фризієр (перукарня) для жінок "Renesans" [59]',
     Адреса: "Театральна, 7",
     Широта: 48.52708,
     Довгота: 25.03779,
@@ -8007,7 +8023,7 @@ export const buildings = [
     Опис: "Збережені старі вхідні дерев'яні двері",
     "Архітектурний стиль": "",
     Історія:
-      '1891—1912 рр. - друкарня Владислава Аксентовича і редакція газети (видається часопис "Gazeta Kołomyjska" та коломийський календар); 1899—1926 рр. - друкарня А. Мізевича (видається газета "Głos Pokucia"); 1932—1939 рр. - ювелірна майстерня Адольфа Іра; лікарський кабінет і квартира д-ра Юліуша Цайгера; 1935 р. - склеп (крамниця) меблів А. М. Кіммеля [2]',
+      '1891—1912 рр. - друкарня Владислава Аксентовича і редакція газети (видається часопис "Gazeta Kołomyjska" та коломийський календар); 1899—1926 рр. - друкарня А. Мізевича (видається газета "Głos Pokucia"); 1930-ті рр. - ZAKŁAD KRAWIECKI. Pinkas Munczek zawiadamia Szan. Publiczność, że z powodu ogólnego kryzysu znacznie zredukował ceny wszelkich towarów, znajdujących się na składzie. Wszelkie zamówienia wykonuje wedle najnowszych modeli szybko i solidnie / Заклад кравецький Пінкаса Мунчека [60]; 1932—1939 рр. - ювелірна майстерня Адольфа Іра; лікарський кабінет і квартира д-ра Юліуша Цайгера; 1935 р. - ZMIANA LOKALU. Zawiadamiam Szan. P. T. Publiczność, że przeniosłem mój sklep z ul. Sobieskiego 10 na ul. Kościuszki 8. i polecam Szan. Publ. najnowszy wybór MEBLI różnego rodzaju po cenach przystępnych. Dogodne warunki. A. M. KIMMEL Dom Meblowy / склеп (крамниця) меблів А. М. Кіммеля [59]',
     Адреса: "Театральна, 8",
     Широта: 48.52691,
     Довгота: 25.03814,

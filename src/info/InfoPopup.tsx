@@ -38,6 +38,18 @@ const InfoPopup = () => {
                 <b>липні&nbsp;2025</b>.
               </span>
               <hr />
+              <span>
+                Знайшли помилку або маєте запитання?{" "}
+                <a
+                  href="https://forms.gle/DkXKWuTNAay6YG3k9"
+                  title="Зв'яжіться з нами"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Зв'яжіться з нами
+                </a>
+              </span>
+              <hr />
               <span style={{ fontWeight: "bold" }}>Використані джерела:</span>
               <ol style={{ marginTop: "0.5rem", paddingLeft: "1.5rem" }}>
                 {mappedSources.map((item, index) => (

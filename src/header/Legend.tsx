@@ -50,13 +50,14 @@ const Legend = ({
           : getDeselectedImage(imageWidth, palette.unknown),
         () => setFilters({ ...filters, unknown: !filters.unknown })
       )}
-      {getImage(
-        "втрачені",
-        filters.lost
-          ? getLostBuildingMarkerImage(imageWidth, palette.unknown)
-          : getDeselectedImage(imageWidth, palette.unknown),
-        () => setFilters({ ...filters, lost: !filters.lost })
-      )}
+      {false && //TODO Make it work
+        getImage(
+          "втрачені",
+          filters.lost
+            ? getLostBuildingMarkerImage(imageWidth, palette.unknown)
+            : getDeselectedImage(imageWidth, palette.unknown),
+          () => setFilters({ ...filters, lost: !filters.lost })
+        )}
       {getImage(
         "пам'ятники",
         filters.monuments

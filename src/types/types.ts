@@ -54,3 +54,8 @@ export type SourceProfile = {
   isbn: string;
   link?: string;
 };
+
+export type VocabularyEntry = {
+  word: string;
+  explanation: string;
+};

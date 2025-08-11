@@ -6,12 +6,14 @@ import {
   MonumentProfile,
   Period,
   SourceProfile,
+  VocabularyEntry,
 } from "./types/types";
 import { periods } from "./data/periods";
 import { buildings } from "./data/buildings";
 import { monuments } from "./data/monuments";
 import { lostBuildings } from "./data/lost-buildings";
 import { sources } from "./data/sources";
+import { vocabulary } from "./data/vocabulary";
 
 const itemSeparator = ";";
 const dateSeparator = " - ";
@@ -29,6 +31,24 @@ const parseArray = (
     .filter((s) => !!s);
   return result?.length ? result : undefined;
 };
+
+const getVocabulary = (): VocabularyEntry[] =>
+  vocabulary
+    .map((s: { Слово: string; Пояснення: string }) => {
+      return s["Слово"]
+        .split(",")
+        .map((x) => x.trim())
+        .filter((x) => !!x)
+        .map(
+          (x) =>
+            ({
+              word: x,
+              explanation: s["Пояснення"],
+            } as VocabularyEntry)
+        );
+    })
+    .flat();
+export const mappedVocabulary = getVocabulary();
 
 const getSources = (): SourceProfile[] =>
   sources.map(

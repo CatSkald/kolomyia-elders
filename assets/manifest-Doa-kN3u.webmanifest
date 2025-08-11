@@ -4,16 +4,16 @@
   "start_url": "/kolomyia-elders/",
   "scope": "/kolomyia-elders/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#000000",
+  "theme_color": "black",
+  "background_color": "black",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "/logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo-full.png",
+      "src": "/logo-full.png",
       "type": "image/png",
       "sizes": "512x512"
     }

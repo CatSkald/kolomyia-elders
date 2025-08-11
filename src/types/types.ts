@@ -7,39 +7,32 @@ export type Period = {
   color: string;
 };
 
-export type BuildingProfile = {
+export type LocationProfile = {
   name: string;
   oldNames?: string[];
-  oldStreetNames?: string[];
   date: number | string;
+  coordinates?: LatLngExpression;
+  period?: Period;
+};
+
+export type BuildingProfile = LocationProfile & {
+  oldStreetNames?: string[];
   description?: string;
   architecture?: string;
   history?: HistoryEntry[];
   address: string;
-  coordinates?: LatLngExpression;
-  period?: Period;
 };
 
-export type MonumentProfile = {
-  name: string;
-  oldNames?: string[];
-  date: number | string;
+export type MonumentProfile = LocationProfile & {
   destroyed?: number | string;
   history?: string;
-  coordinates?: LatLngExpression;
-  period?: Period;
 };
 
-export type LostBuildingProfile = {
-  name: string;
-  oldNames?: string[];
-  date: number | string;
+export type LostBuildingProfile = LocationProfile & {
   destroyed?: number | string;
   architecture?: string;
   description?: string;
   history?: HistoryEntry[];
-  coordinates?: LatLngExpression;
-  period?: Period;
 };
 
 export type HistoryEntry = {

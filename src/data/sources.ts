@@ -568,4 +568,208 @@ export const sources = [
       "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 29 kwietnia 1934. Nr. 18",
     ISBN: "",
   },
+  {
+    "№": 99,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 6 maja 1934. Nr. 19",
+    ISBN: "",
+  },
+  {
+    "№": 100,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 13 maja 1934. Nr. 20",
+    ISBN: "",
+  },
+  {
+    "№": 101,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 20 maja 1934. Nr. 21",
+    ISBN: "",
+  },
+  {
+    "№": 102,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 27 maja 1934. Nr. 22",
+    ISBN: "",
+  },
+  {
+    "№": 103,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 3 czerwca 1934. Nr. 23",
+    ISBN: "",
+  },
+  {
+    "№": 104,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 10 czerwca 1934. Nr. 24",
+    ISBN: "",
+  },
+  {
+    "№": 105,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 17 czerwca 1934. Nr. 25",
+    ISBN: "",
+  },
+  {
+    "№": 106,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 24 czerwca 1934. Nr. 26",
+    ISBN: "",
+  },
+  {
+    "№": 107,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 1 lipca 1934. Nr. 27",
+    ISBN: "",
+  },
+  {
+    "№": 108,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 8 lipca 1934. Nr. 28",
+    ISBN: "",
+  },
+  {
+    "№": 109,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 15 lipca 1934. Nr. 29",
+    ISBN: "",
+  },
+  {
+    "№": 110,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 22 lipca 1934. Nr. 30",
+    ISBN: "",
+  },
+  {
+    "№": 111,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 29 lipca 1934. Nr. 31",
+    ISBN: "",
+  },
+  {
+    "№": 112,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 5 sierpnia 1934. Nr. 32",
+    ISBN: "",
+  },
+  {
+    "№": 113,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 12 sierpnia 1934. Nr. 33",
+    ISBN: "",
+  },
+  {
+    "№": 114,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 17 sierpnia 1934. Nr. 34",
+    ISBN: "",
+  },
+  {
+    "№": 115,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 26 sierpnia 1934. Nr. 35",
+    ISBN: "",
+  },
+  {
+    "№": 116,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 2 września 1934. Nr. 36",
+    ISBN: "",
+  },
+  {
+    "№": 117,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 9 września 1934. Nr. 37",
+    ISBN: "",
+  },
+  {
+    "№": 118,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 16 września 1934. Nr. 38",
+    ISBN: "",
+  },
+  {
+    "№": 119,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 23 września 1934. Nr. 39",
+    ISBN: "",
+  },
+  {
+    "№": 120,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 30 września 1934. Nr. 40",
+    ISBN: "",
+  },
+  {
+    "№": 121,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 7 października 1934. Nr. 41",
+    ISBN: "",
+  },
+  {
+    "№": 122,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 14 października 1934. Nr. 42",
+    ISBN: "",
+  },
+  {
+    "№": 123,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 21 października 1934. Nr. 43",
+    ISBN: "",
+  },
+  {
+    "№": 124,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 28 października 1934. Nr. 44",
+    ISBN: "",
+  },
+  {
+    "№": 125,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 1 listopada 1934. Nr. 45",
+    ISBN: "",
+  },
+  {
+    "№": 126,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 11 listopada 1934. Nr. 46",
+    ISBN: "",
+  },
+  {
+    "№": 127,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 18 listopada 1934. Nr. 47",
+    ISBN: "",
+  },
+  {
+    "№": 128,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 25 listopada 1934. Nr. 48",
+    ISBN: "",
+  },
+  {
+    "№": 129,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 1 grudnia 1934. Nr. 49",
+    ISBN: "",
+  },
+  {
+    "№": 130,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 9 grudnia 1934. Nr. 50",
+    ISBN: "",
+  },
+  {
+    "№": 131,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 16 grudnia 1934. Nr. 51",
+    ISBN: "",
+  },
+  {
+    "№": 132,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 23 grudnia 1934. Nr. 52",
+    ISBN: "",
+  },
 ];

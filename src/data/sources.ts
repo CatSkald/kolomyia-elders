@@ -772,4 +772,172 @@ export const sources = [
       "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 23 grudnia 1934. Nr. 52",
     ISBN: "",
   },
+  {
+    "№": 133,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 7 stycznia 1934. Nr. 2",
+    ISBN: "",
+  },
+  {
+    "№": 134,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Nakład drugi po konfiskacie. Kołomyja, dnia 14 stycznia 1934. Nr. 3",
+    ISBN: "",
+  },
+  {
+    "№": 135,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 21 stycznia 1934. Nr. 4",
+    ISBN: "",
+  },
+  {
+    "№": 136,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 28 stycznia 1934. Nr. 5",
+    ISBN: "",
+  },
+  {
+    "№": 137,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 4 lutego 1934. Nr. 6",
+    ISBN: "",
+  },
+  {
+    "№": 138,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 11 lutego 1934. Nr. 7",
+    ISBN: "",
+  },
+  {
+    "№": 139,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 18 lutego 1934. Nr. 8",
+    ISBN: "",
+  },
+  {
+    "№": 140,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 25 lutego 1934. Nr. 9",
+    ISBN: "",
+  },
+  {
+    "№": 141,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 4 marca 1934. Nr. 10",
+    ISBN: "",
+  },
+  {
+    "№": 142,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 11 marca 1934. Nr. 11",
+    ISBN: "",
+  },
+  {
+    "№": 143,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 18 marca 1934. Nr. 12",
+    ISBN: "",
+  },
+  {
+    "№": 144,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 1 kwietnia 1934. Nr. 14",
+    ISBN: "",
+  },
+  {
+    "№": 145,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 8 kwietnia 1934. Nr. 15",
+    ISBN: "",
+  },
+  {
+    "№": 146,
+    Назва:
+      "Tygodnik Pokucki Zjednoczenie. Poświęcony sprawom społecznym, gospodarczym i kulturalnym Pokucia. Rok VIII. Kołomyja, dnia 15 kwietnia 1934. Nr. 16",
+    ISBN: "",
+  },
+  {
+    "№": 147,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 7-go STYCZNIA 1923. Nr. 1",
+    ISBN: "",
+  },
+  {
+    "№": 148,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 14-go STYCZNIA 1923. Nr. 2",
+    ISBN: "",
+  },
+  {
+    "№": 149,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 21-go STYCZNIA 1923. Nr. 3",
+    ISBN: "",
+  },
+  {
+    "№": 150,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 4-go LUTEGO 1923. Nr. 5",
+    ISBN: "",
+  },
+  {
+    "№": 151,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 11-go LUTEGO 1923. Nr. 6",
+    ISBN: "",
+  },
+  {
+    "№": 152,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 18-go LUTEGO 1923. Nr. 7",
+    ISBN: "",
+  },
+  {
+    "№": 153,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 25-go LUTEGO 1923. Nr. 8",
+    ISBN: "",
+  },
+  {
+    "№": 154,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 4-go MARCA 1923. Nr. 9",
+    ISBN: "",
+  },
+  {
+    "№": 155,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 11-go MARCA 1923. Nr. 10",
+    ISBN: "",
+  },
+  {
+    "№": 156,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 18-go MARCA 1923. Nr. 11",
+    ISBN: "",
+  },
+  {
+    "№": 157,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 25-go MARCA 1923. Nr. 13",
+    ISBN: "",
+  },
+  {
+    "№": 158,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 1-go KWIETNIA 1923. Nr. 14",
+    ISBN: "",
+  },
+  {
+    "№": 159,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 8-go KWIETNIA 1923. Nr. 15",
+    ISBN: "",
+  },
+  {
+    "№": 160,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 15-go KWIETNIA 1923. Nr. 16",
+    ISBN: ",",
+  },
 ];

@@ -10,7 +10,7 @@ export const monuments = [
   },
   {
     Назва: "Пам'ятник Францішеку Карпінському",
-    "Стара назва": "Pomnik Fr. Karpińskiego (1939)",
+    "Стара назва": "",
     Збудовано: 1880,
     Зруйновано: 1914,
     Історія: "Зруйнований солдатами РІА",
@@ -99,5 +99,15 @@ export const monuments = [
     Історія: "",
     Широта: 48.56744,
     Довгота: 24.9874,
+  },
+  {
+    Назва: "Пам'ятник Францішеку Карпінському",
+    "Стара назва": "Pomnik Fr. Karpińskiego (1939)",
+    Збудовано: 1931,
+    Зруйновано: 1939,
+    Історія:
+      "1934 р. - Zestawienie kosztów budowy pomnika poetu Franciszka Karpińskiego w Kołomyi. DOCHODY.\\ 1) Duchowieństwo i klasztory 242.17\\ 2) Młodzież szkół śred. miejsc. 275.10\\ 3) Młodzież szk. śr. zamiejscowa 258.35\\ 4) Młodzież szk. pow. miejsc. 577.31\\ 5) Młodzież szk. pow. zamiejsc. 78.-\\ 6) Młodzież szkół zawodowych 82.96\\ 7) Cukrownia w Horodence i Przeworsku 325.-\\ 8) Miejska Komunalna Kasa Oszczędności w Kołomyi 200.-\\ 9) Towarzystwo upiększenia miasta Kołomyi 259.31\\ 10) Urzędnicy Banku Polskiego 197.50\\ 11) 49 pułk piechoty w Kołomyi 191.30\\ 12) Inne pułki w Polsce 216.03\\ 13) Inne osoby i instytucje 2.525.06\\ 14) Procenty od wkładów oszczędnościowych 905.30\\ Razem Zł. 6.333.39\\ ROZCHODY.\\ 1) Profesor Tracz za model 2.800.-\\ 2) Szkoła w Pabjanicach za odlew 2.080.-\\ 3) Transport modelu i odlewu z Pabjanic 283.96\\ 4) Ustawienie pomnika i naprawa cokołu 184.95\\ 5) Magistrat za ogrodzenie pomnika 290.87\\ 6) Druki i odezwy 160.75\\ 7) Porto i stemple 172.73\\ 8) P. K. O. za druki i należytości manipulacyjne 71.80\\ 9) Inne wydatki 33.30\\ Razem wydatków zł. 6.078.36\\ Pozostałość kasowa 255.03\\ Razem zł. 6.333.39\\ Pozostałość kasowa w kwocie zł. 255.03 przeznaczono\\ 1) dla przytuliska w Kołomyi zł. 100.-\\ 2) dla Ochronki przy ul. Szewczenki zł. 100.-\\ 3) Reszta na sprawienie ogrodzenia koło pomnika na Kosaczowie zł. 55.03\\ Za datki, które hojnie popłynęły od społeczeństwa całej Polski, Komitet szczerze na tem miejscu dziękuje. Przewodniczący Stanisław Boroń, Sekretarz Wład. Sozański, Skarbnik Franciszek Zadembski. / Підрахунок коштів на побудову пам'ятника Францішеку Карпінському в Коломиї [135]",
+    Широта: 48.52496,
+    Довгота: 25.03864,
   },
 ];

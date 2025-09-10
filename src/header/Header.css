@@ -17,23 +17,27 @@
 }
 
 .button {
-  padding-right: 0.25rem;
-  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .legend {
   display: flex;
+  gap: 0.25rem;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .legend div {
   display: flex;
-  margin-top: 0.25rem;
-  margin-right: 0.25rem;
   align-items: center;
   color: var(--color-accent2);
+}
+
+@media only screen and (max-width: 768px) {
+  .legend .mobile-line-break {
+    width: 100%;
+  }
 }
 
 .legend div img {

@@ -43,6 +43,7 @@ const Legend = ({
             })
         );
       })}
+      <div className="mobile-line-break"></div>
       {getImage(
         "збудовані до 1944",
         filters.unknown
@@ -50,6 +51,7 @@ const Legend = ({
           : getDeselectedImage(imageWidth, palette.unknown),
         () => setFilters({ ...filters, unknown: !filters.unknown })
       )}
+      <div className="mobile-line-break"></div>
       {getImage(
         "втрачені",
         filters.lost

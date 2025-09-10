@@ -1,5 +1,4 @@
 import "./Header.css";
-import CoatOfArmsUrl from "../assets/coat_of_arms.svg";
 
 import { MoonStarsFill, SunFill } from "react-bootstrap-icons";
 import Legend from "./Legend";
@@ -55,7 +54,7 @@ const Header = ({
       </div>
       <hr />
       <div style={{ display: "flex", flexDirection: "row" }}>
-        <div className="captioned">
+        {/* <div className="captioned">
           <div>Герб міста Коломия</div>
           <img
             className="preview"
@@ -65,7 +64,7 @@ const Header = ({
               maxWidth: "5vh",
             }}
           />
-        </div>
+        </div> */}
         <Legend filters={filters} setFilters={setFilters} />
       </div>
     </div>

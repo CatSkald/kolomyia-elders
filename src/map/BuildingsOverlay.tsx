@@ -34,8 +34,7 @@ const BuildingsOverlay = ({
 
   return (
     <>
-      {false && //TODO
-        filters.lost &&
+      {filters.lost &&
         mappedLostBuildings
           .filter((b) => !!b.coordinates)
           .map((b) => (

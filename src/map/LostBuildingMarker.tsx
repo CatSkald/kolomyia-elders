@@ -33,7 +33,7 @@ export default function LostBuildingMarker({
           className: "marker",
           iconSize: [markerSize, markerSize],
           iconAnchor: [markerSize / 2, markerSize],
-          html: getLostBuildingMarkerImage(markerSize, markerColor),
+          html: getLostBuildingMarkerImage(markerSize, markerColor, true),
         })
       }
     >

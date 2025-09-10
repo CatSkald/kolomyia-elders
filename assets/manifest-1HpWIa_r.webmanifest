@@ -1,0 +1,9 @@
+{
+  "short_name": "Коломия: архітектурна спадщина",
+  "name": "Архітектурна спадщина міста Коломиї",
+  "start_url": "/kolomyia-elders/",
+  "scope": "/kolomyia-elders/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#000000"
+}

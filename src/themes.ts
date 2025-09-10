@@ -18,7 +18,7 @@ export const getLostBuildingMarkerImage = (
 ) =>
   `<svg fill="${color}" stroke="${stroke ? palette.overlay : ""}"
     xmlns="http://www.w3.org/2000/svg" width="${size}px" height="${size}px" viewBox="0 0 16 16">
-    <path d="m6.68,15.93a8.06,8.06 0 0 1 0,-15.86l0,3.56a4.6,4.6 0 0 0 0,8.75l0,3.56zm2.64,-15.86l0,3.56a4.6,4.6 0 0 1 0,8.75l0,3.56a8.06,8.06 0 0 0 0,-15.86z"/>
+    <path d="m7.98,0.24a7.74,7.74 0 1 0 7.74,7.74a7.74,7.74 0 0 0 -7.74,-7.74zm0,12.17a4.43,4.43 0 1 1 4.43,-4.43a4.43,4.43 0 0 1 -4.43,4.43z"/>
 </svg>`;
 
 export const getMonumentMarkerImage = (size: number, color: string) =>

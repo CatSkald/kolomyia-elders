@@ -17,10 +17,7 @@ const BuildingHistory = ({ data }: { data: HistoryEntry[] }) => {
               {item.description}
               {item.sources && (
                 <sup
-                  style={{
-                    fontStyle: "italic",
-                    textDecoration: "underline dotted",
-                  }}
+                  className="has-tooltip"
                   title={item.sources.map((s) => s.title).join("; ")}
                 >
                   {item.sources.map((s) => s.number).join(",")}

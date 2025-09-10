@@ -62,6 +62,11 @@ h2 {
   font-weight: bold;
 }
 
+.has-tooltip {
+  font-style: "italic";
+  text-decoration: "underline dotted";
+}
+
 @media (pointer: coarse), (hover: none) {
   [title] {
     position: relative;

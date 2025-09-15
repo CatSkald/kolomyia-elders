@@ -938,6 +938,108 @@ export const sources = [
     "№": 160,
     Назва:
       "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 15-go KWIETNIA 1923. Nr. 16",
+    ISBN: "",
+  },
+  {
+    "№": 161,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 22-go KWIETNIA 1923. Nr. 17",
+    ISBN: "",
+  },
+  {
+    "№": 162,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 29-go KWIETNIA 1923. Nr. 18",
+    ISBN: "",
+  },
+  {
+    "№": 163,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 6-go MAJA 1923. Nr. 19",
+    ISBN: "",
+  },
+  {
+    "№": 164,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 13-go MAJA 1923. Nr. 20",
+    ISBN: "",
+  },
+  {
+    "№": 165,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 20-go MAJA 1923. Nr. 21",
+    ISBN: "",
+  },
+  {
+    "№": 166,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 27-go MAJA 1923. Nr. 22",
+    ISBN: "",
+  },
+  {
+    "№": 167,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 3-go CZERWCA 1923. Nr. 23",
+    ISBN: "",
+  },
+  {
+    "№": 168,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 10-go CZERWCA 1923. Nr. 24",
+    ISBN: "",
+  },
+  {
+    "№": 169,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 17-go CZERWCA 1923. Nr. 25",
+    ISBN: "",
+  },
+  {
+    "№": 170,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 24-go CZERWCA 1923. Nr. 26",
+    ISBN: "",
+  },
+  {
+    "№": 171,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 1-go LIPCA 1923. Nr. 27",
+    ISBN: "",
+  },
+  {
+    "№": 172,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 8-go LIPCA 1923. Nr. 28",
+    ISBN: "",
+  },
+  {
+    "№": 173,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 15-go LIPCA 1923. Nr. 29",
+    ISBN: "",
+  },
+  {
+    "№": 174,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 22-go LIPCA 1923. Nr. 30",
+    ISBN: "",
+  },
+  {
+    "№": 175,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 29-go LIPCA 1923. Nr. 31",
+    ISBN: "",
+  },
+  {
+    "№": 176,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 5-go SIERPNIA 1923. Nr. 32",
+    ISBN: "",
+  },
+  {
+    "№": 177,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 12-go SIERPNIA 1923. Nr. 33",
     ISBN: ",",
   },
 ];

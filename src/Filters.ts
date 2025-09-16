@@ -5,5 +5,4 @@ export type Filters = {
   monuments: boolean;
   unknown: boolean;
   lost: Period[];
-  lostUnknown: boolean;
 };

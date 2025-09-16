@@ -38,9 +38,9 @@ export const palette = {
   iv: "#7E354D",
   v: "#3CB371",
   vi: "#006a3f",
-  l1: "gold",
-  l2: "yellowgreen",
-  l3: "olive",
-  unknown: "#80b3b3",
+  l1: "olive",
+  l2: "#84b02a",
+  l3: "gold",
+  unknown: "#8B4513",
   overlay: "#666666bf",
 };

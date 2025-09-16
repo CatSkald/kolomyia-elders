@@ -38,8 +38,8 @@ const BuildingsOverlay = ({
         .filter(
           (b) =>
             !!b.coordinates &&
-            ((filters.lostUnknown && b.periodOfDestruction) ||
-              filters.lost.find((p) => p.name === b.periodOfDestruction?.name))
+            !!b.periodOfDestruction &&
+            filters.lost.find((p) => p.name === b.periodOfDestruction?.name)
         )
         .map((b) => (
           <FeatureGroup key={b.coordinates?.toString()}>

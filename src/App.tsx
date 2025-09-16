@@ -14,7 +14,6 @@ function App() {
     monuments: true,
     unknown: true,
     lost: [],
-    lostUnknown: false,
   });
 
   const toggleTheme = (): void => {

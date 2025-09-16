@@ -63,17 +63,17 @@ h2 {
 }
 
 .has-tooltip {
-  font-style: "italic";
-  text-decoration: "underline dotted";
+  font-style: italic;
+  text-decoration: underline dotted;
 }
 
 @media (pointer: coarse), (hover: none) {
-  [title] {
+  [title]:not(a) {
     position: relative;
     display: inline-flex;
     justify-content: center;
   }
-  [title]:hover::after {
+  [title]:not(a):hover::after {
     content: attr(title);
     position: absolute;
     z-index: 1001;

@@ -40,6 +40,10 @@
   }
 }
 
+.legend .line-break {
+  width: 100%;
+}
+
 .legend div img {
   width: 24px;
   height: 24px;

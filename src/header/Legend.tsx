@@ -1,4 +1,4 @@
-import { periods } from "../data/periods";
+import { periods, periodsOfDestruction } from "../data/periods";
 import { Filters } from "../Filters";
 import {
   getDeselectedImage,
@@ -51,14 +51,31 @@ const Legend = ({
           : getDeselectedImage(imageWidth, palette.unknown),
         () => setFilters({ ...filters, unknown: !filters.unknown })
       )}
-      <div className="mobile-line-break"></div>
+      <div className="mobile-line-break line-break"></div>
+      {periodsOfDestruction.map((p) => {
+        const isSelected = filters.lost.find((x) => x.name === p.name);
+        return getImage(
+          p.name,
+          isSelected
+            ? getLostBuildingMarkerImage(imageWidth, p.color, false)
+            : getDeselectedImage(imageWidth, p.color),
+          () =>
+            setFilters({
+              ...filters,
+              lost: isSelected
+                ? filters.lost.filter((x) => x.name !== p.name)
+                : filters.lost.concat([p]),
+            })
+        );
+      })}
       {getImage(
         "втрачені",
-        filters.lost
+        filters.lostUnknown
           ? getLostBuildingMarkerImage(imageWidth, palette.unknown, false)
           : getDeselectedImage(imageWidth, palette.unknown),
-        () => setFilters({ ...filters, lost: !filters.lost })
+        () => setFilters({ ...filters, lostUnknown: !filters.lostUnknown })
       )}
+      <div className="mobile-line-break"></div>
       {getImage(
         "пам'ятники",
         filters.monuments

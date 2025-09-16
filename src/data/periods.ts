@@ -1,6 +1,5 @@
 import { palette } from "../themes";
 
-// https://digitalherald.org/2021/01/hexcodes-for-heraldic-tinctures/
 export const periods = [
   {
     name: "1550—1650",
@@ -37,5 +36,26 @@ export const periods = [
     startDate: 1919,
     endDate: 1944,
     color: palette.i,
+  },
+];
+
+export const periodsOfDestruction = [
+  {
+    name: "втрачені до 1944",
+    startDate: 0,
+    endDate: 1944,
+    color: palette.l1,
+  },
+  {
+    name: "втрачені в 1945—1990",
+    startDate: 1945,
+    endDate: 1990,
+    color: palette.l2,
+  },
+  {
+    name: "втрачені після 1991",
+    startDate: 1991,
+    endDate: 9999,
+    color: palette.l3,
   },
 ];

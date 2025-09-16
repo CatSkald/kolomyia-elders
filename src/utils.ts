@@ -8,7 +8,7 @@ import {
   SourceProfile,
   VocabularyEntry,
 } from "./types/types";
-import { periods } from "./data/periods";
+import { periods, periodsOfDestruction } from "./data/periods";
 import { buildings } from "./data/buildings";
 import { monuments } from "./data/monuments";
 import { lostBuildings } from "./data/lost-buildings";
@@ -63,9 +63,13 @@ const getSources = (): SourceProfile[] =>
   );
 export const mappedSources = getSources();
 
-export const getPeriod = (date: string | number): Period | undefined => {
+export const getPeriod = (
+  periods: Period[],
+  date?: string | number
+): Period | undefined => {
   let year = undefined;
-  if (typeof date === "number") year = date;
+  if (!date) return undefined;
+  else if (typeof date === "number") year = date;
   else if (date.includes("II пол. XVIII ст.")) year = 1751;
   else if (date.includes("кін. XVIII ст.")) year = 1800;
   else if (date.includes("XVIII ст.")) year = 1701;
@@ -159,7 +163,7 @@ const getBuildings = (): BuildingProfile[] =>
         description: b["Опис"],
         architecture: b["Архітектурний стиль"],
         history: history ? parseHistory(history) : undefined,
-        period: getPeriod(date),
+        period: getPeriod(periods, date),
         address: b["Адреса"],
         coordinates: coordinates,
       };
@@ -190,7 +194,7 @@ const getMonuments = (): MonumentProfile[] =>
         date: cleanDate(date)!,
         destroyed: cleanDate(m["Зруйновано"]),
         history: m["Історія"],
-        period: getPeriod(date),
+        period: getPeriod(periods, date),
         coordinates: coordinates,
       };
     }
@@ -212,6 +216,7 @@ const getLostBuildings = (): LostBuildingProfile[] =>
     }) => {
       const history = b["Історія"];
       const date = b["Збудовано"];
+      const dateLost = b["Зруйновано"];
       const lat = b["Широта"] as number | undefined;
       const lan = b["Довгота"] as number | undefined;
       const coordinates: LatLngExpression | undefined =
@@ -221,11 +226,12 @@ const getLostBuildings = (): LostBuildingProfile[] =>
         name: b["Назва"],
         oldNames: parseArray(b["Стара назва"], itemSeparator),
         date: cleanDate(date)!,
-        destroyed: cleanDate(b["Зруйновано"]),
+        destroyed: cleanDate(dateLost),
         description: b["Опис"],
         architecture: b["Архітектурний стиль"],
         history: history ? parseHistory(history) : undefined,
-        period: getPeriod(date),
+        period: getPeriod(periods, date),
+        periodOfDestruction: getPeriod(periodsOfDestruction, dateLost),
         coordinates: coordinates,
       };
     }

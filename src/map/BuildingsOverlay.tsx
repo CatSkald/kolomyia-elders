@@ -34,18 +34,22 @@ const BuildingsOverlay = ({
 
   return (
     <>
-      {filters.lost &&
-        mappedLostBuildings
-          .filter((b) => !!b.coordinates)
-          .map((b) => (
-            <FeatureGroup key={b.coordinates?.toString()}>
-              <LostBuildingMarker
-                data={b}
-                markerSize={markerSize}
-                onClick={() => onMarkerClick(b.coordinates!)}
-              />
-            </FeatureGroup>
-          ))}
+      {mappedLostBuildings
+        .filter(
+          (b) =>
+            !!b.coordinates &&
+            ((filters.lostUnknown && b.periodOfDestruction) ||
+              filters.lost.find((p) => p.name === b.periodOfDestruction?.name))
+        )
+        .map((b) => (
+          <FeatureGroup key={b.coordinates?.toString()}>
+            <LostBuildingMarker
+              data={b}
+              markerSize={markerSize}
+              onClick={() => onMarkerClick(b.coordinates!)}
+            />
+          </FeatureGroup>
+        ))}
       {mappedBuildings
         .filter(
           (b) =>

@@ -16,7 +16,7 @@ export default function LostBuildingMarker({
   markerSize: number;
   onClick: () => void;
 }) {
-  const markerColor = data.period?.color ?? palette.unknown;
+  const markerColor = data.periodOfDestruction?.color ?? palette.unknown;
   return !data.coordinates ? (
     <></>
   ) : (

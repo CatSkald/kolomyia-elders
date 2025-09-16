@@ -30,6 +30,7 @@ export type MonumentProfile = LocationProfile & {
 
 export type LostBuildingProfile = LocationProfile & {
   destroyed?: number | string;
+  periodOfDestruction?: Period;
   architecture?: string;
   description?: string;
   history?: HistoryEntry[];

@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import "./App.css";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
-import Map from "./map/Map";
 import { Theme } from "./themes";
 import { Filters } from "./Filters";
 import { periods } from "./data/periods";
+import Loading from "./Loading";
+
+const Map = lazy(() => import("./map/Map"));
 
 function App() {
   const [theme, setTheme] = useState(Theme.Dark);
@@ -32,7 +34,9 @@ function App() {
         setFilters={setFilters}
       />
       <section className="map-container">
-        <Map theme={theme} filters={filters} />
+        <Suspense fallback={<Loading />}>
+          <Map theme={theme} filters={filters} />
+        </Suspense>
       </section>
       <Footer />
     </div>

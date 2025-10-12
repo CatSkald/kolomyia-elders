@@ -9,11 +9,12 @@ import {
   VocabularyEntry,
 } from "./types/types";
 import { periods, periodsOfDestruction } from "./data/periods";
-import { buildings } from "./data/buildings";
-import { monuments } from "./data/monuments";
-import { lostBuildings } from "./data/lost-buildings";
-import { sources } from "./data/sources";
-import { vocabulary } from "./data/vocabulary";
+
+import buildings from "./data/buildings.json";
+import lostBuildings from "./data/lost-buildings.json";
+import monuments from "./data/monuments.json";
+import sources from "./data/sources.json";
+import vocabulary from "./data/vocabulary.json";
 
 const itemSeparator = ";";
 const dateSeparator = " - ";

@@ -33,11 +33,11 @@ function App() {
         filters={filters}
         setFilters={setFilters}
       />
-      <section className="map-container">
-        <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loading />}>
+        <section className="map-container">
           <Map theme={theme} filters={filters} />
-        </Suspense>
-      </section>
+        </section>
+      </Suspense>
       <Footer />
     </div>
   );

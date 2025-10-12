@@ -5,7 +5,7 @@ import Header from "./header/Header";
 import { Theme } from "./themes";
 import { Filters } from "./Filters";
 import { periods } from "./data/periods";
-import Loading from "./Loading";
+import Loader from "./loader/Loader";
 
 const Map = lazy(() => import("./map/Map"));
 
@@ -33,7 +33,7 @@ function App() {
         filters={filters}
         setFilters={setFilters}
       />
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loader />}>
         <section className="map-container">
           <Map theme={theme} filters={filters} />
         </section>

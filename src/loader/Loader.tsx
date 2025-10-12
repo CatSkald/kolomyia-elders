@@ -1,5 +1,7 @@
-const Loading = () => (
-  <h2
+import "./Loader.css";
+
+const Loader = () => (
+  <div
     style={{
       height: "100vh",
       display: "flex",
@@ -7,8 +9,8 @@ const Loading = () => (
       alignItems: "center",
     }}
   >
-    🌀 Завантажуємо дані... 🌀
-  </h2>
+    <div className="loader"></div>
+  </div>
 );
 
-export default Loading;
+export default Loader;

@@ -1040,6 +1040,96 @@ export const sources = [
     "№": 177,
     Назва:
       "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 12-go SIERPNIA 1923. Nr. 33",
+    ISBN: "",
+  },
+  {
+    "№": 178,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 19-go SIERPNIA 1923. Nr. 34",
+    ISBN: "",
+  },
+  {
+    "№": 179,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 26-go SIERPNIA 1923. Nr. 35",
+    ISBN: "",
+  },
+  {
+    "№": 180,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 2-go WRZEŚNIA 1923. Nr. 36",
+    ISBN: "",
+  },
+  {
+    "№": 181,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 9-go WRZEŚNIA 1923. Nr. 37",
+    ISBN: "",
+  },
+  {
+    "№": 182,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 16-go WRZEŚNIA 1923. Nr. 38",
+    ISBN: "",
+  },
+  {
+    "№": 183,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 23-go WRZEŚNIA 1923. Nr. 39",
+    ISBN: "",
+  },
+  {
+    "№": 184,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 30-go WRZEŚNIA 1923. Nr. 40",
+    ISBN: "",
+  },
+  {
+    "№": 185,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 7-go PAŹDZIERNIKA 1923. Nr. 41",
+    ISBN: "",
+  },
+  {
+    "№": 186,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 14-go PAŹDZIERNIKA 1923. Nr. 42",
+    ISBN: "",
+  },
+  {
+    "№": 187,
+    Назва:
+      "Prawda Pokucka. Bezpartyjny Tygodnik Polski Poswięcony Sprawom Polityczno - Społecznym. Oświatowym i Handlowym Ziemi Pokuckiej. Rok IV. w KOŁOMYI, DNIA 21-go PAŹDZIERNIKA 1923. Nr. 43",
+    ISBN: "",
+  },
+  {
+    "№": 188,
+    Назва:
+      "GŁOS POKUCIA. Organ Regionalny Pokucia i Huculszczyzny. Rok III. Kołomyja, niedziela, dnia 1. stycznia 1939. Nr. 1",
+    ISBN: "",
+  },
+  {
+    "№": 189,
+    Назва:
+      "GŁOS POKUCIA. Organ Regionalny Pokucia i Huculszczyzny. Rok III. Kołomyja, niedziela, dnia 8. stycznia 1939. Nr. 2",
+    ISBN: "",
+  },
+  {
+    "№": 190,
+    Назва:
+      "GŁOS POKUCIA. Organ Regionalny Pokucia i Huculszczyzny. Rok III. Kołomyja, niedziela, dnia 22. stycznia 1939. Nr. 3",
+    ISBN: "",
+  },
+  {
+    "№": 191,
+    Назва:
+      "GŁOS POKUCIA. Organ Regionalny Pokucia i Huculszczyzny. Rok III. Kołomyja, niedziela, dnia 29. stycznia 1939. Nr. 4",
+    ISBN: "",
+  },
+  {
+    "№": 192,
+    Назва:
+      "GŁOS POKUCIA. Organ Regionalny Pokucia i Huculszczyzny. Rok III. Kołomyja, niedziela, dnia 19. marca 1939. Nr. 5-6",
     ISBN: ",",
   },
 ];

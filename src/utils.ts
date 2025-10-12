@@ -160,9 +160,11 @@ const getBuildings = (): BuildingProfile[] =>
           (x) => x.replaceAll(" - ", " — ")
         ),
         date: cleanDate(b["Дата"])!,
-        description: b["Опис"],
+        description: b["Опис"]?.replace(/(\s?<\d+>)/, ""), //TODO implement vocabulary
         architecture: b["Архітектурний стиль"],
-        history: history ? parseHistory(history) : undefined,
+        history: history
+          ? parseHistory(history?.replace(/(\s?<\d+>)/, "")) //TODO implement vocabulary
+          : undefined,
         period: getPeriod(periods, date),
         address: b["Адреса"],
         coordinates: coordinates,

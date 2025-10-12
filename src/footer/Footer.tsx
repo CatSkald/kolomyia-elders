@@ -13,7 +13,7 @@ const Footer = () => {
         <a
           href="https://www.maptiler.com/copyright/"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           &copy; MapTiler
         </a>
@@ -21,7 +21,7 @@ const Footer = () => {
         <a
           href="https://openstreetmap.org/copyright"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           &copy; OpenStreetMap
         </a>

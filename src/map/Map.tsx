@@ -40,6 +40,8 @@ const Map = ({ theme, filters }: { theme: Theme; filters: Filters }) => {
     if (map) {
       if (!maptiler) {
         enableCoordinatesInUrl(map);
+        // TODO Investigate why
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMaptiler(createMaptiler(map));
       } else {
         maptiler.setStyle(style);

@@ -46,7 +46,7 @@ const InfoPopup = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Зв'яжіться з нами
+                  Зв&apos;яжіться з нами
                 </a>
               </span>
               <hr />
@@ -60,13 +60,17 @@ const InfoPopup = () => {
               </ol>
               <hr />
               <span>Ідея сайту навіяна проектами</span> “
-              <a href="https://map.klym.uk/" rel="external" target="_blank">
+              <a
+                href="https://map.klym.uk/"
+                rel="external noopener noreferrer"
+                target="_blank"
+              >
                 Вік&nbsp;будинків&nbsp;Станиславова
               </a>
               ” та “
               <a
                 href="https://kolobramy.com.ua/"
-                rel="external"
+                rel="external noopener noreferrer"
                 target="_blank"
               >
                 коло&nbsp;брами

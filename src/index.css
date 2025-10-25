@@ -7,6 +7,11 @@ body {
   --color-accent: #5a0c0c;
   --color-accent2: #b22222;
   --color-accent-background: #f59b9b;
+
+  /* TODO use everywhere */
+  --color-link: var(--color-accent2);
+  --color-link-hover: var(--color-accent);
+
   --button-size: 23px;
 
   background-color: var(--color-background);
@@ -80,7 +85,7 @@ h2 {
   [title]:not(a):hover::after {
     content: attr(title);
     position: absolute;
-    z-index: 1001;
+    z-index: 1200;
     top: 90%;
     width: fit-content;
     min-width: 15rem;

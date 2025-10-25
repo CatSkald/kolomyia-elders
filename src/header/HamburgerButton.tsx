@@ -1,9 +1,12 @@
-import { useState } from "react";
 import styles from "./HamburgerButton.module.css";
 
-const HamburgerButton = () => {
-  const [open, setOpen] = useState(false);
-
+const HamburgerButton = ({
+  open,
+  setOpen,
+}: {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+}) => {
   return (
     <div
       className={`${styles.button} ${open ? styles.opened : ""}`}

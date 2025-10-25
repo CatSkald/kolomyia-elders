@@ -7,6 +7,7 @@ body {
   --color-accent: #5a0c0c;
   --color-accent2: #b22222;
   --color-accent-background: #f59b9b;
+  --button-size: 23px;
 
   background-color: var(--color-background);
   color: var(--color-foreground);

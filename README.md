@@ -10,8 +10,8 @@ All texts, data (under `src/data`) and assets (under `src/assets`) are subject t
 
 ## Local development
 
-1. `npm run preview` to view.
-1. Optionally in a separate terminal: `npm run build` to watch.
+1. `npm run build` to build and watch.
+1. In separate terminal: `npm run preview` to view.
 
 ## Deploy
 

@@ -9,7 +9,7 @@
   bottom: 0;
   right: 0;
   /* 16px is min recommended by Apple and Google */
-  padding: 16px 0.1rem;
+  padding: 0.1rem 16px;
   font-size: x-small;
   display: flex;
   flex-direction: column;

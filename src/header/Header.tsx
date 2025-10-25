@@ -5,6 +5,10 @@ import Legend from "./Legend";
 import InfoPopup from "../info/InfoPopup";
 import { buttonSize, Theme } from "../themes";
 import { Filters } from "../Filters";
+import HamburgerButton from "./HamburgerButton";
+import { ReactNode, useState } from "react";
+import AboutUs from "../info/AboutUs";
+import Sources from "../info/Sources";
 
 const Header = ({
   theme,
@@ -19,6 +23,8 @@ const Header = ({
 }) => {
   const isDarkTheme = theme === "dark";
   const toggleTheme = () => setTheme(isDarkTheme ? Theme.Light : Theme.Dark);
+  const [openMenu, setOpenMenu] = useState(false);
+  const [popupContent, setPopupContent] = useState<ReactNode>(undefined);
 
   return (
     <div className="header">
@@ -27,30 +33,43 @@ const Header = ({
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-          justifyContent: "space-between",
         }}
       >
-        {/* <div className="button" style={{ marginRight: "0.5rem" }}>
-          <List />
-        </div> */}
-        <h1>Архітектурна спадщина міста Коломиї</h1>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "end",
-            columnGap: "0.5rem",
-          }}
-        >
-          <div className="button" onClick={toggleTheme}>
+        <HamburgerButton open={openMenu} setOpen={setOpenMenu} />
+        <h1>Архітектурна спадщина Коломиї</h1>
+        <nav className={openMenu ? "open" : ""}>
+          <div
+            role="button"
+            onClick={() => {
+              setOpenMenu(false);
+              setPopupContent(<AboutUs />);
+            }}
+          >
+            Про нас
+          </div>
+          <div
+            role="button"
+            onClick={() => {
+              setOpenMenu(false);
+              setPopupContent(<Sources />);
+            }}
+          >
+            Використані джерела
+          </div>
+          <div role="button" onClick={toggleTheme}>
             {isDarkTheme ? (
               <MoonStarsFill size={buttonSize} />
             ) : (
               <SunFill size={buttonSize} />
             )}
           </div>
-          <InfoPopup />
-        </div>
+        </nav>
+        <InfoPopup
+          open={!!popupContent}
+          onClose={() => setPopupContent(undefined)}
+        >
+          {popupContent}
+        </InfoPopup>
       </div>
       <hr />
       <div style={{ display: "flex", flexDirection: "row" }}>

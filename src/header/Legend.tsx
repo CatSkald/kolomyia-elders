@@ -16,7 +16,7 @@ const Legend = ({
   setFilters: (filters: Filters) => void;
 }) => {
   const getImage = (text: string, image: string, onClick: () => void) => (
-    <div key={text} className="button" onClick={onClick}>
+    <div key={text} role="button" onClick={onClick}>
       <img
         src={`data:image/svg+xml;utf8,${encodeURIComponent(image)}`}
         alt={text}

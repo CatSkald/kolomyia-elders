@@ -9,6 +9,7 @@ const HamburgerButton = ({
 }) => {
   return (
     <div
+      role="button"
       className={`${styles.button} ${open ? styles.opened : ""}`}
       onClick={() => setOpen(!open)}
     >

@@ -1,11 +1,11 @@
 .button {
   z-index: 1120;
-  cursor: pointer;
   user-select: none;
   padding: 0.3rem;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 2px;
+  justify-content: space-evenly;
   width: 26px;
   height: 26px;
 }
@@ -19,7 +19,7 @@
   transition: all 0.35s ease;
 }
 .button:hover span {
-  background-color: var(--color-accent);
+  background-color: var(--color-link-hover);
 }
 
 .opened span:first-child {

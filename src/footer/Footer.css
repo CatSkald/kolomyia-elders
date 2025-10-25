@@ -8,7 +8,8 @@
   box-sizing: border-box;
   bottom: 0;
   right: 0;
-  padding: 0.1rem;
+  /* 16px is min recommended by Apple and Google */
+  padding: 16px 0.1rem;
   font-size: x-small;
   display: flex;
   flex-direction: column;

@@ -8,7 +8,7 @@
   top: 0;
   width: 100vw;
   /* As min recommended by Apple and Google */
-  padding: 16px;
+  padding: 16px 16px 0.5rem;
 }
 
 @media only screen and (min-width: 768px) {

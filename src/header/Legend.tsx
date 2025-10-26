@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { periods, periodsOfDestruction } from "../data/periods";
 import { Filters } from "../Filters";
 import {
@@ -15,6 +16,16 @@ const Legend = ({
   filters: Filters;
   setFilters: (filters: Filters) => void;
 }) => {
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const onWindowSizeChange = () => setWindowWidth(window.innerWidth);
+  useEffect(() => {
+    window.addEventListener("resize", onWindowSizeChange);
+    return () => window.removeEventListener("resize", onWindowSizeChange);
+  }, []);
+  const isMobile = windowWidth <= 768;
+
+  const [expanded, setExpanded] = useState(!isMobile);
+
   const getImage = (text: string, image: string, onClick: () => void) => (
     <div key={text} role="button" onClick={onClick}>
       <img
@@ -43,38 +54,47 @@ const Legend = ({
             })
         );
       })}
-      <div className="mobile-line-break"></div>
-      {getImage(
-        "збудовані до 1944",
-        filters.unknown
-          ? getMarkerImage(imageWidth, palette.unknown)
-          : getDeselectedImage(imageWidth, palette.unknown),
-        () => setFilters({ ...filters, unknown: !filters.unknown })
+      {expanded && (
+        <>
+          <div className="mobile-line-break"></div>
+          {getImage(
+            "збудовані до 1944",
+            filters.unknown
+              ? getMarkerImage(imageWidth, palette.unknown)
+              : getDeselectedImage(imageWidth, palette.unknown),
+            () => setFilters({ ...filters, unknown: !filters.unknown })
+          )}
+          {getImage(
+            "пам'ятники",
+            filters.monuments
+              ? getMonumentMarkerImage(imageWidth, palette.unknown)
+              : getDeselectedImage(imageWidth, palette.unknown),
+            () => setFilters({ ...filters, monuments: !filters.monuments })
+          )}
+          <div className="line-break"></div>
+          {periodsOfDestruction.map((p) => {
+            const isSelected = filters.lost.find((x) => x.name === p.name);
+            return getImage(
+              p.name,
+              isSelected
+                ? getLostBuildingMarkerImage(imageWidth, p.color, false)
+                : getDeselectedImage(imageWidth, p.color),
+              () =>
+                setFilters({
+                  ...filters,
+                  lost: isSelected
+                    ? filters.lost.filter((x) => x.name !== p.name)
+                    : filters.lost.concat([p]),
+                })
+            );
+          })}
+        </>
       )}
-      {getImage(
-        "пам'ятники",
-        filters.monuments
-          ? getMonumentMarkerImage(imageWidth, palette.unknown)
-          : getDeselectedImage(imageWidth, palette.unknown),
-        () => setFilters({ ...filters, monuments: !filters.monuments })
+      {isMobile && (
+        <div role="button" onClick={() => setExpanded(!expanded)}>
+          {expanded ? "▲ Сховати фільтри" : "◆ Більше фільтрів"}
+        </div>
       )}
-      <div className="line-break"></div>
-      {periodsOfDestruction.map((p) => {
-        const isSelected = filters.lost.find((x) => x.name === p.name);
-        return getImage(
-          p.name,
-          isSelected
-            ? getLostBuildingMarkerImage(imageWidth, p.color, false)
-            : getDeselectedImage(imageWidth, p.color),
-          () =>
-            setFilters({
-              ...filters,
-              lost: isSelected
-                ? filters.lost.filter((x) => x.name !== p.name)
-                : filters.lost.concat([p]),
-            })
-        );
-      })}
     </div>
   );
 };

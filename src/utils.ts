@@ -21,6 +21,7 @@ const dateSeparator = " - ";
 const dashToClean = " - ";
 const newLineToClean = "\\";
 
+//TODO second part of date is not bold
 const cleanDate = (date?: string | number): string | number | undefined =>
   typeof date === "number" ? date : date?.replaceAll(dateSeparator, "—");
 

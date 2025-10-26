@@ -4,8 +4,9 @@ import "leaflet/dist/leaflet.css";
 import { LostBuildingProfile } from "../types/types";
 import { getLostBuildingMarkerImage, palette } from "../themes";
 import { DivIcon } from "leaflet";
-import Collapsible from "./Collapsible";
 import BuildingHistory from "./BuildingHistory";
+import { useState } from "react";
+import ReadMoreButton from "./ReadMoreButton";
 
 export default function LostBuildingMarker({
   data,
@@ -16,6 +17,8 @@ export default function LostBuildingMarker({
   markerSize: number;
   onClick: () => void;
 }) {
+  const [showOldName, setShowOldName] = useState(false);
+
   const markerColor = data.periodOfDestruction?.color ?? palette.unknown;
   return !data.coordinates ? (
     <></>
@@ -62,37 +65,44 @@ export default function LostBuildingMarker({
           >
             {data.date}—{data.destroyed}
           </span>
+          {data.oldNames && (
+            <div style={showOldName ? { display: "none" } : {}}>
+              <ReadMoreButton
+                text="давні назви"
+                onClick={() => setShowOldName(true)}
+              />
+            </div>
+          )}
+          {data.oldNames && (
+            <>
+              <div
+                className="newline"
+                style={{
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center",
+                  display: showOldName ? "flex" : "none",
+                }}
+              >
+                {data.oldNames.map((name, index) => (
+                  <div key={index} style={{ textAlign: "center" }}>
+                    {name}
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
         </div>
-        {(data.description || data.architecture) && (
-          <Collapsible header="Опис">
-            {data.description && (
-              <div style={{ textAlign: "center" }}>{data.description}</div>
-            )}
-            {data.architecture && (
-              <>
-                <hr style={{ margin: "0.9rem 0" }} />
-                <div
-                  className="newline"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    textAlign: "center",
-                  }}
-                >
-                  <span>
-                    Архітектурний стиль:&nbsp;
-                    <span style={{ fontStyle: "italic" }}>
-                      {data.architecture}
-                    </span>
-                  </span>
-                </div>
-              </>
-            )}
-          </Collapsible>
+
+        {data.description && (
+          <>
+            <hr style={{ margin: "0.5rem 0", width: "100%" }} />
+            <div style={{ textAlign: "center" }}>{data.description}</div>
+          </>
         )}
-        {data.oldNames && (
-          <Collapsible header="Давні назви">
+        {data.architecture && (
+          <>
+            <hr style={{ margin: "0.5rem 0", width: "100%" }} />
             <div
               className="newline"
               style={{
@@ -102,13 +112,12 @@ export default function LostBuildingMarker({
                 textAlign: "center",
               }}
             >
-              {data.oldNames.map((name, index) => (
-                <div key={index} style={{ textAlign: "center" }}>
-                  {name}
-                </div>
-              ))}
+              <span>
+                Архітектурний стиль:&nbsp;
+                <span style={{ fontStyle: "italic" }}>{data.architecture}</span>
+              </span>
             </div>
-          </Collapsible>
+          </>
         )}
         {data.history && <BuildingHistory data={data.history} />}
       </Popup>

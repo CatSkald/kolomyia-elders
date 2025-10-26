@@ -57,6 +57,14 @@ export default function MonumentMarker({
           >
             {data.name}
           </span>
+          <span
+            style={{
+              fontSize: "0.9rem",
+            }}
+          >
+            {data.date}
+            {data.destroyed ? `—${data.destroyed}` : ""}
+          </span>
           {data.oldNames && (
             <div style={showOldName ? { display: "none" } : {}}>
               <ReadMoreButton
@@ -66,42 +74,33 @@ export default function MonumentMarker({
             </div>
           )}
           {data.oldNames && (
-            <div
-              className="newline"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                textAlign: "center",
-                visibility: showOldName ? "visible" : "hidden",
-              }}
-            >
-              {data.oldNames.map((name, index) => (
-                <div key={index} style={{ textAlign: "center" }}>
-                  {name}
-                </div>
-              ))}
-              <br
+            <>
+              <div
+                className="newline"
                 style={{
-                  display: showOldName ? "block" : "none",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center",
+                  display: showOldName ? "flex" : "none",
                 }}
-              />
-            </div>
+              >
+                {data.oldNames.map((name, index) => (
+                  <div key={index} style={{ textAlign: "center" }}>
+                    {name}
+                  </div>
+                ))}
+              </div>
+            </>
           )}
-          <span
-            style={{
-              fontSize: "0.9rem",
-            }}
-          >
-            {data.date}
-            {data.destroyed ? `—${data.destroyed}` : ""}
-          </span>
         </div>
         {data.history && (
-          <div style={{ whiteSpace: "pre-wrap" }}>
-            {data.history}
-            {data.sources && <Sources data={data.sources} />}
-          </div>
+          <>
+            <hr style={{ margin: "0.5rem 0", width: "100%" }} />
+            <div style={{ whiteSpace: "pre-wrap" }}>
+              {data.history}
+              {data.sources && <Sources data={data.sources} />}
+            </div>
+          </>
         )}
       </Popup>
     </Marker>

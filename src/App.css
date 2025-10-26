@@ -6,6 +6,7 @@
 
 .app main {
   flex-grow: 1;
+  overflow: hidden;
   height: 100%;
 }
 

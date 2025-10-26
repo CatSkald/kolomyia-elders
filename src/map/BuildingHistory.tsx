@@ -1,5 +1,6 @@
 import { HistoryEntry } from "../types/types";
 import Collapsible from "./Collapsible";
+import Sources from "./Sources";
 
 const BuildingHistory = ({ data }: { data: HistoryEntry[] }) => {
   return (
@@ -15,14 +16,7 @@ const BuildingHistory = ({ data }: { data: HistoryEntry[] }) => {
             {item.date && item.description && " — "}
             <span style={{ whiteSpace: "pre-wrap" }}>
               {item.description}
-              {item.sources && (
-                <sup
-                  className="has-tooltip"
-                  title={item.sources.map((s) => s.title).join("; ")}
-                >
-                  {item.sources.map((s) => s.number).join(",")}
-                </sup>
-              )}
+              {item.sources && <Sources data={item.sources} />}
             </span>
           </li>
         ))}

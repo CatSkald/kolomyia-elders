@@ -18,6 +18,8 @@ import vocabulary from "./data/vocabulary.json";
 
 const itemSeparator = ";";
 const dateSeparator = " - ";
+const dashToClean = " - ";
+const newLineToClean = "\\";
 
 const cleanDate = (date?: string | number): string | number | undefined =>
   typeof date === "number" ? date : date?.replaceAll(dateSeparator, "—");
@@ -87,13 +89,54 @@ export const getPeriod = (
   return periods.find((p) => p.startDate <= year && p.endDate >= year);
 };
 
+const cleanText = (text?: string): string => {
+  if (!text) return "";
+
+  return text
+    .replaceAll(dashToClean, " — ")
+    .replaceAll(newLineToClean, "\n")
+    .replace(/(\s?<\d+>)/, "") //TODO implement vocabulary
+    .trim();
+};
+
+const parseSources = (
+  text: string
+): {
+  hasSources: boolean;
+  sourcedText: string | undefined;
+  sources: SourceProfile[] | undefined;
+} => {
+  const sourceMarker = "[";
+  const hasSources = text.indexOf(sourceMarker) !== -1;
+  let sources = undefined;
+  let sourcedText = undefined;
+
+  if (hasSources) {
+    const all = text.split("[");
+    sourcedText = all[0];
+    sources = all[1]
+      .slice(0, -1)
+      .split(",")
+      .map((x) => {
+        const number = Number(x);
+        return (
+          mappedSources.find((s) => s.number === number) ??
+          ({
+            number: number,
+            title: "Unknown",
+          } as SourceProfile)
+        );
+      });
+  }
+
+  return { hasSources, sourcedText, sources };
+};
+
 const parseHistory = (history: string): HistoryEntry[] =>
   parseArray(history, itemSeparator)!.map((h) => {
     const noDateMarker = "? - ";
-    const sourceMarker = "[";
     let date = undefined;
-    let description = h.replaceAll(" - ", " — ").replaceAll("\\", "\n");
-    let sources = undefined;
+    let description = cleanText(h);
     if (h.startsWith(noDateMarker)) {
       description = description.slice(noDateMarker.length).trim();
     } else {
@@ -106,27 +149,11 @@ const parseHistory = (history: string): HistoryEntry[] =>
       }
     }
 
-    if (description.indexOf(sourceMarker) !== -1) {
-      const all = description.split("[");
-      description = all[0];
-      sources = all[1]
-        .slice(0, -1)
-        .split(",")
-        .map((x) => {
-          const number = Number(x);
-          return (
-            mappedSources.find((s) => s.number === number) ??
-            ({
-              number: number,
-              title: "Unknown",
-            } as SourceProfile)
-          );
-        });
-    }
+    const { sourcedText, sources } = parseSources(description);
 
     return {
       date: date,
-      description: description,
+      description: sourcedText ?? description,
       sources: sources,
     };
   });
@@ -153,19 +180,15 @@ const getBuildings = (): BuildingProfile[] =>
         lat && lan ? [lat, lan] : undefined;
 
       return {
-        name: b["Назва"],
-        oldNames: parseArray(b["Стара назва"], itemSeparator)?.map((x) =>
-          x.replaceAll(" - ", " — ")
-        ),
+        name: cleanText(b["Назва"]),
+        oldNames: parseArray(b["Стара назва"], itemSeparator)?.map(cleanText),
         oldStreetNames: parseArray(b["Старі назви вулиці"], itemSeparator)?.map(
-          (x) => x.replaceAll(" - ", " — ")
+          cleanText
         ),
         date: cleanDate(b["Дата"])!,
-        description: b["Опис"]?.replace(/(\s?<\d+>)/, ""), //TODO implement vocabulary
+        description: cleanText(b["Опис"]),
         architecture: b["Архітектурний стиль"],
-        history: history
-          ? parseHistory(history?.replace(/(\s?<\d+>)/, "")) //TODO implement vocabulary
-          : undefined,
+        history: history ? parseHistory(history) : undefined,
         period: getPeriod(periods, date),
         address: b["Адреса"],
         coordinates: coordinates,
@@ -191,12 +214,16 @@ const getMonuments = (): MonumentProfile[] =>
       const coordinates: LatLngExpression | undefined =
         lat && lan ? [lat, lan] : undefined;
 
+      const history = m["Історія"];
+      const { sourcedText, sources } = parseSources(history ?? "");
+
       return {
-        name: m["Назва"],
+        name: cleanText(m["Назва"]),
         oldNames: parseArray(m["Стара назва"], itemSeparator),
         date: cleanDate(date)!,
         destroyed: cleanDate(m["Зруйновано"]),
-        history: m["Історія"],
+        history: cleanText(sourcedText ?? history),
+        sources: sources,
         period: getPeriod(periods, date),
         coordinates: coordinates,
       };
@@ -226,11 +253,11 @@ const getLostBuildings = (): LostBuildingProfile[] =>
         lat && lan ? [lat, lan] : undefined;
 
       return {
-        name: b["Назва"],
+        name: cleanText(b["Назва"]),
         oldNames: parseArray(b["Стара назва"], itemSeparator),
         date: cleanDate(date)!,
         destroyed: cleanDate(dateLost),
-        description: b["Опис"],
+        description: cleanText(b["Опис"]),
         architecture: b["Архітектурний стиль"],
         history: history ? parseHistory(history) : undefined,
         period: getPeriod(periods, date),

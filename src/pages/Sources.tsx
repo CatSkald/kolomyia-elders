@@ -5,12 +5,7 @@ const Sources = () => {
   return (
     <div className={styles.page}>
       <h2>Використані джерела</h2>
-      <ol
-        style={{
-          marginTop: "0.5rem",
-          paddingLeft: "1.5rem",
-        }}
-      >
+      <ol>
         {mappedSources.map((item, index) => (
           <li key={index}>
             <span>{item.title}</span>

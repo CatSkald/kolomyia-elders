@@ -26,6 +26,7 @@ export type BuildingProfile = LocationProfile & {
 export type MonumentProfile = LocationProfile & {
   destroyed?: number | string;
   history?: string;
+  sources?: SourceProfile[];
 };
 
 export type LostBuildingProfile = LocationProfile & {

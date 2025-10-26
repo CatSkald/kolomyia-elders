@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
 body {
   --color-background: #fff;
   /* --color-foreground: rgba(0, 0, 0, 0.87); */
@@ -13,6 +11,8 @@ body {
   --color-link-hover: var(--color-accent);
 
   --button-size: 23px;
+  /* As recommended by Apple and Google */
+  --padding-min-mobile: 16px;
 
   background-color: var(--color-background);
   color: var(--color-foreground);

@@ -1,14 +1,12 @@
 .header {
-  position: absolute;
+  position: sticky;
   /* To be on top of the leaflet zoom buttons */
   z-index: 1100;
   background-color: var(--color-background);
   color: var(--color-foreground);
   box-sizing: border-box;
   top: 0;
-  width: 100vw;
-  /* As min recommended by Apple and Google */
-  padding: 16px 16px 0.5rem;
+  padding: var(--padding-min-mobile) var(--padding-min-mobile) 0.5rem;
 }
 
 @media only screen and (min-width: 768px) {

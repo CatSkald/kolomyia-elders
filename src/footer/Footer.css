@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  position: absolute;
+  position: sticky;
   z-index: 500;
   background-color: var(--color-background);
   color: var(--color-foreground);
@@ -8,8 +8,7 @@
   box-sizing: border-box;
   bottom: 0;
   right: 0;
-  /* 16px is min recommended by Apple and Google */
-  padding: 0.1rem 16px;
+  padding: 0.1rem var(--padding-min-mobile);
   font-size: x-small;
   display: flex;
   flex-direction: column;

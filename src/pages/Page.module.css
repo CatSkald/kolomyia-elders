@@ -1,0 +1,22 @@
+.page {
+  padding: 0 var(--padding-min-mobile) var(--padding-min-mobile);
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.page h2 {
+  font-size: 1.2rem;
+  margin-block-start: 0;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .page {
+    padding: 0 0.8rem 0.8rem;
+  }
+
+  .page h2 {
+    text-align: start;
+    font-size: 1.3rem;
+  }
+}

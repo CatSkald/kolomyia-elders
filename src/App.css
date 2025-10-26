@@ -1,6 +1,17 @@
-.app .leaflet-container {
-  width: 100vw;
+.app {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
+}
+
+.app main {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.app .leaflet-container {
+  font-family: Philosopher, Noto Sans, serif;
+  height: 100%;
 }
 .app .leaflet-control-zoom {
   position: absolute;
@@ -20,10 +31,11 @@
 
 /* logoPosition: "bottom-right" does not work with React */
 /* https://github.com/maptiler/leaflet-maptilersdk/blob/3d7b122d8e6315d0fcc27a74dfdfe47fcd8848fe/src/leaflet-maptilersdk.ts#L324 */
-.app .map-container a:has(img[alt="MapTiler logo"]) {
+.app a:has(img[alt="MapTiler logo"]) {
   left: unset !important;
   right: 0.3rem;
   bottom: -6px !important;
+  position: fixed !important;
 }
 
 /* Open popup below */

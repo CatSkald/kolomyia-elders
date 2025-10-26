@@ -1,23 +1,21 @@
-import { ReactNode, useState } from "react";
-import AboutUs from "../info/AboutUs";
-import Sources from "../info/Sources";
+import { useState } from "react";
 import { buttonSize, Theme } from "../themes";
 import { MoonStarsFill, SunFill } from "react-bootstrap-icons";
-import InfoPopup from "../info/InfoPopup";
 import HamburgerButton from "./HamburgerButton";
 import styles from "./Menu.module.css";
+import { SiteMap } from "../pages/SiteMap";
 
 const Menu = ({
   theme,
   setTheme,
+  setActivePage,
 }: {
   theme: Theme;
   setTheme: (theme: Theme) => void;
+  setActivePage: (page?: SiteMap) => void;
 }) => {
   const isDarkTheme = theme === "dark";
   const toggleTheme = () => setTheme(isDarkTheme ? Theme.Light : Theme.Dark);
-
-  const [popupContent, setPopupContent] = useState<ReactNode>(undefined);
 
   const [open, setOpen] = useState(false);
 
@@ -29,7 +27,16 @@ const Menu = ({
           role="button"
           onClick={() => {
             setOpen(false);
-            setPopupContent(<AboutUs />);
+            setActivePage(SiteMap.Map);
+          }}
+        >
+          Мапа
+        </div>
+        <div
+          role="button"
+          onClick={() => {
+            setOpen(false);
+            setActivePage(SiteMap.AboutUs);
           }}
         >
           Про нас
@@ -38,7 +45,7 @@ const Menu = ({
           role="button"
           onClick={() => {
             setOpen(false);
-            setPopupContent(<Sources />);
+            setActivePage(SiteMap.Sources);
           }}
         >
           Використані джерела
@@ -51,12 +58,6 @@ const Menu = ({
           )}
         </div>
       </nav>
-      <InfoPopup
-        open={!!popupContent}
-        onClose={() => setPopupContent(undefined)}
-      >
-        {popupContent}
-      </InfoPopup>
     </>
   );
 };

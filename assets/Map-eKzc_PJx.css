@@ -1,0 +1,1 @@
+.collapsible-header{cursor:pointer;text-align:center;color:var(--color-link);border-radius:3px}.collapsible-header:hover{color:var(--color-link-hover)}.collapsible-header:before{content:"▼ "}.collapsed .collapsible-header:before{content:"◆ "}.collapsible-content{transition:max-height .2s ease-out}.collapsed .collapsible-content{display:none;overflow:hidden;max-height:0}

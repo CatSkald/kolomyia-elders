@@ -2,7 +2,6 @@ nav.menu {
   z-index: 1110;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   background: var(--color-background);
   height: 100vh;
   text-align: left;
@@ -12,6 +11,7 @@ nav.menu {
   transition: transform 0.3s ease-in-out;
   transform: translateX(-100%);
   font-size: 1.2rem;
+  padding-top: 50px; /* allow space for hamburger button */
 }
 
 nav.menu div {
@@ -26,6 +26,8 @@ nav.menu.opened {
 @media only screen and (max-width: 768px) {
   nav.menu {
     width: 100%;
+    justify-content: center;
+    padding-top: 0;
   }
 
   nav.menu [role="button"] {

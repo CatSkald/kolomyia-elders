@@ -11,7 +11,10 @@ nav.menu {
   transition: transform 0.3s ease-in-out;
   transform: translateX(-100%);
   font-size: 1.2rem;
-  padding-top: 50px; /* allow space for hamburger button */
+}
+
+nav.menu div:first-child {
+  margin-top: 50px; /* allow space for hamburger button */
 }
 
 nav.menu div {

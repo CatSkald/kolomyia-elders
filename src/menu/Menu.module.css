@@ -1,0 +1,34 @@
+nav.menu {
+  z-index: 1110;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--color-background);
+  height: 100vh;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+  font-size: 1.2rem;
+}
+
+nav.menu div {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+nav.menu.opened {
+  transform: translateX(0%);
+}
+
+@media only screen and (max-width: 768px) {
+  nav.menu {
+    width: 100%;
+  }
+
+  nav.menu [role="button"] {
+    text-align: center;
+  }
+}

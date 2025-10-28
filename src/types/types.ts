@@ -7,43 +7,12 @@ export type Period = {
   color: string;
 };
 
-export type LocationProfile = {
-  name: string;
-  oldNames?: string[];
-  date: number | string;
-  coordinates?: LatLngExpression;
-  period?: Period;
-};
-
-export type BuildingProfile = LocationProfile & {
-  oldStreetNames?: string[];
-  description?: string;
-  architecture?: string;
-  history?: HistoryEntry[];
-  address: string;
-};
-
-export type MonumentProfile = LocationProfile & {
-  destroyed?: number | string;
-  history?: string;
-  sources?: SourceProfile[];
-};
-
-export type LostBuildingProfile = LocationProfile & {
-  destroyed?: number | string;
-  periodOfDestruction?: Period;
-  architecture?: string;
-  description?: string;
-  history?: HistoryEntry[];
-};
-
-export type HistoryEntry = {
+export type HistoryEntry = SourcedProfile & {
   date?: string;
   description: string;
-  sources?: SourceProfile[];
 };
 
-export type SourceProfile = {
+export type SourceEntry = {
   number: number;
   title: string;
   isbn: string;
@@ -54,3 +23,45 @@ export type VocabularyEntry = {
   word: string;
   explanation: string;
 };
+
+export type LostProfile = {
+  destroyed?: number | string;
+  periodOfDestruction?: Period;
+};
+
+export type AddressProfile = {
+  address: string;
+  oldStreetNames?: string[];
+};
+
+export type SourcedProfile = {
+  sources?: SourceEntry[];
+};
+
+export type LocationProfile = {
+  name: string;
+  oldNames?: string[];
+  date: number | string;
+  coordinates?: LatLngExpression;
+  period?: Period;
+};
+
+export type BuildingProfile = LocationProfile &
+  AddressProfile & {
+    description?: string;
+    architecture?: string;
+    history?: HistoryEntry[];
+  };
+
+export type LostBuildingProfile = LocationProfile &
+  LostProfile & {
+    description?: string;
+    architecture?: string;
+    history?: HistoryEntry[];
+  };
+
+export type MonumentProfile = LocationProfile &
+  LostProfile &
+  SourcedProfile & {
+    history?: string;
+  };

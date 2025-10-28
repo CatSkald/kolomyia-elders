@@ -41,7 +41,7 @@ function App() {
         setActivePage={(page) => setActivePage(page ?? SiteMap.Map)}
       />
       <main>
-        {activePage === SiteMap.Map && (
+        {(activePage === SiteMap.Map || activePage === SiteMap.Search) && (
           <Suspense fallback={<Loader />}>
             <Map theme={theme} filters={filters} />
           </Suspense>

@@ -9,7 +9,7 @@ import { getMarkerSize } from "../themes";
 import { LatLngExpression } from "leaflet";
 import BuildingMarker from "./BuildingMarker";
 import MonumentMarker from "./MonumentMarker";
-import { Filters } from "../Filters";
+import { Filters, matchSearchTerm } from "../Filters";
 import LostBuildingMarker from "./LostBuildingMarker";
 
 const BuildingsOverlay = ({
@@ -39,7 +39,11 @@ const BuildingsOverlay = ({
           (b) =>
             !!b.coordinates &&
             !!b.periodOfDestruction &&
-            filters.lost.find((p) => p.name === b.periodOfDestruction?.name)
+            (filters.searchTerm
+              ? matchSearchTerm(b, filters)
+              : filters.lost.find(
+                  (p) => p.name === b.periodOfDestruction?.name
+                ))
         )
         .map((b) => (
           <FeatureGroup key={b.coordinates?.toString()}>
@@ -54,8 +58,10 @@ const BuildingsOverlay = ({
         .filter(
           (b) =>
             !!b.coordinates &&
-            ((filters.unknown && !b.period) ||
-              filters.periods.find((p) => p.name === b.period?.name))
+            (filters.searchTerm
+              ? matchSearchTerm(b, filters)
+              : (filters.unknown && !b.period) ||
+                filters.periods.find((p) => p.name === b.period?.name))
         )
         .map((b) => (
           <FeatureGroup key={b.coordinates?.toString()}>
@@ -68,7 +74,11 @@ const BuildingsOverlay = ({
         ))}
       {filters.monuments &&
         mappedMonuments
-          .filter((b) => !!b.coordinates)
+          .filter(
+            (b) =>
+              !!b.coordinates &&
+              (!filters.searchTerm || matchSearchTerm(b, filters))
+          )
           .map((b) => (
             <FeatureGroup key={b.coordinates?.toString()}>
               <MonumentMarker

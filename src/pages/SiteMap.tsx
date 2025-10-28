@@ -1,5 +1,6 @@
 export enum SiteMap {
-  Map = "Map",
-  AboutUs = "AboutUs",
-  Sources = "Sources",
+  Map = "Мапа",
+  Search = "Пошук",
+  AboutUs = "Про нас",
+  Sources = "Використані джерела",
 }

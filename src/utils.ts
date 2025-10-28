@@ -5,7 +5,7 @@ import {
   HistoryEntry,
   MonumentProfile,
   Period,
-  SourceProfile,
+  SourceEntry,
   VocabularyEntry,
 } from "./types/types";
 import { periods, periodsOfDestruction } from "./data/periods";
@@ -54,7 +54,7 @@ const getVocabulary = (): VocabularyEntry[] =>
     .flat();
 export const mappedVocabulary = getVocabulary();
 
-const getSources = (): SourceProfile[] =>
+const getSources = (): SourceEntry[] =>
   sources.map(
     (s: { "№": number; Назва: string; ISBN: string; Посилання?: string }) => {
       return {
@@ -105,7 +105,7 @@ const parseSources = (
 ): {
   hasSources: boolean;
   sourcedText: string | undefined;
-  sources: SourceProfile[] | undefined;
+  sources: SourceEntry[] | undefined;
 } => {
   const sourceMarker = "[";
   const hasSources = text.indexOf(sourceMarker) !== -1;
@@ -125,7 +125,7 @@ const parseSources = (
           ({
             number: number,
             title: "Unknown",
-          } as SourceProfile)
+          } as SourceEntry)
         );
       });
   }

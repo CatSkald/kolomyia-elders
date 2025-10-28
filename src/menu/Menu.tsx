@@ -23,33 +23,18 @@ const Menu = ({
     <>
       <HamburgerButton open={open} setOpen={setOpen} />
       <nav className={`${styles.menu} ${open ? styles.opened : ""}`}>
-        <div
-          role="button"
-          onClick={() => {
-            setOpen(false);
-            setActivePage(SiteMap.Map);
-          }}
-        >
-          Мапа
-        </div>
-        <div
-          role="button"
-          onClick={() => {
-            setOpen(false);
-            setActivePage(SiteMap.AboutUs);
-          }}
-        >
-          Про нас
-        </div>
-        <div
-          role="button"
-          onClick={() => {
-            setOpen(false);
-            setActivePage(SiteMap.Sources);
-          }}
-        >
-          Використані джерела
-        </div>
+        {Object.entries(SiteMap).map(([key, value]: [string, SiteMap]) => (
+          <div
+            key={key}
+            role="button"
+            onClick={() => {
+              setOpen(false);
+              setActivePage(value);
+            }}
+          >
+            {value}
+          </div>
+        ))}
         <div role="button" onClick={toggleTheme}>
           {isDarkTheme ? (
             <MoonStarsFill size={buttonSize} />

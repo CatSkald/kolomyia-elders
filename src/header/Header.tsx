@@ -5,6 +5,7 @@ import { Theme } from "../themes";
 import { Filters } from "../Filters";
 import Menu from "../menu/Menu";
 import { SiteMap } from "../pages/SiteMap";
+import SearchBar from "../search/SearchBar";
 
 const Header = ({
   theme,
@@ -36,6 +37,9 @@ const Header = ({
       <hr />
       {activePage === SiteMap.Map && (
         <Legend filters={filters} setFilters={setFilters} />
+      )}
+      {activePage === SiteMap.Search && (
+        <SearchBar filters={filters} setFilters={setFilters} />
       )}
     </div>
   );

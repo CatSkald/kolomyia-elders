@@ -35,7 +35,13 @@ const Menu = ({
             {value}
           </div>
         ))}
-        <div role="button" onClick={toggleTheme}>
+        <div
+          role="button"
+          onClick={() => {
+            setOpen(false);
+            toggleTheme();
+          }}
+        >
           {isDarkTheme ? (
             <MoonStarsFill size={buttonSize} />
           ) : (

@@ -37,7 +37,7 @@ export const periods = [
     endDate: 1944,
     color: palette.i,
   },
-];
+] as const;
 
 export const periodsOfDestruction = [
   {
@@ -58,4 +58,4 @@ export const periodsOfDestruction = [
     endDate: 9999,
     color: palette.l3,
   },
-];
+] as const;

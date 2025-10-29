@@ -1,29 +1,43 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import "./App.css";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import { Theme } from "./themes";
 import { Filters } from "./Filters";
-import { periods } from "./data/periods";
 import Loader from "./loader/Loader";
 import { SiteMap } from "./pages/SiteMap";
 import AboutUs from "./pages/AboutUs";
 import Sources from "./pages/Sources";
+import { UserPreferences } from "./UserPreferences";
 
 const Map = lazy(() => import("./map/Map"));
 
 function App() {
-  const [theme, setTheme] = useState(Theme.Dark);
-  const toggleTheme = (): void => {
-    document.body.classList.toggle("dark-mode");
+  const preferences = UserPreferences.load();
+
+  const [theme, setTheme] = useState(preferences.theme);
+  const selectTheme = (theme: Theme): void => {
+    preferences.updateTheme(theme);
+
+    setTheme(theme);
   };
 
-  const [filters, setFilters] = useState<Filters>({
-    periods: periods,
-    monuments: true,
-    unknown: true,
-    lost: [],
-  });
+  useEffect(() => {
+    switch (theme) {
+      case Theme.Dark:
+        document.body.classList.add("dark-mode");
+        break;
+      case Theme.Light:
+        document.body.classList.remove("dark-mode");
+        break;
+    }
+  }, [theme]);
+
+  const [filters, setFilters] = useState<Filters>(preferences.filters);
+  const selectFilters = (filters: Filters): void => {
+    preferences.updateFilters(filters);
+    setFilters(filters);
+  };
 
   const [activePage, setActivePage] = useState<SiteMap>(SiteMap.Map);
 
@@ -31,12 +45,9 @@ function App() {
     <div className="app">
       <Header
         theme={theme}
-        setTheme={(theme) => {
-          setTheme(theme);
-          toggleTheme();
-        }}
+        setTheme={selectTheme}
         filters={filters}
-        setFilters={setFilters}
+        setFilters={selectFilters}
         activePage={activePage}
         setActivePage={(page) => setActivePage(page ?? SiteMap.Map)}
       />

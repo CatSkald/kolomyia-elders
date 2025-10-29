@@ -4,6 +4,11 @@ export const getMarkerSize = (zoom: number): number => {
   return (zoom - 11) * 2;
 };
 
+export const getDefaultBrowserTheme = (): Theme =>
+  window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? Theme.Dark
+    : Theme.Light;
+
 export const getDeselectedImage = (size: number, color: string) =>
   `<svg viewBox="0 0 ${size} ${size}" width="${size}px" height="${size}px" fill="${color}" xmlns="http://www.w3.org/2000/svg"><path d="M12 0a12 12 0 000 24-12-12 0 000-24zm7 6L6 19a1 1 0 01-1-1L18 5a1 1 0 011 1zM6 5l13 13a1 1 0 01-1 1L5 6a1 1 0 011-1z"/></svg>`;
 
@@ -43,4 +48,4 @@ export const palette = {
   l3: "gold",
   unknown: "#8B4513",
   overlay: "#666666bf",
-};
+} as const;

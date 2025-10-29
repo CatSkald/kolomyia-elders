@@ -39,7 +39,7 @@ const Legend = ({
   return (
     <div className="legend">
       {periods.map((p) => {
-        const isSelected = filters.periods.find((x) => x.name === p.name);
+        const isSelected = filters.periods.find((x) => x === p.name);
         return getImage(
           p.name,
           isSelected
@@ -49,8 +49,8 @@ const Legend = ({
             setFilters({
               ...filters,
               periods: isSelected
-                ? filters.periods.filter((x) => x.name !== p.name)
-                : filters.periods.concat([p]),
+                ? filters.periods.filter((x) => x !== p.name)
+                : filters.periods.concat([p.name]),
             })
         );
       })}
@@ -73,7 +73,7 @@ const Legend = ({
           )}
           <div className="line-break"></div>
           {periodsOfDestruction.map((p) => {
-            const isSelected = filters.lost.find((x) => x.name === p.name);
+            const isSelected = filters.lost.find((x) => x === p.name);
             return getImage(
               p.name,
               isSelected
@@ -83,8 +83,8 @@ const Legend = ({
                 setFilters({
                   ...filters,
                   lost: isSelected
-                    ? filters.lost.filter((x) => x.name !== p.name)
-                    : filters.lost.concat([p]),
+                    ? filters.lost.filter((x) => x !== p.name)
+                    : filters.lost.concat([p.name]),
                 })
             );
           })}

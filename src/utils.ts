@@ -68,7 +68,7 @@ const getSources = (): SourceEntry[] =>
 export const mappedSources = getSources();
 
 export const getPeriod = (
-  periods: Period[],
+  periods: readonly Period[],
   date?: string | number
 ): Period | undefined => {
   let year = undefined;

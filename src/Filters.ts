@@ -1,17 +1,17 @@
+import { periods, periodsOfDestruction } from "./data/periods";
 import {
   AddressProfile,
   BuildingProfile,
   LocationProfile,
   LostBuildingProfile,
   MonumentProfile,
-  Period,
 } from "./types/types";
 
 export type Filters = {
-  periods: Period[];
+  periods: (typeof periods)[number]["name"][];
   monuments: boolean;
   unknown: boolean;
-  lost: Period[];
+  lost: (typeof periodsOfDestruction)[number]["name"][];
   searchTerm?: string;
 };
 

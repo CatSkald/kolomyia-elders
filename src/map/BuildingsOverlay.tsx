@@ -41,9 +41,7 @@ const BuildingsOverlay = ({
             !!b.periodOfDestruction &&
             (filters.searchTerm
               ? matchSearchTerm(b, filters)
-              : filters.lost.find(
-                  (p) => p.name === b.periodOfDestruction?.name
-                ))
+              : filters.lost.find((p) => p === b.periodOfDestruction?.name))
         )
         .map((b) => (
           <FeatureGroup key={b.coordinates?.toString()}>
@@ -61,7 +59,7 @@ const BuildingsOverlay = ({
             (filters.searchTerm
               ? matchSearchTerm(b, filters)
               : (filters.unknown && !b.period) ||
-                filters.periods.find((p) => p.name === b.period?.name))
+                filters.periods.find((p) => p === b.period?.name))
         )
         .map((b) => (
           <FeatureGroup key={b.coordinates?.toString()}>

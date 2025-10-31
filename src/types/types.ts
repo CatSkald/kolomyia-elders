@@ -19,9 +19,10 @@ export type SourceEntry = {
   link?: string;
 };
 
-export type VocabularyEntry = {
+export type WordDefinition = {
+  id: string;
   word: string;
-  explanation: string;
+  definition: string;
 };
 
 export type LostProfile = {

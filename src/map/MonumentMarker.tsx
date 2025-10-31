@@ -7,6 +7,7 @@ import { DivIcon } from "leaflet";
 import Sources from "./Sources";
 import ReadMoreButton from "./ReadMoreButton";
 import { useState } from "react";
+import RichText from "./RichText";
 
 export default function MonumentMarker({
   data,
@@ -18,6 +19,7 @@ export default function MonumentMarker({
   onClick: () => void;
 }) {
   const [showOldName, setShowOldName] = useState(false);
+
   const markerColor = data.period?.color ?? palette.unknown;
   return !data.coordinates ? (
     <></>
@@ -49,14 +51,13 @@ export default function MonumentMarker({
             textAlign: "center",
           }}
         >
-          <span
+          <RichText
+            data={data.name}
             style={{
               fontWeight: "bold",
               fontSize: "1rem",
             }}
-          >
-            {data.name}
-          </span>
+          />
           <span
             style={{
               fontSize: "0.9rem",
@@ -97,7 +98,7 @@ export default function MonumentMarker({
           <>
             <hr style={{ margin: "0.5rem 0", width: "100%" }} />
             <div style={{ whiteSpace: "pre-wrap" }}>
-              {data.history}
+              <RichText data={data.history} />
               {data.sources && <Sources data={data.sources} />}
             </div>
           </>

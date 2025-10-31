@@ -6,6 +6,7 @@ import BuildingHistory from "./BuildingHistory";
 import { palette } from "../themes";
 import ReadMoreButton from "./ReadMoreButton";
 import { useState } from "react";
+import RichText from "./RichText";
 
 export default function BuildingMarker({
   data,
@@ -48,14 +49,13 @@ export default function BuildingMarker({
             textAlign: "center",
           }}
         >
-          <span
+          <RichText
+            data={data.name}
             style={{
               fontWeight: "bold",
               fontSize: "1rem",
             }}
-          >
-            {data.name}
-          </span>
+          />
           <span
             style={{
               fontSize: "0.9rem",
@@ -123,7 +123,7 @@ export default function BuildingMarker({
         {data.description && (
           <>
             <hr style={{ margin: "0.5rem 0", width: "100%" }} />
-            <div style={{ textAlign: "center" }}>{data.description}</div>
+            <RichText data={data.description} style={{ textAlign: "center" }} />
           </>
         )}
         {data.architecture && (
@@ -140,7 +140,10 @@ export default function BuildingMarker({
             >
               <span>
                 Архітектурний стиль:&nbsp;
-                <span style={{ fontStyle: "italic" }}>{data.architecture}</span>
+                <RichText
+                  data={data.architecture}
+                  style={{ fontStyle: "italic" }}
+                />
               </span>
             </div>
           </>

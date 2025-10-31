@@ -6,7 +6,7 @@ import {
   MonumentProfile,
   Period,
   SourceEntry,
-  VocabularyEntry,
+  WordDefinition,
 } from "./types/types";
 import { periods, periodsOfDestruction } from "./data/periods";
 
@@ -36,9 +36,9 @@ const parseArray = (
   return result?.length ? result : undefined;
 };
 
-const getVocabulary = (): VocabularyEntry[] =>
+const getVocabulary = (): WordDefinition[] =>
   vocabulary
-    .map((s: { Слово: string; Пояснення: string }) => {
+    .map((s: { "№": number; Слово: string; Пояснення: string }) => {
       return s["Слово"]
         .split(",")
         .map((x) => x.trim())
@@ -46,9 +46,10 @@ const getVocabulary = (): VocabularyEntry[] =>
         .map(
           (x) =>
             ({
+              id: s["№"].toString(),
               word: x,
-              explanation: s["Пояснення"],
-            } as VocabularyEntry)
+              definition: s["Пояснення"],
+            } as WordDefinition)
         );
     })
     .flat();
@@ -96,7 +97,6 @@ const cleanText = (text?: string): string => {
   return text
     .replaceAll(dashToClean, " — ")
     .replaceAll(newLineToClean, "\n")
-    .replace(/(\s?<\d+>)/, "") //TODO implement vocabulary
     .trim();
 };
 

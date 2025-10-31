@@ -6,7 +6,6 @@ body {
   --color-accent2: #b22222;
   --color-accent-background: #f59b9b;
 
-  /* TODO use everywhere */
   --color-link: var(--color-accent2);
   --color-link-hover: var(--color-accent);
 
@@ -42,7 +41,7 @@ ul {
 }
 
 a {
-  color: var(--color-accent2);
+  color: var(--color-link);
 }
 
 a,
@@ -54,7 +53,7 @@ a,
 
 a:hover,
 [role="button"]:hover {
-  color: var(--color-accent);
+  color: var(--color-link-hover);
 }
 
 input {

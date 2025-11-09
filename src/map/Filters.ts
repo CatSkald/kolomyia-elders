@@ -1,11 +1,11 @@
-import { periods, periodsOfDestruction } from "./data/periods";
+import { periods, periodsOfDestruction } from "../data/periods";
 import {
   AddressProfile,
   BuildingProfile,
   LocationProfile,
   LostBuildingProfile,
   MonumentProfile,
-} from "./types/types";
+} from "../types/types";
 
 export type Filters = {
   periods: (typeof periods)[number]["name"][];

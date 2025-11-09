@@ -1,6 +1,6 @@
 import styles from "./SearchBar.module.css";
 import { useEffect, useState } from "react";
-import { Filters } from "../Filters";
+import { Filters } from "../map/Filters";
 import { Search, XLg } from "react-bootstrap-icons";
 
 const SearchBar = ({

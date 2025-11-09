@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { periods, periodsOfDestruction } from "../data/periods";
-import { Filters } from "../Filters";
+import { Filters } from "../map/Filters";
 import {
   getDeselectedImage,
   getLostBuildingMarkerImage,

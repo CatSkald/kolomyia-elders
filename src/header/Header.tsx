@@ -2,7 +2,7 @@ import "./Header.css";
 
 import Legend from "./Legend";
 import { Theme } from "../themes";
-import { Filters } from "../Filters";
+import { Filters } from "../map/Filters";
 import Menu from "../menu/Menu";
 import { SiteMap } from "../pages/SiteMap";
 import SearchBar from "../search/SearchBar";

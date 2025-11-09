@@ -1,26 +1,26 @@
 import { Marker, Popup } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
-import { MonumentProfile } from "../types/types";
-import { getMonumentMarkerImage, palette } from "../themes";
+import { LostBuildingProfile } from "../../types/types";
+import { getLostBuildingMarkerImage, palette } from "../../themes";
 import { DivIcon } from "leaflet";
-import Sources from "./Sources";
-import ReadMoreButton from "./ReadMoreButton";
+import BuildingHistory from "../popup/BuildingHistory";
 import { useState } from "react";
-import RichText from "./RichText";
+import ReadMoreButton from "../popup/ReadMoreButton";
+import RichText from "../popup/RichText";
 
-export default function MonumentMarker({
+export default function LostBuildingMarker({
   data,
   markerSize,
   onClick,
 }: {
-  data: MonumentProfile;
+  data: LostBuildingProfile;
   markerSize: number;
   onClick: () => void;
 }) {
   const [showOldName, setShowOldName] = useState(false);
 
-  const markerColor = data.period?.color ?? palette.unknown;
+  const markerColor = data.periodOfDestruction?.color ?? palette.unknown;
   return !data.coordinates ? (
     <></>
   ) : (
@@ -37,7 +37,7 @@ export default function MonumentMarker({
           className: "marker",
           iconSize: [markerSize, markerSize],
           iconAnchor: [markerSize / 2, markerSize],
-          html: getMonumentMarkerImage(markerSize, markerColor),
+          html: getLostBuildingMarkerImage(markerSize, markerColor, true),
         })
       }
     >
@@ -63,8 +63,7 @@ export default function MonumentMarker({
               fontSize: "0.9rem",
             }}
           >
-            {data.date}
-            {data.destroyed ? `—${data.destroyed}` : ""}
+            {data.date}—{data.destroyed}
           </span>
           {data.oldNames && (
             <div style={showOldName ? { display: "none" } : {}}>
@@ -94,15 +93,35 @@ export default function MonumentMarker({
             </>
           )}
         </div>
-        {data.history && (
+        {data.description && (
           <>
             <hr style={{ margin: "0.5rem 0", width: "100%" }} />
-            <div style={{ whiteSpace: "pre-wrap" }}>
-              <RichText data={data.history} />
-              {data.sources && <Sources data={data.sources} />}
+            <RichText data={data.description} style={{ textAlign: "center" }} />
+          </>
+        )}
+        {data.architecture && (
+          <>
+            <hr style={{ margin: "0.5rem 0", width: "100%" }} />
+            <div
+              className="newline"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+              }}
+            >
+              <span>
+                Архітектурний стиль:&nbsp;
+                <RichText
+                  data={data.architecture}
+                  style={{ fontStyle: "italic" }}
+                />
+              </span>
             </div>
           </>
         )}
+        {data.history && <BuildingHistory data={data.history} />}
       </Popup>
     </Marker>
   );

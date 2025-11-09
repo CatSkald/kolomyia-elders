@@ -7,10 +7,10 @@ import {
 } from "../utils";
 import { getMarkerSize } from "../themes";
 import { LatLngExpression } from "leaflet";
-import BuildingMarker from "./BuildingMarker";
-import MonumentMarker from "./MonumentMarker";
-import { Filters, matchSearchTerm } from "../Filters";
-import LostBuildingMarker from "./LostBuildingMarker";
+import BuildingMarker from "./markers/BuildingMarker";
+import MonumentMarker from "./markers/MonumentMarker";
+import { Filters, matchSearchTerm } from "./Filters";
+import LostBuildingMarker from "./markers/LostBuildingMarker";
 
 const BuildingsOverlay = ({
   initialZoom,

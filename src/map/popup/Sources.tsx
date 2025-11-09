@@ -1,4 +1,4 @@
-import { SourceEntry } from "../types/types";
+import { SourceEntry } from "../../types/types";
 
 const Sources = ({ data }: { data: SourceEntry[] }) => {
   return (

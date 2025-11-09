@@ -1,5 +1,5 @@
 import { periods, periodsOfDestruction } from "./data/periods";
-import { Filters } from "./Filters";
+import { Filters } from "./map/Filters";
 import { retrieve, retrieveArray, store, storeArray } from "./localStorage";
 import { getDefaultBrowserTheme, Theme } from "./themes";
 

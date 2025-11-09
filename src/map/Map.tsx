@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import * as L from "leaflet";
 import "leaflet-hash";
 import { MapContainer, ZoomControl } from "react-leaflet";
-import { latLngBounds } from "leaflet";
 import BuildingsOverlay from "./BuildingsOverlay.tsx";
 import {
   MaptilerLayer,
@@ -11,13 +10,20 @@ import {
 } from "@maptiler/leaflet-maptilersdk";
 import { Theme } from "../themes.ts";
 import { config } from "./MaptilerConfig.ts";
-import { Filters } from "../Filters.ts";
+import { Filters } from "./Filters.ts";
+import { MapSettings } from "./MapSettings.ts";
 
 const x = atob(config.x);
 
-const Map = ({ theme, filters }: { theme: Theme; filters: Filters }) => {
-  const kolomyiaBounds = latLngBounds([48.6184, 24.9379], [48.4868, 25.1415]);
-  const initialZoom = 16;
+const Map = ({
+  theme,
+  filters,
+  mapSettings,
+}: {
+  theme: Theme;
+  filters: Filters;
+  mapSettings: MapSettings;
+}) => {
   const [map, setMap] = useState<L.Map | null>(null);
   const [maptiler, setMaptiler] = useState<MaptilerLayerInterface | null>(null);
   const enableCoordinatesInUrl = (map: L.Map) => {
@@ -52,16 +58,16 @@ const Map = ({ theme, filters }: { theme: Theme; filters: Filters }) => {
 
   return (
     <MapContainer
-      center={[48.525, 25.0373]}
-      zoom={initialZoom}
-      minZoom={14}
+      center={mapSettings.center}
+      zoom={mapSettings.zoom}
+      minZoom={mapSettings.minZoom}
       zoomControl={false}
       maxBoundsViscosity={0.7}
-      maxBounds={kolomyiaBounds}
+      maxBounds={mapSettings.bounds}
       ref={setMap}
     >
       <ZoomControl position="topright" />
-      <BuildingsOverlay initialZoom={initialZoom} filters={filters} />
+      <BuildingsOverlay initialZoom={mapSettings.zoom} filters={filters} />
     </MapContainer>
   );
 };

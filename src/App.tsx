@@ -3,12 +3,13 @@ import "./App.css";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import { Theme } from "./themes";
-import { Filters } from "./Filters";
+import { Filters } from "./map/Filters";
 import Loader from "./loader/Loader";
 import { SiteMap } from "./pages/SiteMap";
 import AboutUs from "./pages/AboutUs";
 import Sources from "./pages/Sources";
 import { UserPreferences } from "./UserPreferences";
+import { kolomyiaDefault } from "./map/MapSettings";
 
 const Map = lazy(() => import("./map/Map"));
 
@@ -54,7 +55,11 @@ function App() {
       <main>
         {(activePage === SiteMap.Map || activePage === SiteMap.Search) && (
           <Suspense fallback={<Loader />}>
-            <Map theme={theme} filters={filters} />
+            <Map
+              theme={theme}
+              filters={filters}
+              mapSettings={kolomyiaDefault}
+            />
           </Suspense>
         )}
         {activePage === SiteMap.AboutUs && <AboutUs />}

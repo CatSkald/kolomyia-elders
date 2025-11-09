@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { mappedVocabulary } from "../utils";
+import { mappedVocabulary } from "../../utils";
 import reactStringReplace from "react-string-replace";
 
 const RichText = ({ data, style }: { data: string; style?: CSSProperties }) => {

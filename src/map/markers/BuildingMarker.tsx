@@ -1,12 +1,12 @@
 import { CircleMarker, Popup } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
-import { BuildingProfile } from "../types/types";
-import BuildingHistory from "./BuildingHistory";
-import { palette } from "../themes";
-import ReadMoreButton from "./ReadMoreButton";
+import { BuildingProfile } from "../../types/types";
+import BuildingHistory from "../popup/BuildingHistory";
+import { palette } from "../../themes";
+import ReadMoreButton from "../popup/ReadMoreButton";
 import { useState } from "react";
-import RichText from "./RichText";
+import RichText from "../popup/RichText";
 
 export default function BuildingMarker({
   data,

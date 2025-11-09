@@ -24,7 +24,7 @@ export function matchSearchTerm(
     | MonumentProfile,
   filters: Filters
 ): boolean {
-  if (!filters.searchTerm || filters.searchTerm.length < 2) return false;
+  if (!filters.searchTerm) return false;
 
   const searchTerm = filters.searchTerm!.toUpperCase();
 

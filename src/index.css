@@ -64,7 +64,8 @@ input {
   padding: 0.3rem;
 }
 input:focus {
-  transform: scale(1.01);
+  outline: solid var(--color-link-hover);
+  border-color: var(--color-link-hover);
 }
 
 hr {

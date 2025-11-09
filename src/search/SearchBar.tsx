@@ -1,6 +1,7 @@
 import styles from "./SearchBar.module.css";
 import { useEffect, useState } from "react";
 import { Filters } from "../Filters";
+import { Search, XLg } from "react-bootstrap-icons";
 
 const SearchBar = ({
   filters,
@@ -10,13 +11,17 @@ const SearchBar = ({
   setFilters: (filters: Filters) => void;
 }) => {
   const [value, setValue] = useState(filters.searchTerm ?? "");
+
   useEffect(() => {
-    if (value.length > 1) setFilters({ ...filters, searchTerm: value });
-  });
+    if (value === "") setFilters({ ...filters, searchTerm: undefined });
+    setFilters({ ...filters, searchTerm: value });
+  }, [value]); // warning expected, filters are not expected to change on this page other than the search term
+
   return (
     <div className={styles.container}>
       <input
-        type="text"
+        autoFocus={true}
+        type="search"
         name="search"
         placeholder="Шукати на карті..."
         value={value}
@@ -24,16 +29,14 @@ const SearchBar = ({
           setValue(e.target.value);
         }}
       />
-      <div className="buttons">
-        <div className="button-search"></div>
-        <div
-          className="button-close"
-          role="button"
-          onClick={() => setValue("")}
-        >
-          <span></span>
-          <span></span>
-        </div>
+      <div className={styles.searchIcon}>
+        {value ? (
+          <div role="button" onClick={() => setValue("")}>
+            <XLg />
+          </div>
+        ) : (
+          <Search />
+        )}
       </div>
     </div>
   );

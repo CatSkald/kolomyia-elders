@@ -13,6 +13,8 @@ import { Theme } from "../themes.ts";
 import { config } from "./MaptilerConfig.ts";
 import { Filters } from "../Filters.ts";
 
+const x = atob(config.x);
+
 const Map = ({ theme, filters }: { theme: Theme; filters: Filters }) => {
   const kolomyiaBounds = latLngBounds([48.6184, 24.9379], [48.4868, 25.1415]);
   const initialZoom = 16;
@@ -24,7 +26,6 @@ const Map = ({ theme, filters }: { theme: Theme; filters: Filters }) => {
 
   useEffect(() => {
     const style = theme === Theme.Dark ? config.darkStyle : config.lightStyle;
-    const x = atob(config.x);
     const createMaptiler = (map: L.Map): MaptilerLayerInterface => {
       const maptilerOptions = {
         apiKey: x,

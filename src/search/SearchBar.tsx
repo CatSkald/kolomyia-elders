@@ -31,7 +31,11 @@ const SearchBar = ({
       />
       <div className={styles.searchIcon}>
         {value ? (
-          <div role="button" onClick={() => setValue("")}>
+          <div
+            role="button"
+            aria-label="Очистити поле пошуку"
+            onClick={() => setValue("")}
+          >
             <XLg />
           </div>
         ) : (

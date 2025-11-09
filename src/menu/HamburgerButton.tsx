@@ -10,6 +10,7 @@ const HamburgerButton = ({
   return (
     <div
       role="button"
+      aria-label="Меню"
       className={`${styles.button} ${open ? styles.opened : ""}`}
       onClick={() => setOpen(!open)}
     >

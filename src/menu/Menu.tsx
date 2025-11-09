@@ -27,6 +27,7 @@ const Menu = ({
           <div
             key={key}
             role="button"
+            aria-label={value}
             onClick={() => {
               setOpen(false);
               setActivePage(value);
@@ -37,6 +38,11 @@ const Menu = ({
         ))}
         <div
           role="button"
+          aria-label={
+            isDarkTheme
+              ? "Увімкнути світлу тему сайту"
+              : "Увімкнути темну тему сайту"
+          }
           onClick={() => {
             setOpen(false);
             toggleTheme();

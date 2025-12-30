@@ -36,27 +36,6 @@ export class UserPreferences {
     return this._map ?? kolomyiaDefault;
   }
 
-  // TODO Use me
-  // const parsePath = (
-  //   path: string
-  // ): {
-  //   path: string;
-  //   zoom: number | undefined;
-  //   center: LatLngTuple | undefined;
-  // } => {
-  //   const split = path.split("#");
-  //   if (split[1]) {
-  //     const [zoom, lat, lang] = split[1].split("/");
-  //     return {
-  //       path: split[0],
-  //       zoom: parseInt(zoom),
-  //       center: [parseFloat(lat), parseFloat(lang)],
-  //     };
-  //   }
-
-  //   return { path: split[0], zoom: undefined, center: undefined };
-  // };
-
   updateMap(value: MapSettings) {
     this._map = value;
     store("map.zoom", this._map.zoom.toString());

@@ -20,11 +20,13 @@ const Map = ({
   filters,
   mapSettings,
   onZoom,
+  onMarkerSelected,
 }: {
   theme: Theme;
   filters: Filters;
   mapSettings: MapSettings;
   onZoom: (zoom: number) => void;
+  onMarkerSelected: (coordinates: L.LatLngTuple) => void;
 }) => {
   const [map, setMap] = useState<L.Map | null>(null);
   const [maptiler, setMaptiler] = useState<MaptilerLayerInterface | null>(null);
@@ -74,6 +76,7 @@ const Map = ({
         initialZoom={mapSettings.zoom}
         onZoom={onZoom}
         filters={filters}
+        onMarkerSelected={onMarkerSelected}
       />
     </MapContainer>
   );

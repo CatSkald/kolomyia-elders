@@ -6,7 +6,7 @@ import {
   mappedMonuments,
 } from "../utils";
 import { getMarkerSize } from "../themes";
-import { LatLngExpression } from "leaflet";
+import { LatLngTuple } from "leaflet";
 import BuildingMarker from "./markers/BuildingMarker";
 import MonumentMarker from "./markers/MonumentMarker";
 import { Filters, matchSearchTerm } from "./Filters";
@@ -16,10 +16,12 @@ const BuildingsOverlay = ({
   initialZoom,
   onZoom,
   filters,
+  onMarkerSelected,
 }: {
   initialZoom: number;
   onZoom: (zoom: number) => void;
   filters: Filters;
+  onMarkerSelected: (coordinates: LatLngTuple) => void;
 }) => {
   const [markerSize, setMarkerSize] = useState(getMarkerSize(initialZoom));
 
@@ -31,9 +33,10 @@ const BuildingsOverlay = ({
     },
   });
 
-  const onMarkerClick = (coordinates: LatLngExpression) => {
+  const onMarkerClick = (coordinates: LatLngTuple) => {
     const zoom = map.getZoom();
     map.setView(coordinates, zoom < 18 ? 18 : zoom);
+    onMarkerSelected(coordinates);
   };
 
   return (

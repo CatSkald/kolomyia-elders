@@ -1,4 +1,4 @@
-import { LatLngExpression } from "leaflet";
+import { LatLngTuple } from "leaflet";
 
 export type Period = {
   name: string;
@@ -43,7 +43,7 @@ export type LocationProfile = {
   name: string;
   oldNames?: string[];
   date: number | string;
-  coordinates?: LatLngExpression;
+  coordinates?: LatLngTuple;
   period?: Period;
 };
 

@@ -7,6 +7,7 @@ import { Filters } from "./map/Filters";
 import Loader from "./loader/Loader";
 import { getCurrentPage } from "./pages/SiteMap";
 import { UserPreferences } from "./UserPreferences";
+import { LatLngTuple } from "leaflet";
 
 const Map = lazy(() => import("./map/Map"));
 
@@ -19,10 +20,16 @@ function App() {
 
     setTheme(theme);
   };
+
   const updateZoomPreferences = (zoom: number) =>
     preferences.updateMap({
       ...preferences.map,
       zoom: zoom,
+    });
+  const updateCoordinatesPreferences = (coordinates: LatLngTuple) =>
+    preferences.updateMap({
+      ...preferences.map,
+      center: coordinates,
     });
 
   useEffect(() => {
@@ -66,6 +73,7 @@ function App() {
               filters={filters}
               mapSettings={preferences.map}
               onZoom={updateZoomPreferences}
+              onMarkerSelected={updateCoordinatesPreferences}
             />
           </Suspense>
         )}

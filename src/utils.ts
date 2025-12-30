@@ -1,4 +1,4 @@
-import { LatLngExpression } from "leaflet";
+import { LatLngTuple } from "leaflet";
 import {
   BuildingProfile,
   LostBuildingProfile,
@@ -177,7 +177,7 @@ const getBuildings = (): BuildingProfile[] =>
       const history = b["Історія"];
       const lat = b["Широта"] as number | undefined;
       const lan = b["Довгота"] as number | undefined;
-      const coordinates: LatLngExpression | undefined =
+      const coordinates: LatLngTuple | undefined =
         lat && lan ? [lat, lan] : undefined;
 
       return {
@@ -212,7 +212,7 @@ const getMonuments = (): MonumentProfile[] =>
       const date = m["Збудовано"];
       const lat = m["Широта"] as number | undefined;
       const lan = m["Довгота"] as number | undefined;
-      const coordinates: LatLngExpression | undefined =
+      const coordinates: LatLngTuple | undefined =
         lat && lan ? [lat, lan] : undefined;
 
       const history = m["Історія"];
@@ -250,7 +250,7 @@ const getLostBuildings = (): LostBuildingProfile[] =>
       const dateLost = b["Зруйновано"];
       const lat = b["Широта"] as number | undefined;
       const lan = b["Довгота"] as number | undefined;
-      const coordinates: LatLngExpression | undefined =
+      const coordinates: LatLngTuple | undefined =
         lat && lan ? [lat, lan] : undefined;
 
       return {

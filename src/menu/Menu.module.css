@@ -17,10 +17,16 @@ nav.menu a:first-child {
   margin-top: 50px; /* allow space for hamburger button */
 }
 
-nav.menu a {
+nav.menu a,
+nav.menu [role="button"] {
   margin: 0.5rem;
   padding: 0.5rem;
   color: var(--color-foreground);
+}
+
+nav.menu a:hover,
+nav.menu [role="button"]:hover {
+  color: var(--color-link-hover);
 }
 
 nav.menu.opened {
@@ -34,7 +40,8 @@ nav.menu.opened {
     padding-top: 0;
   }
 
-  nav.menu a {
+  nav.menu a,
+  nav.menu [role="button"] {
     text-align: center;
   }
 }

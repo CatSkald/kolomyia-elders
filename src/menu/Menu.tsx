@@ -21,8 +21,8 @@ const Menu = ({
     <>
       <HamburgerButton open={open} setOpen={setOpen} />
       <nav className={`${styles.menu} ${open ? styles.opened : ""}`}>
-        {siteMap.map((page) => (
-          <a key={page.path} href={page.path}>
+        {siteMap.map((page, index) => (
+          <a key={index} href={page.path || "?"}>
             {page.title}
           </a>
         ))}

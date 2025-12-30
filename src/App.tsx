@@ -62,7 +62,7 @@ function App() {
         setTheme={selectTheme}
         filters={filters}
         setFilters={selectFilters}
-        showFilters={activePage.path === ""}
+        showFilters={activePage.title === "Мапа"}
         showSearch={activePage.path === "?search"}
       />
       <main>

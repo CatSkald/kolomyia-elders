@@ -1,3 +1,4 @@
+import { updatedOn } from "../data/updatedOn";
 import styles from "./Page.module.css";
 
 const AboutUs = () => {
@@ -7,7 +8,10 @@ const AboutUs = () => {
       <span>
         Наш сайт створено з метою популяризації історії міста Коломиї.
         Інформація постійно доповнюється і допрацьовується. Оновлено у{" "}
-        <b>листопаді&nbsp;2025</b>.
+        <b>
+          {updatedOn.month}&nbsp;{updatedOn.year}
+        </b>
+        .
       </span>
       <br />
       <br />

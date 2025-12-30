@@ -11,7 +11,7 @@ import {
 import { Theme } from "../themes.ts";
 import { config } from "./MaptilerConfig.ts";
 import { Filters } from "./Filters.ts";
-import { MapSettings } from "./MapSettings.ts";
+import { mapBoundaries, MapSettings } from "./MapSettings.ts";
 
 const x = atob(config.x);
 
@@ -60,10 +60,11 @@ const Map = ({
     <MapContainer
       center={mapSettings.center}
       zoom={mapSettings.zoom}
-      minZoom={mapSettings.minZoom}
+      minZoom={mapBoundaries.minZoom}
+      maxZoom={mapBoundaries.maxZoom}
       zoomControl={false}
       maxBoundsViscosity={0.7}
-      maxBounds={mapSettings.bounds}
+      maxBounds={mapBoundaries.bounds}
       ref={setMap}
     >
       <ZoomControl position="topright" />

@@ -4,7 +4,7 @@ import Sources from "./Sources";
 export const siteMap = [
   {
     title: "Мапа",
-    path: "",
+    path: "/",
     getComponent: () => undefined,
   },
   {

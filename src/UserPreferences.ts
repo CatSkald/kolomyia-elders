@@ -2,9 +2,14 @@ import { periods, periodsOfDestruction } from "./data/periods";
 import { Filters } from "./map/Filters";
 import { retrieve, retrieveArray, store, storeArray } from "./localStorage";
 import { getDefaultBrowserTheme, Theme } from "./themes";
+import { kolomyiaDefault, mapBoundaries, MapSettings } from "./map/MapSettings";
 
 export class UserPreferences {
-  private constructor(private _theme: Theme, private _filters: Filters) {}
+  private constructor(
+    private _theme: Theme,
+    private _filters: Filters,
+    private _map: MapSettings
+  ) {}
 
   get theme() {
     return this._theme;
@@ -25,6 +30,38 @@ export class UserPreferences {
     storeArray("filters.lost", this._filters.lost);
     store("filters.monuments", this._filters.monuments.toString());
     store("filters.unknown", this._filters.unknown.toString());
+  }
+
+  get map() {
+    return this._map;
+  }
+
+  // TODO Use me
+  // const parsePath = (
+  //   path: string
+  // ): {
+  //   path: string;
+  //   zoom: number | undefined;
+  //   center: LatLngTuple | undefined;
+  // } => {
+  //   const split = path.split("#");
+  //   if (split[1]) {
+  //     const [zoom, lat, lang] = split[1].split("/");
+  //     return {
+  //       path: split[0],
+  //       zoom: parseInt(zoom),
+  //       center: [parseFloat(lat), parseFloat(lang)],
+  //     };
+  //   }
+
+  //   return { path: split[0], zoom: undefined, center: undefined };
+  // };
+
+  updateMap(value: MapSettings) {
+    this._map = value;
+    store("map.zoom", this._map.zoom.toString());
+    store("map.center.lat", this._map.center[0].toString());
+    store("map.center.lng", this._map.center[1].toString());
   }
 
   static load(): UserPreferences {
@@ -54,6 +91,22 @@ export class UserPreferences {
           : [],
     };
 
-    return new UserPreferences(theme, filters);
+    const mapZoomParsed = parseInt(retrieve("map.zoom") ?? "");
+    const mapZoom: number =
+      mapZoomParsed &&
+      mapZoomParsed > mapBoundaries.minZoom &&
+      mapZoomParsed < mapBoundaries.maxZoom
+        ? mapZoomParsed
+        : kolomyiaDefault.zoom;
+    const mapCenterLat = parseFloat(retrieve("map.center.lat") ?? "");
+    const mapCenterLng = parseFloat(retrieve("map.center.lng") ?? "");
+
+    return new UserPreferences(theme, filters, {
+      zoom: mapZoom,
+      center:
+        mapCenterLat && mapCenterLng
+          ? [mapCenterLat, mapCenterLng]
+          : kolomyiaDefault.center,
+    });
   }
 }

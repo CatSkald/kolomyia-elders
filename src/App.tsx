@@ -5,9 +5,7 @@ import Header from "./header/Header";
 import { Theme } from "./themes";
 import { Filters } from "./map/Filters";
 import Loader from "./loader/Loader";
-import { SiteMap } from "./pages/SiteMap";
-import AboutUs from "./pages/AboutUs";
-import Sources from "./pages/Sources";
+import { getCurrentPage } from "./pages/SiteMap";
 import { UserPreferences } from "./UserPreferences";
 import { kolomyiaDefault } from "./map/MapSettings";
 
@@ -40,7 +38,11 @@ function App() {
     setFilters(filters);
   };
 
-  const [activePage, setActivePage] = useState<SiteMap>(SiteMap.Map);
+  const activePage = getCurrentPage();
+  const activePageComponent = activePage.getComponent();
+  useEffect(() => {
+    document.title = `${activePage.title} - Архітектурна спадщина міста Коломиї`;
+  }, [activePage]);
 
   return (
     <div className="app">
@@ -49,11 +51,11 @@ function App() {
         setTheme={selectTheme}
         filters={filters}
         setFilters={selectFilters}
-        activePage={activePage}
-        setActivePage={(page) => setActivePage(page ?? SiteMap.Map)}
+        showFilters={activePage.path === "/"}
+        showSearch={activePage.path === "/search"}
       />
       <main>
-        {(activePage === SiteMap.Map || activePage === SiteMap.Search) && (
+        {activePageComponent ?? (
           <Suspense fallback={<Loader />}>
             <Map
               theme={theme}
@@ -62,8 +64,6 @@ function App() {
             />
           </Suspense>
         )}
-        {activePage === SiteMap.AboutUs && <AboutUs />}
-        {activePage === SiteMap.Sources && <Sources />}
       </main>
       <Footer />
     </div>

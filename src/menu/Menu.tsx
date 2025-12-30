@@ -3,16 +3,14 @@ import { buttonSize, Theme } from "../themes";
 import { MoonStarsFill, SunFill } from "react-bootstrap-icons";
 import HamburgerButton from "./HamburgerButton";
 import styles from "./Menu.module.css";
-import { SiteMap } from "../pages/SiteMap";
+import { siteMap } from "../pages/SiteMap";
 
 const Menu = ({
   theme,
   setTheme,
-  setActivePage,
 }: {
   theme: Theme;
   setTheme: (theme: Theme) => void;
-  setActivePage: (page?: SiteMap) => void;
 }) => {
   const isDarkTheme = theme === "dark";
   const toggleTheme = () => setTheme(isDarkTheme ? Theme.Light : Theme.Dark);
@@ -23,18 +21,10 @@ const Menu = ({
     <>
       <HamburgerButton open={open} setOpen={setOpen} />
       <nav className={`${styles.menu} ${open ? styles.opened : ""}`}>
-        {Object.entries(SiteMap).map(([key, value]: [string, SiteMap]) => (
-          <div
-            key={key}
-            role="button"
-            aria-label={value}
-            onClick={() => {
-              setOpen(false);
-              setActivePage(value);
-            }}
-          >
-            {value}
-          </div>
+        {siteMap.map((page) => (
+          <a key={page.path} href={page.path}>
+            {page.title}
+          </a>
         ))}
         <div
           role="button"

@@ -4,7 +4,6 @@ import Legend from "./Legend";
 import { Theme } from "../themes";
 import { Filters } from "../map/Filters";
 import Menu from "../menu/Menu";
-import { SiteMap } from "../pages/SiteMap";
 import SearchBar from "../search/SearchBar";
 
 const Header = ({
@@ -12,15 +11,15 @@ const Header = ({
   setTheme,
   filters,
   setFilters,
-  activePage,
-  setActivePage,
+  showFilters,
+  showSearch,
 }: {
   theme: Theme;
   setTheme: (theme: Theme) => void;
   filters: Filters;
   setFilters: (filters: Filters) => void;
-  activePage: SiteMap;
-  setActivePage: (page?: SiteMap) => void;
+  showFilters: boolean;
+  showSearch: boolean;
 }) => {
   return (
     <div className="header">
@@ -31,16 +30,12 @@ const Header = ({
           alignItems: "center",
         }}
       >
-        <Menu theme={theme} setTheme={setTheme} setActivePage={setActivePage} />
+        <Menu theme={theme} setTheme={setTheme} />
         <h1>Архітектурна спадщина Коломиї</h1>
       </div>
       <hr />
-      {activePage === SiteMap.Map && (
-        <Legend filters={filters} setFilters={setFilters} />
-      )}
-      {activePage === SiteMap.Search && (
-        <SearchBar filters={filters} setFilters={setFilters} />
-      )}
+      {showFilters && <Legend filters={filters} setFilters={setFilters} />}
+      {showSearch && <SearchBar filters={filters} setFilters={setFilters} />}
     </div>
   );
 };

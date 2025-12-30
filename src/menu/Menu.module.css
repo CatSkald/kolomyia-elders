@@ -13,13 +13,14 @@ nav.menu {
   font-size: 1.2rem;
 }
 
-nav.menu div:first-child {
+nav.menu a:first-child {
   margin-top: 50px; /* allow space for hamburger button */
 }
 
-nav.menu div {
+nav.menu a {
   margin: 0.5rem;
   padding: 0.5rem;
+  color: var(--color-foreground);
 }
 
 nav.menu.opened {
@@ -33,7 +34,7 @@ nav.menu.opened {
     padding-top: 0;
   }
 
-  nav.menu [role="button"] {
+  nav.menu a {
     text-align: center;
   }
 }

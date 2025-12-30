@@ -19,10 +19,12 @@ const Map = ({
   theme,
   filters,
   mapSettings,
+  onZoom,
 }: {
   theme: Theme;
   filters: Filters;
   mapSettings: MapSettings;
+  onZoom: (zoom: number) => void;
 }) => {
   const [map, setMap] = useState<L.Map | null>(null);
   const [maptiler, setMaptiler] = useState<MaptilerLayerInterface | null>(null);
@@ -68,7 +70,11 @@ const Map = ({
       ref={setMap}
     >
       <ZoomControl position="topright" />
-      <BuildingsOverlay initialZoom={mapSettings.zoom} filters={filters} />
+      <BuildingsOverlay
+        initialZoom={mapSettings.zoom}
+        onZoom={onZoom}
+        filters={filters}
+      />
     </MapContainer>
   );
 };

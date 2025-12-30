@@ -7,7 +7,6 @@ import { Filters } from "./map/Filters";
 import Loader from "./loader/Loader";
 import { getCurrentPage } from "./pages/SiteMap";
 import { UserPreferences } from "./UserPreferences";
-import { kolomyiaDefault } from "./map/MapSettings";
 
 const Map = lazy(() => import("./map/Map"));
 
@@ -20,6 +19,11 @@ function App() {
 
     setTheme(theme);
   };
+  const updateZoomPreferences = (zoom: number) =>
+    preferences.updateMap({
+      ...preferences.map,
+      zoom: zoom,
+    });
 
   useEffect(() => {
     switch (theme) {
@@ -60,7 +64,8 @@ function App() {
             <Map
               theme={theme}
               filters={filters}
-              mapSettings={kolomyiaDefault}
+              mapSettings={preferences.map}
+              onZoom={updateZoomPreferences}
             />
           </Suspense>
         )}

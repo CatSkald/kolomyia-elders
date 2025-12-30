@@ -33,7 +33,7 @@ export class UserPreferences {
   }
 
   get map() {
-    return this._map;
+    return this._map ?? kolomyiaDefault;
   }
 
   // TODO Use me

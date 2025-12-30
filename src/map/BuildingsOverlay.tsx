@@ -14,16 +14,20 @@ import LostBuildingMarker from "./markers/LostBuildingMarker";
 
 const BuildingsOverlay = ({
   initialZoom,
+  onZoom,
   filters,
 }: {
   initialZoom: number;
+  onZoom: (zoom: number) => void;
   filters: Filters;
 }) => {
   const [markerSize, setMarkerSize] = useState(getMarkerSize(initialZoom));
 
   const map = useMapEvents({
     zoomend() {
-      setMarkerSize(getMarkerSize(map.getZoom()));
+      const zoom = map.getZoom();
+      setMarkerSize(getMarkerSize(zoom));
+      onZoom(zoom);
     },
   });
 

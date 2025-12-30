@@ -4,27 +4,27 @@ import Sources from "./Sources";
 export const siteMap = [
   {
     title: "Мапа",
-    path: "/",
+    path: "",
     getComponent: () => undefined,
   },
   {
     title: "Пошук",
-    path: "/search",
+    path: "?search",
     getComponent: () => undefined,
   },
   {
     title: "Про нас",
-    path: "/about",
+    path: "?about",
     getComponent: () => <AboutUs />,
   },
   {
     title: "Використані джерела",
-    path: "/sources",
+    path: "?sources",
     getComponent: () => <Sources />,
   },
 ] as const;
 
 export function getCurrentPage(): (typeof siteMap)[number] {
-  const path = window.location.pathname.split("#")[0];
+  const path = window.location.search;
   return siteMap.find((x) => x.path === path) ?? siteMap[0];
 }

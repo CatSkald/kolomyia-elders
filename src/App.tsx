@@ -62,8 +62,8 @@ function App() {
         setTheme={selectTheme}
         filters={filters}
         setFilters={selectFilters}
-        showFilters={activePage.path === "/"}
-        showSearch={activePage.path === "/search"}
+        showFilters={activePage.path === ""}
+        showSearch={activePage.path === "?search"}
       />
       <main>
         {activePageComponent ?? (

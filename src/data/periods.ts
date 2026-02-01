@@ -2,26 +2,20 @@ import { palette } from "../themes";
 
 export const periods = [
   {
-    name: "1550—1650",
-    startDate: 1550,
-    endDate: 1650,
+    name: "1405—1771",
+    startDate: 1405,
+    endDate: 1771,
     color: palette.vi,
   },
   {
-    name: "1651—1750",
-    startDate: 1651,
-    endDate: 1750,
+    name: "1772—1865",
+    startDate: 1772,
+    endDate: 1865,
     color: palette.v,
   },
   {
-    name: "1751—1850",
-    startDate: 1751,
-    endDate: 1850,
-    color: palette.iv,
-  },
-  {
-    name: "1851—1913",
-    startDate: 1851,
+    name: "1866—1913",
+    startDate: 1866,
     endDate: 1913,
     color: palette.iii,
   },

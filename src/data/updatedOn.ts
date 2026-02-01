@@ -1,5 +1,5 @@
 export const updatedOn = {
   // Month name in dative case
-  month: "грудні",
-  year: 2025,
+  month: "лютому",
+  year: 2026,
 } as const;

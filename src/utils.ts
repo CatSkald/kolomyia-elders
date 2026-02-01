@@ -27,7 +27,7 @@ const cleanDate = (date?: string | number): string | number | undefined =>
 
 const parseArray = (
   value: string | undefined,
-  delimiter: string
+  delimiter: string,
 ): string[] | undefined => {
   const result = value
     ?.split(delimiter)
@@ -49,7 +49,7 @@ const getVocabulary = (): WordDefinition[] =>
               id: s["№"].toString(),
               word: x,
               definition: s["Пояснення"],
-            } as WordDefinition)
+            }) as WordDefinition,
         );
     })
     .flat();
@@ -64,30 +64,50 @@ const getSources = (): SourceEntry[] =>
         isbn: s["ISBN"],
         link: s["Посилання"],
       };
-    }
+    },
   );
 export const mappedSources = getSources();
 
 export const getPeriod = (
   periods: readonly Period[],
-  date?: string | number
+  date?: string | number,
 ): Period | undefined => {
-  let year = undefined;
   if (!date) return undefined;
-  else if (typeof date === "number") year = date;
-  else if (date.includes("II пол. XVIII ст.")) year = 1751;
-  else if (date.includes("кін. XVIII ст.")) year = 1800;
-  else if (date.includes("XVIII ст.")) year = 1701;
-  else if (date.includes("II пол. XIX ст.")) year = 1851;
-  else if (date.includes("кін. XIX ст.")) year = 1900;
-  else if (date.includes("XIX ст.")) year = 1801;
-  else if (date.includes("XX ст.")) year = 1901;
-  else if (date.includes("-ті") || date.includes("-х"))
-    year = parseInt(date.split("-")[0].slice(-4));
-  else if (date.startsWith("після"))
-    year = 1 + parseInt(date.split(" ")[1].substring(0, 4));
+
+  let year = undefined;
+  if (typeof date === "number") {
+    year = date;
+  } else {
+    const startDate = date.split(dateSeparator)[0].trim();
+
+    if (startDate.includes(" ст.")) {
+      if (startDate.includes("XV ст.")) year = 1401;
+      else if (startDate.includes("XVI ст.")) year = 1501;
+      else if (startDate.includes("XVII ст.")) year = 1601;
+      else if (startDate.includes("XVIII ст.")) year = 1701;
+      else if (startDate.includes("XIX ст.")) year = 1801;
+      else if (startDate.includes("XX ст.")) year = 1901;
+      else if (startDate.includes("XXI ст.")) year = 2001;
+
+      // Unexpected century or format
+      if (!year) return undefined;
+
+      // "поч." and "I пол." equal to the start of the century, ignore them
+      if (startDate.startsWith("сер.")) year += 74;
+      else if (startDate.startsWith("II пол.") || startDate.startsWith("кін."))
+        year += 99;
+    } else if (startDate.includes("-ті") || date.includes("-х")) {
+      year = parseInt(date.split("-")[0].slice(-4));
+      if (startDate.startsWith("сер.")) year += 5;
+      else if (startDate.startsWith("кін.")) year += 9;
+    } else if (date.startsWith("після ")) {
+      // Expected format: "після 1234 р."
+      year = 1 + parseInt(date.split(" ")[1].substring(0, 4));
+    }
+  }
 
   if (!year) return undefined;
+
   return periods.find((p) => p.startDate <= year && p.endDate >= year);
 };
 
@@ -101,7 +121,7 @@ const cleanText = (text?: string): string => {
 };
 
 const parseSources = (
-  text: string
+  text: string,
 ): {
   hasSources: boolean;
   sourcedText: string | undefined;
@@ -184,7 +204,7 @@ const getBuildings = (): BuildingProfile[] =>
         name: cleanText(b["Назва"]),
         oldNames: parseArray(b["Стара назва"], itemSeparator)?.map(cleanText),
         oldStreetNames: parseArray(b["Старі назви вулиці"], itemSeparator)?.map(
-          cleanText
+          cleanText,
         ),
         date: cleanDate(b["Дата"])!,
         description: cleanText(b["Опис"]),
@@ -194,7 +214,7 @@ const getBuildings = (): BuildingProfile[] =>
         address: b["Адреса"],
         coordinates: coordinates,
       };
-    }
+    },
   );
 export const mappedBuildings = getBuildings();
 
@@ -228,7 +248,7 @@ const getMonuments = (): MonumentProfile[] =>
         period: getPeriod(periods, date),
         coordinates: coordinates,
       };
-    }
+    },
   );
 export const mappedMonuments = getMonuments();
 
@@ -265,6 +285,6 @@ const getLostBuildings = (): LostBuildingProfile[] =>
         periodOfDestruction: getPeriod(periodsOfDestruction, dateLost),
         coordinates: coordinates,
       };
-    }
+    },
   );
 export const mappedLostBuildings = getLostBuildings();

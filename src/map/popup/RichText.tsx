@@ -12,27 +12,29 @@ const RichText = ({ data, style }: { data: string; style?: CSSProperties }) => {
     /([\p{Alphabetic}\p{Mark}\p{Decimal_Number}\p{Connector_Punctuation}\p{Join_Control}]+\s?<\d+>)/gu;
 
   return (
-    <span style={style}>
-      {reactStringReplace(text, wordFromVocabularyPattern, (match, index) => {
-        const [word, definitionId] = match
-          .replace(">", "")
-          .split("<")
-          .map((x) => x.trim());
-        const vocabularyWord = mappedVocabulary.find(
-          (x) => x.id === definitionId,
-        );
+    <span>
+      <span style={style}>
+        {reactStringReplace(text, wordFromVocabularyPattern, (match, index) => {
+          const [word, definitionId] = match
+            .replace(">", "")
+            .split("<")
+            .map((x) => x.trim());
+          const vocabularyWord = mappedVocabulary.find(
+            (x) => x.id === definitionId,
+          );
 
-        return (
-          <span
-            key={index}
-            {...(vocabularyWord
-              ? { className: "has-tooltip", title: vocabularyWord.definition }
-              : {})}
-          >
-            {word}
-          </span>
-        );
-      })}
+          return (
+            <span
+              key={index}
+              {...(vocabularyWord
+                ? { className: "has-tooltip", title: vocabularyWord.definition }
+                : {})}
+            >
+              {word}
+            </span>
+          );
+        })}
+      </span>
       {sources && <Sources data={sources} />}
     </span>
   );

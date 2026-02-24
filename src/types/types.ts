@@ -7,7 +7,7 @@ export type Period = {
   color: string;
 };
 
-export type HistoryEntry = SourcedProfile & {
+export type HistoryEntry = {
   date?: string;
   description: string;
 };
@@ -35,10 +35,6 @@ export type AddressProfile = {
   oldStreetNames?: string[];
 };
 
-export type SourcedProfile = {
-  sources?: SourceEntry[];
-};
-
 export type LocationProfile = {
   name: string;
   oldNames?: string[];
@@ -62,7 +58,6 @@ export type LostBuildingProfile = LocationProfile &
   };
 
 export type MonumentProfile = LocationProfile &
-  LostProfile &
-  SourcedProfile & {
+  LostProfile & {
     history?: string;
   };

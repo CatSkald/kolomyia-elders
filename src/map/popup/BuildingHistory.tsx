@@ -1,7 +1,6 @@
 import { HistoryEntry } from "../../types/types";
 import Collapsible from "./Collapsible";
 import RichText from "./RichText";
-import Sources from "./Sources";
 
 const BuildingHistory = ({ data }: { data: HistoryEntry[] }) => {
   return (
@@ -15,10 +14,7 @@ const BuildingHistory = ({ data }: { data: HistoryEntry[] }) => {
               </span>
             )}
             {item.date && item.description && " — "}
-            <span style={{ whiteSpace: "pre-wrap" }}>
-              <RichText data={item.description} />
-              {item.sources && <Sources data={item.sources} />}
-            </span>
+            <RichText data={item.description} />
           </li>
         ))}
       </ul>

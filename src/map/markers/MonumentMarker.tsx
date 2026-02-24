@@ -4,7 +4,6 @@ import "leaflet/dist/leaflet.css";
 import { MonumentProfile } from "../../types/types";
 import { getMonumentMarkerImage, palette } from "../../themes";
 import { DivIcon } from "leaflet";
-import Sources from "../popup/Sources";
 import ReadMoreButton from "../popup/ReadMoreButton";
 import { useState } from "react";
 import RichText from "../popup/RichText";
@@ -97,10 +96,7 @@ export default function MonumentMarker({
         {data.history && (
           <>
             <hr style={{ margin: "0.5rem 0", width: "100%" }} />
-            <div style={{ whiteSpace: "pre-wrap" }}>
-              <RichText data={data.history} />
-              {data.sources && <Sources data={data.sources} />}
-            </div>
+            <RichText data={data.history} />
           </>
         )}
       </Popup>

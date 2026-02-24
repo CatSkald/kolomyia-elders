@@ -120,39 +120,6 @@ const cleanText = (text?: string): string => {
     .trim();
 };
 
-const parseSources = (
-  text: string,
-): {
-  hasSources: boolean;
-  sourcedText: string | undefined;
-  sources: SourceEntry[] | undefined;
-} => {
-  const sourceMarker = "[";
-  const hasSources = text.indexOf(sourceMarker) !== -1;
-  let sources = undefined;
-  let sourcedText = undefined;
-
-  if (hasSources) {
-    const all = text.split("[");
-    sourcedText = all[0];
-    sources = all[1]
-      .slice(0, -1)
-      .split(",")
-      .map((x) => {
-        const number = Number(x);
-        return (
-          mappedSources.find((s) => s.number === number) ??
-          ({
-            number: number,
-            title: "Unknown",
-          } as SourceEntry)
-        );
-      });
-  }
-
-  return { hasSources, sourcedText, sources };
-};
-
 const parseHistory = (history: string): HistoryEntry[] =>
   parseArray(history, itemSeparator)!.map((h) => {
     const noDateMarker = "? - ";
@@ -170,12 +137,9 @@ const parseHistory = (history: string): HistoryEntry[] =>
       }
     }
 
-    const { sourcedText, sources } = parseSources(description);
-
     return {
       date: date,
-      description: sourcedText ?? description,
-      sources: sources,
+      description: description,
     };
   });
 
@@ -236,15 +200,13 @@ const getMonuments = (): MonumentProfile[] =>
         lat && lan ? [lat, lan] : undefined;
 
       const history = m["Історія"];
-      const { sourcedText, sources } = parseSources(history ?? "");
 
       return {
         name: cleanText(m["Назва"]),
         oldNames: parseArray(m["Стара назва"], itemSeparator),
         date: cleanDate(date)!,
         destroyed: cleanDate(m["Зруйновано"]),
-        history: cleanText(sourcedText ?? history),
-        sources: sources,
+        history: cleanText(history),
         period: getPeriod(periods, date),
         coordinates: coordinates,
       };

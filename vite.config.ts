@@ -26,4 +26,11 @@ export default defineConfig({
       },
     },
   },
+  // Enable profiling:
+  // resolve: {
+  //   alias: [
+  //     { find: /^react-dom\/client$/, replacement: "react-dom/profiling" },
+  //     { find: "scheduler/tracing", replacement: "scheduler/tracing-profiling" },
+  //   ],
+  // },
 });

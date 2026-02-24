@@ -12,7 +12,7 @@ const RichText = ({ data, style }: { data: string; style?: CSSProperties }) => {
     /([\p{Alphabetic}\p{Mark}\p{Decimal_Number}\p{Connector_Punctuation}\p{Join_Control}]+\s?<\d+>)/gu;
 
   return (
-    <span>
+    <span style={style}>
       {reactStringReplace(text, wordFromVocabularyPattern, (match, index) => {
         const [word, definitionId] = match
           .replace(">", "")
@@ -25,7 +25,6 @@ const RichText = ({ data, style }: { data: string; style?: CSSProperties }) => {
         return (
           <span
             key={index}
-            style={style}
             {...(vocabularyWord
               ? { className: "has-tooltip", title: vocabularyWord.definition }
               : {})}

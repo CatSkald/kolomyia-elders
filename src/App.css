@@ -11,7 +11,10 @@
 }
 
 .app .leaflet-container {
-  font-family: Philosopher, Noto Sans, serif;
+  font-family:
+    Philosopher,
+    Noto Sans,
+    serif;
   height: 100%;
 }
 .app .leaflet-control-zoom {
@@ -57,11 +60,15 @@
   /* TODO border, on hover */
 }
 
+.app .leaflet-bar a {
+  border-bottom: 1px solid #666;
+}
+
 .app .leaflet-popup-close-button > span,
 .app .leaflet-control-zoom .leaflet-control-zoom-in,
 .app .leaflet-control-zoom .leaflet-control-zoom-out {
   background-color: var(--color-background);
-  color: var(--color-link);
+  color: var(--color-foreground);
 }
 
 .app .leaflet-popup-close-button:hover > span,

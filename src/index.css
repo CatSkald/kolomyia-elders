@@ -19,7 +19,7 @@ body {
 body.dark-mode {
   --color-background: #121212;
   /* --color-foreground: rgba(255, 255, 255, 0.87); */
-  --color-foreground: #ffffffde;
+  --color-foreground: #fffafade;
   --color-accent: #b22222;
   --color-accent2: #f59b9b;
   --color-accent-background: #5a0c0c;
@@ -28,7 +28,10 @@ body.dark-mode {
 body {
   margin: 0;
   padding: 0;
-  font-family: Philosopher, Noto Sans, serif;
+  font-family:
+    Philosopher,
+    Noto Sans,
+    serif;
 }
 
 .newline {

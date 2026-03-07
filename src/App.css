@@ -32,6 +32,12 @@
   width: 25rem;
   font-size: 0.8rem;
 }
+.app .leaflet-popup-content-wrapper {
+  max-height: 25rem;
+  overflow-x: hidden;
+  scrollbar-color: var(--color-accent2) var(--color-background);
+  scrollbar-width: thin;
+}
 
 /* logoPosition: "bottom-right" does not work with React */
 /* https://github.com/maptiler/leaflet-maptilersdk/blob/3d7b122d8e6315d0fcc27a74dfdfe47fcd8848fe/src/leaflet-maptilersdk.ts#L324 */
@@ -62,6 +68,10 @@
 
 .app .leaflet-bar a {
   border-bottom: 1px solid #666;
+}
+
+.app .leaflet-popup-close-button {
+  right: 6px !important;
 }
 
 .app .leaflet-popup-close-button > span,

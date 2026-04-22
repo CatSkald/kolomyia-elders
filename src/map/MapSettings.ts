@@ -7,10 +7,10 @@ export type MapSettings = {
 
 export const mapBoundaries = {
   minZoom: 14,
-  maxZoom: 23,
+  maxZoom: 20,
   bounds: [
-    [48.6184, 24.9379],
-    [48.4868, 25.1415],
+    [48.595, 24.95],
+    [48.505, 25.12],
   ] as LatLngBoundsExpression,
 } as const;
 

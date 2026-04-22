@@ -54,6 +54,8 @@ const Map = ({
         // TODO Investigate why
         // eslint-disable-next-line react-hooks/set-state-in-effect
         setMaptiler(createMaptiler(map));
+        //TODO Investigate why this is needed
+        map.setMaxBounds(mapBoundaries.bounds);
       } else {
         maptiler.setStyle(style);
       }
@@ -67,7 +69,7 @@ const Map = ({
       minZoom={mapBoundaries.minZoom}
       maxZoom={mapBoundaries.maxZoom}
       zoomControl={false}
-      maxBoundsViscosity={0.7}
+      maxBoundsViscosity={0.75}
       maxBounds={mapBoundaries.bounds}
       ref={setMap}
     >

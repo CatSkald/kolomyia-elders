@@ -1,14 +1,15 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import "./App.css";
+import type { LatLngTuple } from "leaflet";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
-import { Theme } from "./themes";
-import { Filters } from "./map/Filters";
 import Loader from "./loader/Loader";
+import type { Filters } from "./map/Filters";
 import { getCurrentPage } from "./pages/SiteMap";
+import { Theme } from "./themes";
 import { UserPreferences } from "./UserPreferences";
-import { LatLngTuple } from "leaflet";
 
+// biome-ignore lint/suspicious/noShadowRestrictedNames: Map is a sound name
 const Map = lazy(() => import("./map/Map"));
 
 function App() {

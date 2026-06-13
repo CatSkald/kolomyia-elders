@@ -1,5 +1,5 @@
-import { periods, periodsOfDestruction } from "../data/periods";
-import {
+import type { periods, periodsOfDestruction } from "../data/periods";
+import type {
   AddressProfile,
   BuildingProfile,
   LocationProfile,
@@ -22,7 +22,7 @@ export function matchSearchTerm(
     | BuildingProfile
     | LostBuildingProfile
     | MonumentProfile,
-  filters: Filters
+  filters: Filters,
 ): boolean {
   if (!filters.searchTerm) return false;
 
@@ -44,7 +44,7 @@ export function matchSearchTerm(
             else return false;
           }).length > 0
         );
-      }
+      } else return undefined;
     }).length > 0
   );
 }

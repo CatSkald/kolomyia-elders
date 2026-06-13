@@ -1,5 +1,5 @@
-import { LatLngTuple } from "leaflet";
-import {
+import type { LatLngTuple } from "leaflet";
+import type {
   BuildingProfile,
   LostBuildingProfile,
   HistoryEntry,
@@ -37,22 +37,20 @@ const parseArray = (
 };
 
 const getVocabulary = (): WordDefinition[] =>
-  vocabulary
-    .map((s: { "№": number; Слово: string; Пояснення: string }) => {
-      return s["Слово"]
-        .split(",")
-        .map((x) => x.trim())
-        .filter((x) => !!x)
-        .map(
-          (x) =>
-            ({
-              id: s["№"].toString(),
-              word: x,
-              definition: s["Пояснення"],
-            }) as WordDefinition,
-        );
-    })
-    .flat();
+  vocabulary.flatMap((s: { "№": number; Слово: string; Пояснення: string }) => {
+    return s["Слово"]
+      .split(",")
+      .map((x) => x.trim())
+      .filter((x) => !!x)
+      .map(
+        (x) =>
+          ({
+            id: s["№"].toString(),
+            word: x,
+            definition: s["Пояснення"],
+          }) as WordDefinition,
+      );
+  });
 export const mappedVocabulary = getVocabulary();
 
 const getSources = (): SourceEntry[] =>
@@ -74,7 +72,7 @@ export const getPeriod = (
 ): Period | undefined => {
   if (!date) return undefined;
 
-  let year = undefined;
+  let year: number | undefined;
   if (typeof date === "number") {
     year = date;
   } else {
@@ -123,7 +121,7 @@ const cleanText = (text?: string): string => {
 const parseHistory = (history: string): HistoryEntry[] =>
   parseArray(history, itemSeparator)!.map((h) => {
     const noDateMarker = "? - ";
-    let date = undefined;
+    let date: string | undefined;
     let description = cleanText(h);
     if (h.startsWith(noDateMarker)) {
       description = description.slice(noDateMarker.length).trim();

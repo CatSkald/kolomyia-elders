@@ -1,4 +1,4 @@
-import { HistoryEntry } from "../../types/types";
+import type { HistoryEntry } from "../../types/types";
 import Collapsible from "./Collapsible";
 import RichText from "./RichText";
 

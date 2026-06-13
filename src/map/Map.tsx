@@ -6,15 +6,16 @@ import { MapContainer, ZoomControl } from "react-leaflet";
 import BuildingsOverlay from "./BuildingsOverlay.tsx";
 import {
   MaptilerLayer,
-  MaptilerLayerInterface,
+  type MaptilerLayerInterface,
 } from "@maptiler/leaflet-maptilersdk";
 import { Theme } from "../themes.ts";
 import { config } from "./MaptilerConfig.ts";
-import { Filters } from "./Filters.ts";
-import { mapBoundaries, MapSettings } from "./MapSettings.ts";
+import type { Filters } from "./Filters.ts";
+import { mapBoundaries, type MapSettings } from "./MapSettings.ts";
 
 const x = atob(config.x);
 
+// biome-ignore lint/suspicious/noShadowRestrictedNames: Map is a sound name
 const Map = ({
   theme,
   filters,

@@ -1,7 +1,7 @@
 import { CircleMarker, Popup } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
-import { BuildingProfile } from "../../types/types";
+import type { BuildingProfile } from "../../types/types";
 import BuildingHistory from "../popup/BuildingHistory";
 import { palette } from "../../themes";
 import ReadMoreButton from "../popup/ReadMoreButton";

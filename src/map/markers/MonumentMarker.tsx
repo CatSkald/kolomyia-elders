@@ -1,7 +1,7 @@
 import { Marker, Popup } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
-import { MonumentProfile } from "../../types/types";
+import type { MonumentProfile } from "../../types/types";
 import { getMonumentMarkerImage, palette } from "../../themes";
 import { DivIcon } from "leaflet";
 import ReadMoreButton from "../popup/ReadMoreButton";

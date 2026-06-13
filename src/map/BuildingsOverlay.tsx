@@ -6,10 +6,10 @@ import {
   mappedMonuments,
 } from "../utils";
 import { getMarkerSize } from "../themes";
-import { LatLngTuple } from "leaflet";
+import type { LatLngTuple } from "leaflet";
 import BuildingMarker from "./markers/BuildingMarker";
 import MonumentMarker from "./markers/MonumentMarker";
-import { Filters, matchSearchTerm } from "./Filters";
+import { type Filters, matchSearchTerm } from "./Filters";
 import LostBuildingMarker from "./markers/LostBuildingMarker";
 
 const BuildingsOverlay = ({

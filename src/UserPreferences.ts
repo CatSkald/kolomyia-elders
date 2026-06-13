@@ -1,8 +1,8 @@
 import { periods, periodsOfDestruction } from "./data/periods";
-import { Filters } from "./map/Filters";
+import type { Filters } from "./map/Filters";
 import { retrieve, retrieveArray, store, storeArray } from "./localStorage";
 import { getDefaultBrowserTheme, Theme } from "./themes";
-import { kolomyiaDefault, mapBoundaries, MapSettings } from "./map/MapSettings";
+import { kolomyiaDefault, mapBoundaries, type MapSettings } from "./map/MapSettings";
 
 export class UserPreferences {
   private constructor(

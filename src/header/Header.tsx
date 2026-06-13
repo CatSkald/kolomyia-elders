@@ -1,8 +1,8 @@
 import "./Header.css";
 
 import Legend from "./Legend";
-import { Theme } from "../themes";
-import { Filters } from "../map/Filters";
+import type { Theme } from "../themes";
+import type { Filters } from "../map/Filters";
 import Menu from "../menu/Menu";
 import SearchBar from "../search/SearchBar";
 

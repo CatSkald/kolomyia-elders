@@ -1,7 +1,7 @@
 import { Marker, Popup } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
-import { LostBuildingProfile } from "../../types/types";
+import type { LostBuildingProfile } from "../../types/types";
 import { getLostBuildingMarkerImage, palette } from "../../themes";
 import { DivIcon } from "leaflet";
 import BuildingHistory from "../popup/BuildingHistory";

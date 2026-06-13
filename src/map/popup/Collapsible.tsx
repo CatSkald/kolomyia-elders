@@ -1,6 +1,6 @@
 import "./Collapsible.css";
 
-import { useState, ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 
 const Collapsible = ({
   header,

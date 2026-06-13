@@ -1,4 +1,4 @@
-import { LatLngBoundsExpression, LatLngTuple } from "leaflet";
+import type { LatLngBoundsExpression, LatLngTuple } from "leaflet";
 
 export type MapSettings = {
   zoom: number;

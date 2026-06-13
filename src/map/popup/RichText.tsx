@@ -1,7 +1,7 @@
-import { CSSProperties } from "react";
+import type { CSSProperties } from "react";
 import { mappedSources, mappedVocabulary } from "../../utils";
 import reactStringReplace from "react-string-replace";
-import { SourceEntry } from "../../types/types";
+import type { SourceEntry } from "../../types/types";
 import Sources from "./Sources";
 
 const RichText = ({ data, style }: { data: string; style?: CSSProperties }) => {
@@ -48,8 +48,8 @@ const parseSources = (
 } => {
   const sourceMarker = "[";
   const hasSources = text.indexOf(sourceMarker) !== -1;
-  let sources = undefined;
-  let sourcedText = undefined;
+  let sources: SourceEntry[] | undefined;
+  let sourcedText: string | undefined;
 
   if (hasSources) {
     const all = text.split("[");

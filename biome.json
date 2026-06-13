@@ -24,10 +24,13 @@
       "linter": {
         "rules": {
           "a11y": "info",
+          "complexity": {
+            "useLiteralKeys": "off"
+          },
           "correctness": {
             "noUndeclaredVariables": "error",
             "useExhaustiveDependencies": "info",
-            "useParseIntRadix": "info"
+            "useParseIntRadix": "off"
           },
           "style": {
             "noNonNullAssertion": "off",

@@ -1,5 +1,5 @@
-import styles from "./Page.module.css";
 import { mappedSources } from "../utils";
+import styles from "./Page.module.css";
 
 const Sources = () => {
   return (

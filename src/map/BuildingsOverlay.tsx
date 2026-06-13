@@ -1,16 +1,16 @@
+import type { LatLngTuple } from "leaflet";
 import { useState } from "react";
 import { FeatureGroup, useMapEvents } from "react-leaflet";
+import { getMarkerSize } from "../themes";
 import {
   mappedBuildings,
   mappedLostBuildings,
   mappedMonuments,
 } from "../utils";
-import { getMarkerSize } from "../themes";
-import type { LatLngTuple } from "leaflet";
-import BuildingMarker from "./markers/BuildingMarker";
-import MonumentMarker from "./markers/MonumentMarker";
 import { type Filters, matchSearchTerm } from "./Filters";
+import BuildingMarker from "./markers/BuildingMarker";
 import LostBuildingMarker from "./markers/LostBuildingMarker";
+import MonumentMarker from "./markers/MonumentMarker";
 
 const BuildingsOverlay = ({
   initialZoom,
@@ -48,7 +48,7 @@ const BuildingsOverlay = ({
             !!b.periodOfDestruction &&
             (filters.searchTerm
               ? matchSearchTerm(b, filters)
-              : filters.lost.find((p) => p === b.periodOfDestruction?.name))
+              : filters.lost.find((p) => p === b.periodOfDestruction?.name)),
         )
         .map((b) => (
           <FeatureGroup key={b.coordinates?.toString()}>
@@ -66,7 +66,7 @@ const BuildingsOverlay = ({
             (filters.searchTerm
               ? matchSearchTerm(b, filters)
               : (filters.unknown && !b.period) ||
-                filters.periods.find((p) => p === b.period?.name))
+                filters.periods.find((p) => p === b.period?.name)),
         )
         .map((b) => (
           <FeatureGroup key={b.coordinates?.toString()}>
@@ -82,7 +82,7 @@ const BuildingsOverlay = ({
           .filter(
             (b) =>
               !!b.coordinates &&
-              (!filters.searchTerm || matchSearchTerm(b, filters))
+              (!filters.searchTerm || matchSearchTerm(b, filters)),
           )
           .map((b) => (
             <FeatureGroup key={b.coordinates?.toString()}>

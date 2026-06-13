@@ -1,10 +1,10 @@
 import "./Header.css";
 
-import Legend from "./Legend";
-import type { Theme } from "../themes";
 import type { Filters } from "../map/Filters";
 import Menu from "../menu/Menu";
 import SearchBar from "../search/SearchBar";
+import type { Theme } from "../themes";
+import Legend from "./Legend";
 
 const Header = ({
   theme,

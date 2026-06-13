@@ -1,17 +1,17 @@
 import "leaflet/dist/leaflet.css";
-import { useEffect, useState } from "react";
 import * as L from "leaflet";
+import { useEffect, useState } from "react";
 import "leaflet-hash";
-import { MapContainer, ZoomControl } from "react-leaflet";
-import BuildingsOverlay from "./BuildingsOverlay.tsx";
 import {
   MaptilerLayer,
   type MaptilerLayerInterface,
 } from "@maptiler/leaflet-maptilersdk";
+import { MapContainer, ZoomControl } from "react-leaflet";
 import { Theme } from "../themes.ts";
-import { config } from "./MaptilerConfig.ts";
+import BuildingsOverlay from "./BuildingsOverlay.tsx";
 import type { Filters } from "./Filters.ts";
-import { mapBoundaries, type MapSettings } from "./MapSettings.ts";
+import { type MapSettings, mapBoundaries } from "./MapSettings.ts";
+import { config } from "./MaptilerConfig.ts";
 
 const x = atob(config.x);
 

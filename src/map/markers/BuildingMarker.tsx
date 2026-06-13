@@ -1,11 +1,11 @@
 import { CircleMarker, Popup } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
+import { useState } from "react";
+import { palette } from "../../themes";
 import type { BuildingProfile } from "../../types/types";
 import BuildingHistory from "../popup/BuildingHistory";
-import { palette } from "../../themes";
 import ReadMoreButton from "../popup/ReadMoreButton";
-import { useState } from "react";
 import RichText from "../popup/RichText";
 
 export default function BuildingMarker({
@@ -20,9 +20,7 @@ export default function BuildingMarker({
   const [showOldName, setShowOldName] = useState(false);
   const [showOldStreetName, setShowOldStreetName] = useState(false);
   const markerColor = data.period?.color ?? palette.unknown;
-  return !data.coordinates ? (
-    <></>
-  ) : (
+  return !data.coordinates ? null : (
     <CircleMarker
       center={data.coordinates}
       radius={markerSize / 2}
@@ -101,23 +99,21 @@ export default function BuildingMarker({
             </div>
           )}
           {data.oldStreetNames && (
-            <>
-              <div
-                className="newline"
-                style={{
-                  flexDirection: "column",
-                  alignItems: "center",
-                  textAlign: "center",
-                  display: showOldStreetName ? "flex" : "none",
-                }}
-              >
-                {data.oldStreetNames.map((name, index) => (
-                  <div key={index} style={{ textAlign: "center" }}>
-                    {name}
-                  </div>
-                ))}
-              </div>
-            </>
+            <div
+              className="newline"
+              style={{
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+                display: showOldStreetName ? "flex" : "none",
+              }}
+            >
+              {data.oldStreetNames.map((name, index) => (
+                <div key={index} style={{ textAlign: "center" }}>
+                  {name}
+                </div>
+              ))}
+            </div>
           )}
         </div>
         {data.description && (

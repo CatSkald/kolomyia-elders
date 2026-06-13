@@ -1,11 +1,11 @@
 import { Marker, Popup } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
-import type { LostBuildingProfile } from "../../types/types";
-import { getLostBuildingMarkerImage, palette } from "../../themes";
 import { DivIcon } from "leaflet";
-import BuildingHistory from "../popup/BuildingHistory";
 import { useState } from "react";
+import { getLostBuildingMarkerImage, palette } from "../../themes";
+import type { LostBuildingProfile } from "../../types/types";
+import BuildingHistory from "../popup/BuildingHistory";
 import ReadMoreButton from "../popup/ReadMoreButton";
 import RichText from "../popup/RichText";
 
@@ -21,9 +21,7 @@ export default function LostBuildingMarker({
   const [showOldName, setShowOldName] = useState(false);
 
   const markerColor = data.periodOfDestruction?.color ?? palette.unknown;
-  return !data.coordinates ? (
-    <></>
-  ) : (
+  return !data.coordinates ? null : (
     <Marker
       position={data.coordinates}
       eventHandlers={{
@@ -74,23 +72,21 @@ export default function LostBuildingMarker({
             </div>
           )}
           {data.oldNames && (
-            <>
-              <div
-                className="newline"
-                style={{
-                  flexDirection: "column",
-                  alignItems: "center",
-                  textAlign: "center",
-                  display: showOldName ? "flex" : "none",
-                }}
-              >
-                {data.oldNames.map((name, index) => (
-                  <div key={index} style={{ textAlign: "center" }}>
-                    {name}
-                  </div>
-                ))}
-              </div>
-            </>
+            <div
+              className="newline"
+              style={{
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+                display: showOldName ? "flex" : "none",
+              }}
+            >
+              {data.oldNames.map((name, index) => (
+                <div key={index} style={{ textAlign: "center" }}>
+                  {name}
+                </div>
+              ))}
+            </div>
           )}
         </div>
         {data.description && (

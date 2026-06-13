@@ -56,7 +56,7 @@ const Legend = ({
               periods: isSelected
                 ? filters.periods.filter((x) => x !== p.name)
                 : filters.periods.concat([p.name]),
-            })
+            }),
         );
       })}
       {expanded && (
@@ -67,14 +67,14 @@ const Legend = ({
             filters.unknown
               ? getMarkerImage(imageWidth, palette.unknown)
               : getDeselectedImage(imageWidth, palette.unknown),
-            () => setFilters({ ...filters, unknown: !filters.unknown })
+            () => setFilters({ ...filters, unknown: !filters.unknown }),
           )}
           {getImage(
             "пам'ятники",
             filters.monuments
               ? getMonumentMarkerImage(imageWidth, palette.unknown)
               : getDeselectedImage(imageWidth, palette.unknown),
-            () => setFilters({ ...filters, monuments: !filters.monuments })
+            () => setFilters({ ...filters, monuments: !filters.monuments }),
           )}
           <div className="line-break"></div>
           {periodsOfDestruction.map((p) => {
@@ -90,7 +90,7 @@ const Legend = ({
                   lost: isSelected
                     ? filters.lost.filter((x) => x !== p.name)
                     : filters.lost.concat([p.name]),
-                })
+                }),
             );
           })}
         </>

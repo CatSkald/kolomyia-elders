@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
-import { mappedSources, mappedVocabulary } from "../../utils";
 import reactStringReplace from "react-string-replace";
 import type { SourceEntry } from "../../types/types";
+import { mappedSources, mappedVocabulary } from "../../utils";
 import Sources from "./Sources";
 
 const RichText = ({ data, style }: { data: string; style?: CSSProperties }) => {

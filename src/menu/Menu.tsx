@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { buttonSize, Theme } from "../themes";
 import { MoonStarsFill, SunFill } from "react-bootstrap-icons";
+import { siteMap } from "../pages/SiteMap";
+import { buttonSize, Theme } from "../themes";
 import HamburgerButton from "./HamburgerButton";
 import styles from "./Menu.module.css";
-import { siteMap } from "../pages/SiteMap";
 
 const Menu = ({
   theme,

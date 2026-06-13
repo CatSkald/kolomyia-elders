@@ -1,5 +1,5 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
 const chunkables = [
   ["buildings", "/src/data/buildings.json"], //TODO this is still too big

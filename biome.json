@@ -23,7 +23,6 @@
       "includes": ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
       "linter": {
         "rules": {
-          "a11y": "info",
           "complexity": {
             "useLiteralKeys": "off"
           },

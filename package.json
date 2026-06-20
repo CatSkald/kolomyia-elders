@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build --watch",
-    "lint": "biome lint --write --error-on-warnings --diagnostic-level=warn",
+    "lint": "biome check --error-on-warnings --diagnostic-level=warn",
     "preview": "vite preview",
     "deploy": "tsc && vite build && npx gh-pages -d dist",
     "upgrade": "npx npm-check-updates --upgrade && npm install"

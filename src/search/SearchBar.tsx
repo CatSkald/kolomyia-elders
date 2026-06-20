@@ -20,6 +20,7 @@ const SearchBar = ({
   return (
     <div className={styles.container}>
       <input
+        // biome-ignore lint/a11y/noAutofocus: We want to focus on search
         autoFocus={true}
         type="search"
         name="search"
@@ -31,13 +32,13 @@ const SearchBar = ({
       />
       <div className={styles.searchIcon}>
         {value ? (
-          <div
-            role="button"
+          <button
+            type="button"
             aria-label="Очистити поле пошуку"
             onClick={() => setValue("")}
           >
             <XLg />
-          </div>
+          </button>
         ) : (
           <Search />
         )}

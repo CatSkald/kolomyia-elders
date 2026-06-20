@@ -18,15 +18,22 @@ nav.menu a:first-child {
 }
 
 nav.menu a,
-nav.menu [role="button"] {
-  margin: 0.5rem;
-  padding: 0.5rem;
+nav.menu button {
   color: var(--color-foreground);
 }
 
 nav.menu a:hover,
-nav.menu [role="button"]:hover {
+nav.menu button:hover {
   color: var(--color-link-hover);
+}
+
+nav.menu button {
+  margin: 1rem;
+}
+
+nav.menu a {
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 
 nav.menu.opened {
@@ -37,11 +44,13 @@ nav.menu.opened {
   nav.menu {
     width: 100%;
     justify-content: center;
+    align-items: center;
+    align-self: center;
     padding-top: 0;
   }
 
   nav.menu a,
-  nav.menu [role="button"] {
+  nav.menu button {
     text-align: center;
   }
 }

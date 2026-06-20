@@ -28,7 +28,3 @@
   transition: all 0.25s ease-in-out;
   display: flex;
 }
-
-.searchIcon div[role="button"] {
-  display: flex;
-}

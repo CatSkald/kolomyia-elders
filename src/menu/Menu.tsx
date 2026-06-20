@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MoonStarsFill, SunFill } from "react-bootstrap-icons";
 import { siteMap } from "../pages/SiteMap";
-import { buttonSize, Theme } from "../themes";
+import { Theme } from "../themes";
 import HamburgerButton from "./HamburgerButton";
 import styles from "./Menu.module.css";
 
@@ -26,8 +26,8 @@ const Menu = ({
             {page.title}
           </a>
         ))}
-        <div
-          role="button"
+        <button
+          type="button"
           aria-label={
             isDarkTheme
               ? "Увімкнути світлу тему сайту"
@@ -38,12 +38,8 @@ const Menu = ({
             toggleTheme();
           }}
         >
-          {isDarkTheme ? (
-            <MoonStarsFill size={buttonSize} />
-          ) : (
-            <SunFill size={buttonSize} />
-          )}
-        </div>
+          {isDarkTheme ? <MoonStarsFill /> : <SunFill />}
+        </button>
       </nav>
     </>
   );

@@ -1,6 +1,5 @@
-import "./Collapsible.css";
-
 import { type ReactNode, useState } from "react";
+import styles from "./Collapsible.module.css";
 
 const Collapsible = ({
   header,
@@ -13,11 +12,13 @@ const Collapsible = ({
 }) => {
   const [isExpanded, expand] = useState(expanded ?? false);
   return (
-    <div className={`collapsible${isExpanded ? "" : " collapsed"}`}>
-      <h2 className="collapsible-header" onClick={() => expand(!isExpanded)}>
-        {header}
-      </h2>
-      <div className="collapsible-content">{children}</div>
+    <div className={`${isExpanded ? "" : styles.collapsed}`}>
+      <div className={styles.header}>
+        <button type="button" onClick={() => expand(!isExpanded)}>
+          {header}
+        </button>
+      </div>
+      <div className={styles.content}>{children}</div>
     </div>
   );
 };

@@ -48,7 +48,6 @@ a {
 }
 
 a,
-button,
 [role="button"] {
   text-decoration: none;
   font-weight: bold;
@@ -68,7 +67,9 @@ button {
   background: none;
   text-align: center;
   font: inherit;
-  display: flex;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 input {

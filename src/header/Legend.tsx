@@ -27,9 +27,9 @@ const Legend = ({
   const [expanded, setExpanded] = useState(!isMobile);
 
   const getImage = (text: string, image: string, onClick: () => void) => (
-    <div
+    <button
       key={text}
-      role="button"
+      type="button"
       aria-label={`Фільтр ${text}`}
       onClick={onClick}
     >
@@ -38,7 +38,7 @@ const Legend = ({
         alt="Фільтр"
       />
       {text}
-    </div>
+    </button>
   );
   const imageWidth = 24;
   return (
@@ -96,13 +96,13 @@ const Legend = ({
         </>
       )}
       {isMobile && (
-        <div
-          role="button"
+        <button
+          type="button"
           aria-label={expanded ? "Сховати фільтри" : "Більше фільтрів"}
           onClick={() => setExpanded(!expanded)}
         >
           {expanded ? "▲ Сховати фільтри" : "◆ Більше фільтрів"}
-        </div>
+        </button>
       )}
     </div>
   );

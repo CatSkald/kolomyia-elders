@@ -9,6 +9,15 @@
   padding: var(--padding-min-mobile) var(--padding-min-mobile) 0.5rem;
 }
 
+.legend button {
+  text-wrap-mode: nowrap;
+  font-weight: normal;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.25rem;
+}
+
 @media only screen and (min-width: 768px) {
   .header {
     padding: 0.8rem 0.8rem 0.5rem;

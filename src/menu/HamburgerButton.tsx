@@ -8,16 +8,18 @@ const HamburgerButton = ({
   setOpen: (open: boolean) => void;
 }) => {
   return (
-    <button
-      type="button"
-      aria-label="Меню"
-      className={open ? styles.opened : ""}
-      onClick={() => setOpen(!open)}
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <div className={styles.menu}>
+      <button
+        type="button"
+        aria-label="Меню"
+        className={open ? styles.opened : ""}
+        onClick={() => setOpen(!open)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   );
 };
 

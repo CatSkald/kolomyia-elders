@@ -29,6 +29,7 @@ nav.menu button:hover {
 
 nav.menu button {
   margin: 1rem;
+  text-align: left;
 }
 
 nav.menu a {

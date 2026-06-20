@@ -6,14 +6,18 @@ const ReadMoreButton = ({
   onClick: () => void;
 }) => {
   return (
-    <sup
-      role="button"
+    <button
+      type="button"
       aria-label={text}
       onClick={onClick}
-      style={{ color: "var(--color-link)" }}
+      style={{
+        color: "var(--color-link)",
+        verticalAlign: "super",
+        fontSize: "smaller",
+      }}
     >
       {text}
-    </sup>
+    </button>
   );
 };
 

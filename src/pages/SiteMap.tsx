@@ -1,4 +1,5 @@
 import AboutUs from "./AboutUs";
+import Glossary from "./Glossary";
 import Sources from "./Sources";
 
 export const siteMap = [
@@ -21,6 +22,11 @@ export const siteMap = [
     title: "Використані джерела",
     path: "?sources",
     getComponent: () => <Sources />,
+  },
+  {
+    title: "Словник",
+    path: "?glossary",
+    getComponent: () => <Glossary />,
   },
 ] as const;
 

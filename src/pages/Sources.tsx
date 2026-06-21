@@ -6,8 +6,8 @@ const Sources = () => {
     <div className={styles.page}>
       <h2>Використані джерела</h2>
       <ol>
-        {mappedSources.map((item, index) => (
-          <li key={index}>
+        {mappedSources.map((item) => (
+          <li key={item.number}>
             <span>{item.title}</span>
           </li>
         ))}

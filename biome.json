@@ -6,7 +6,16 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["**", "!cache", "!dist", "!build", "!src/data", "!**/*.d.ts"]
+    "includes": [
+      "**",
+      "!cache",
+      "!dist",
+      "!build",
+      "!src/data",
+      "!**/*.d.ts",
+      "!tools",
+      "!public"
+    ]
   },
   "formatter": {
     "enabled": true,

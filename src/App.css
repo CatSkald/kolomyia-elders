@@ -39,15 +39,6 @@
   scrollbar-width: thin;
 }
 
-/* logoPosition: "bottom-right" does not work with React */
-/* https://github.com/maptiler/leaflet-maptilersdk/blob/3d7b122d8e6315d0fcc27a74dfdfe47fcd8848fe/src/leaflet-maptilersdk.ts#L324 */
-.app a:has(img[alt="MapTiler logo"]) {
-  left: unset !important;
-  right: 0.3rem;
-  bottom: -6px !important;
-  position: fixed !important;
-}
-
 /* Open popup below */
 .app .marker-popup.leaflet-popup {
   top: 2.2rem;

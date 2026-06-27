@@ -2,18 +2,41 @@ import "leaflet/dist/leaflet.css";
 import * as L from "leaflet";
 import { useEffect, useState } from "react";
 import "leaflet-hash";
-import {
-  MaptilerLayer,
-  type MaptilerLayerInterface,
-} from "@maptiler/leaflet-maptilersdk";
+import maplibregl from "maplibre-gl";
+import "@maplibre/maplibre-gl-leaflet";
+import { colorful, eclipse } from "@versatiles/style";
+import { Protocol } from "pmtiles";
 import { MapContainer, ZoomControl } from "react-leaflet";
 import { Theme } from "../themes.ts";
 import BuildingsOverlay from "./BuildingsOverlay.tsx";
 import type { Filters } from "./Filters.ts";
 import { type MapSettings, mapBoundaries } from "./MapSettings.ts";
-import { config } from "./MaptilerConfig.ts";
 
-const x = atob(config.x);
+const protocol = new Protocol();
+maplibregl.addProtocol("pmtiles", protocol.tile);
+
+const PMTILES_URL = "pmtiles:///tiles/kolomyia.pmtiles";
+const GLYPHS_URL =
+  "https://tiles.versatiles.org/assets/glyphs/{fontstack}/{range}.pbf";
+
+function buildStyle(theme: Theme) {
+  const base =
+    theme === Theme.Dark
+      ? eclipse({ glyphs: GLYPHS_URL })
+      : colorful({ glyphs: GLYPHS_URL });
+
+  // @versatiles/style sets a `tiles` array on the vector source; PMTiles
+  // requires a `url` property pointing to the .pmtiles file instead.
+  const sources = Object.fromEntries(
+    Object.entries(base.sources as Record<string, { type?: string }>).map(
+      ([key, src]) =>
+        src.type === "vector"
+          ? [key, { type: "vector", url: PMTILES_URL }]
+          : [key, src],
+    ),
+  );
+  return { ...base, sources };
+}
 
 // biome-ignore lint/suspicious/noShadowRestrictedNames: Map is a sound name
 const Map = ({
@@ -30,38 +53,27 @@ const Map = ({
   onMarkerSelected: (coordinates: L.LatLngTuple) => void;
 }) => {
   const [map, setMap] = useState<L.Map | null>(null);
-  const [maptiler, setMaptiler] = useState<MaptilerLayerInterface | null>(null);
+  const [tilesLayer, setTilesLayer] = useState<L.MaplibreGL | null>(null);
+
   const enableCoordinatesInUrl = (map: L.Map) => {
     L.hash(map);
   };
 
   useEffect(() => {
-    const style = theme === Theme.Dark ? config.darkStyle : config.lightStyle;
-    const createMaptiler = (map: L.Map): MaptilerLayerInterface => {
-      const maptilerOptions = {
-        apiKey: x,
-        style: style,
-      };
-
-      const layer = new MaptilerLayer(maptilerOptions);
-      layer.addTo(map);
-
-      return layer;
-    };
+    const style = buildStyle(theme);
 
     if (map) {
-      if (!maptiler) {
+      if (!tilesLayer) {
         enableCoordinatesInUrl(map);
-        // TODO Investigate why
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        setMaptiler(createMaptiler(map));
-        //TODO Investigate why this is needed
+        const layer = L.maplibreGL({ style }).addTo(map);
+        // TODO eslint error react-hooks/set-state-in-effect
+        setTilesLayer(layer);
         map.setMaxBounds(mapBoundaries.bounds);
       } else {
-        maptiler.setStyle(style);
+        tilesLayer.getMaplibreMap().setStyle(style);
       }
     }
-  }, [map, maptiler, theme]);
+  }, [map, tilesLayer, theme]);
 
   return (
     <MapContainer

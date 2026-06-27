@@ -12,6 +12,7 @@
   font-size: x-small;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {

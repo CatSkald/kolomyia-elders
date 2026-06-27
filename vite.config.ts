@@ -4,7 +4,6 @@ import { defineConfig } from "vite";
 const chunkables = [
   ["buildings", "/src/data/buildings.json"], //TODO this is still too big
   ["data", "/src/data/"],
-  ["maptiler", "@maptiler"],
   ["leaflet", "leaflet"],
   ["maplibre", "maplibre-gl.js"], //TODO this is still too big
 ];

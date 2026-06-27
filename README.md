@@ -21,3 +21,7 @@ All texts, data (under `src/data`) and assets (under `src/assets`) are subject t
 ## Upgrade packages
 
 `npx npm-check-updates --upgrade`
+
+## Generating tiles
+
+See [this](./tools/tilemaker/README.md).

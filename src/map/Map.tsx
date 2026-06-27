@@ -15,7 +15,7 @@ import { type MapSettings, mapBoundaries } from "./MapSettings.ts";
 const protocol = new Protocol();
 maplibregl.addProtocol("pmtiles", protocol.tile);
 
-const PMTILES_URL = "pmtiles:///tiles/kolomyia.pmtiles";
+const PMTILES_URL = "pmtiles:///kolomyia.pmtiles";
 const GLYPHS_URL =
   "https://tiles.versatiles.org/assets/glyphs/{fontstack}/{range}.pbf";
 

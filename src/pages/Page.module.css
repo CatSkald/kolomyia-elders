@@ -14,6 +14,31 @@
   padding-bottom: 1rem;
 }
 
+.page li {
+  line-height: 1.3;
+}
+
+/* Stress mark drawn with CSS so it is font-independent */
+.stressed {
+  position: relative;
+  white-space: nowrap;
+}
+
+.stressed::after {
+  content: "\00B4";
+  position: absolute;
+  top: 0.2em;
+  left: 60%;
+  transform: translateX(-50%);
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* Raise the accent for vowels that already have a mark above */
+.markedAbove::after {
+  top: 0;
+}
+
 @media only screen and (min-width: 768px) {
   .page {
     padding: 0 0.8rem 0.8rem;

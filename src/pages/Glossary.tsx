@@ -1,5 +1,6 @@
 import { mappedVocabulary } from "../utils";
 import styles from "./Page.module.css";
+import { StressedWord } from "./StressedWord";
 
 const Glossary = () => {
   return (
@@ -10,8 +11,10 @@ const Glossary = () => {
           .sort((a, b) => a.word.localeCompare(b.word, ["uk", "pl", "de"]))
           .map((item) => (
             <li key={item.id}>
-              <span style={{ fontWeight: "bold" }}>{item.word}</span> —{" "}
-              {item.definition}
+              <span style={{ fontWeight: "bold" }}>
+                <StressedWord text={item.word} />
+              </span>{" "}
+              — {item.definition}
             </li>
           ))}
       </ul>

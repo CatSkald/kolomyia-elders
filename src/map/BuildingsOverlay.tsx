@@ -1,4 +1,5 @@
-import type { LatLngTuple } from "leaflet";
+import type { CircleMarker as LeafletCircleMarker, LatLngTuple } from "leaflet";
+import type { RefObject } from "react";
 import { useState } from "react";
 import { FeatureGroup, useMapEvents } from "react-leaflet";
 import { getMarkerSize } from "../themes";
@@ -7,28 +8,35 @@ import {
   mappedLostBuildings,
   mappedMonuments,
 } from "../utils";
-import { type Filters, matchSearchTerm } from "./Filters";
+import { type Filters, isBuildingVisible, matchSearchTerm } from "./Filters";
 import BuildingMarker from "./markers/BuildingMarker";
 import LostBuildingMarker from "./markers/LostBuildingMarker";
 import MonumentMarker from "./markers/MonumentMarker";
+import { HIDE_HIGHLIGHTED_MARKER_ZOOM } from "./style/createStyle";
 
 const BuildingsOverlay = ({
   initialZoom,
   onZoom,
   filters,
   onMarkerSelected,
+  markerRegistry,
+  highlightedIds,
 }: {
   initialZoom: number;
   onZoom: (zoom: number) => void;
   filters: Filters;
   onMarkerSelected: (coordinates: LatLngTuple) => void;
+  markerRegistry: RefObject<Map<string, LeafletCircleMarker>>;
+  highlightedIds: Set<string>;
 }) => {
   const [markerSize, setMarkerSize] = useState(getMarkerSize(initialZoom));
+  const [zoom, setZoom] = useState(initialZoom);
 
   const map = useMapEvents({
     zoomend() {
       const zoom = map.getZoom();
       setMarkerSize(getMarkerSize(zoom));
+      setZoom(zoom);
       onZoom(zoom);
     },
   });
@@ -60,23 +68,26 @@ const BuildingsOverlay = ({
           </FeatureGroup>
         ))}
       {mappedBuildings
-        .filter(
-          (b) =>
-            !!b.coordinates &&
-            (filters.searchTerm
-              ? matchSearchTerm(b, filters)
-              : (filters.unknown && !b.period) ||
-                filters.periods.find((p) => p === b.period?.name)),
-        )
-        .map((b) => (
-          <FeatureGroup key={b.coordinates?.toString()}>
-            <BuildingMarker
-              data={b}
-              markerSize={markerSize}
-              onClick={() => onMarkerClick(b.coordinates!)}
-            />
-          </FeatureGroup>
-        ))}
+        .filter((b) => isBuildingVisible(b, filters))
+        .map((b) => {
+          const id = b.coordinates!.join(",");
+          const hideMarker: boolean =
+            zoom >= HIDE_HIGHLIGHTED_MARKER_ZOOM && highlightedIds.has(id);
+          return (
+            <FeatureGroup key={b.coordinates?.toString()}>
+              <BuildingMarker
+                data={b}
+                markerSize={markerSize}
+                hidden={hideMarker}
+                onClick={() => onMarkerClick(b.coordinates!)}
+                markerRef={(marker) => {
+                  if (marker) markerRegistry.current.set(id, marker);
+                  else markerRegistry.current.delete(id);
+                }}
+              />
+            </FeatureGroup>
+          );
+        })}
       {filters.monuments &&
         mappedMonuments
           .filter(

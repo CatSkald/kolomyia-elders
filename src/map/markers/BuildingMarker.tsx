@@ -1,6 +1,7 @@
 import { CircleMarker, Popup } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
+import type * as L from "leaflet";
 import { useState } from "react";
 import { palette } from "../../themes";
 import type { BuildingProfile } from "../../types/types";
@@ -12,24 +13,33 @@ export default function BuildingMarker({
   data,
   markerSize,
   onClick,
+  markerRef,
+  hidden = false,
 }: {
   data: BuildingProfile;
   markerSize: number;
   onClick: () => void;
+  markerRef?: (marker: L.CircleMarker | null) => void;
+  hidden?: boolean;
 }) {
   const [showOldName, setShowOldName] = useState(false);
   const [showOldStreetName, setShowOldStreetName] = useState(false);
   const markerColor = data.period?.color ?? palette.unknown;
   return !data.coordinates ? null : (
     <CircleMarker
+      ref={markerRef}
       center={data.coordinates}
       radius={markerSize / 2}
-      color={palette.overlay}
-      opacity={0.5}
-      fillColor={markerColor}
-      fillOpacity={1}
-      stroke={true}
-      weight={1}
+      // Style must go through pathOptions: 
+      // react-leaflet only restyles Path components when this object changes,
+      // not when individual props do.
+      pathOptions={{
+        color: palette.overlay,
+        opacity: hidden ? 0 : 0.5,
+        fillColor: markerColor,
+        fillOpacity: hidden ? 0 : 1,
+        weight: 1,
+      }}
       eventHandlers={{
         click: (event) => {
           onClick();

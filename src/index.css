@@ -1,3 +1,28 @@
+@font-face {
+  font-family: Philosopher;
+  font-style: normal;
+  font-weight: 400;
+  src: url('./vendor/fonts/Philosopher/Philosopher-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: Philosopher;
+  font-style: italic;
+  font-weight: 400;
+  src: url('./vendor/fonts/Philosopher/Philosopher-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: Philosopher;
+  font-style: normal;
+  font-weight: 700;
+  src: url('./vendor/fonts/Philosopher/Philosopher-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: Philosopher;
+  font-style: italic;
+  font-weight: 700;
+  src: url('./vendor/fonts/Philosopher/Philosopher-BoldItalic.ttf') format('truetype');
+}
+
 body {
   --color-background: #fff;
   /* --color-foreground: rgba(0, 0, 0, 0.87); */
@@ -30,7 +55,6 @@ body {
   padding: 0;
   font-family:
     Philosopher,
-    Noto Sans,
     serif;
 }
 

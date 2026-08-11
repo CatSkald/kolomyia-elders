@@ -3,7 +3,6 @@ import { periods, periodsOfDestruction } from "../data/periods";
 import type { Filters } from "../map/Filters";
 import {
   getDeselectedImage,
-  getLostBuildingMarkerImage,
   getMarkerImage,
   getMonumentMarkerImage,
   palette,
@@ -82,7 +81,7 @@ const Legend = ({
             return getImage(
               p.name,
               isSelected
-                ? getLostBuildingMarkerImage(imageWidth, p.color, false)
+                ? getMarkerImage(imageWidth, p.color)
                 : getDeselectedImage(imageWidth, p.color),
               () =>
                 setFilters({

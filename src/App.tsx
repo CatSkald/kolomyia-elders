@@ -10,7 +10,7 @@ import { Theme } from "./themes";
 import { UserPreferences } from "./UserPreferences";
 
 // biome-ignore lint/suspicious/noShadowRestrictedNames: Map is a sound name
-const Map = lazy(() => import("./map/Map"));
+const Map = lazy(() => import("./map/InteractiveMap"));
 
 function App() {
   const preferences = UserPreferences.load();

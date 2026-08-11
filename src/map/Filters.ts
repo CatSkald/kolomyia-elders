@@ -48,3 +48,13 @@ export function matchSearchTerm(
     }).length > 0
   );
 }
+
+export function isBuildingVisible(
+  b: BuildingProfile,
+  filters: Filters,
+): boolean {
+  if (!b.coordinates) return false;
+  if (filters.searchTerm) return matchSearchTerm(b, filters);
+  if (filters.unknown && !b.period) return true;
+  return filters.periods.some((p) => p === b.period?.name);
+}

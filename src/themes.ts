@@ -15,13 +15,6 @@ export const getDeselectedImage = (size: number, color: string) =>
 export const getMarkerImage = (size: number, color: string) =>
   `<svg viewBox="0 0 ${size} ${size}" width="${size}px" height="${size}px" fill="${color}" xmlns="http://www.w3.org/2000/svg"><path d="M12 0a12 12 0 000 24-12-12 0 000-24z"/></svg>`;
 
-export const getLostBuildingMarkerImage = (
-  size: number,
-  color: string,
-  stroke: boolean,
-) =>
-  `<svg fill="${color}" stroke="${stroke ? palette.overlay : ""}" xmlns="http://www.w3.org/2000/svg" width="${size}px" height="${size}px" viewBox="0 0 16 16"><path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2z"></path></svg>`;
-
 export const getMonumentMarkerImage = (size: number, color: string) =>
   `<svg viewBox="0 0 24 24" height="${size}" width="${size}" fill="${color}" xmlns="http://www.w3.org/2000/svg"><path d="m7.00688,23.96521l1.85319,-20.32243l6.17733,0l1.8532,20.32243l-9.88372,0z"/><path d="m8.86844,3.61025l3.07629,-3.53295l3.07629,3.53295l-6.15258,0Z"/></svg>`;
 
@@ -46,5 +39,95 @@ export const palette = {
     iii: "lightblue",
   },
   unknown: "gold",
-  overlay: "#666666bf",
+  overlay: "var(--color-background)",
 } as const;
+
+export type MapStyle = {
+  background: string;
+  building: {
+    fill: string;
+    outline: string;
+  };
+  buildingNumber: {
+    text: string;
+    halo: string;
+  };
+  road: {
+    line: string;
+  };
+  rail: {
+    line: string;
+  };
+  water: {
+    text: string;
+    fill: string;
+    waterway: string;
+  };
+  boundary: {
+    line: string;
+  };
+  label: {
+    text: string;
+    halo: string;
+  };
+};
+
+export const mapStyleDark: MapStyle = {
+  background: "#0d0d0d",
+  building: {
+    fill: "#63666A", // medium gray
+    outline: "#121212",
+  },
+  buildingNumber: {
+    text: "#fffafade",
+    halo: "#121212",
+  },
+  road: {
+    line: "#27272A",
+  },
+  rail: {
+    line: "#36454f", // charcoal gray
+  },
+  water: {
+    text: "#B0C4DE", // light steel blue
+    fill: "#003957", // cobalt blue
+    waterway: "#003957",
+  },
+  boundary: {
+    line: "#606263", // pewter
+  },
+  label: {
+    text: "#fffafade",
+    halo: "#121212",
+  },
+};
+
+export const mapStyleLight: MapStyle = {
+  background: "#F3F2ED",
+  building: {
+    fill: "#A9A9A9",
+    outline: "#fff",
+  },
+  buildingNumber: {
+    text: "#000000de",
+    halo: "#fff",
+  },
+  road: {
+    line: "#d8d2c8",
+  },
+  rail: {
+    line: "#BDB76B",
+  },
+  water: {
+    text: "#000080",
+    fill: "#87CEFA", // sky blue
+    waterway: "#87CEFA",
+  },
+  boundary: {
+    line: "#ffffff",
+  },
+  label: {
+    text: "#000000de",
+    halo: "#ffffff",
+  },
+};

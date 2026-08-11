@@ -12,6 +12,11 @@
   font-size: x-small;
   display: flex;
   flex-direction: column;
+  text-align: center;
+}
+
+.footer .footer-separator {
+  display: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -20,6 +25,13 @@
     padding: 0.4rem;
     font-size: smaller;
     gap: 0.2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer .footer-separator {
+    display: inline;
   }
 }
 

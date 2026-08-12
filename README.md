@@ -15,6 +15,7 @@ Generated map data (`pmtiles` and `geojson`) is derived from OpenStreetMap under
 1. If buildings data is updated: `npm run enrich`.
 1. `npm run build` to build and watch.
 1. In separate terminal: `npm run preview` to view.
+1. `npm run lint -- --fix` to fix linter errors.
 
 ### Upgrade packages
 

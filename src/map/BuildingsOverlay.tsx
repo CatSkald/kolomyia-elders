@@ -1,4 +1,4 @@
-import type { CircleMarker as LeafletCircleMarker, LatLngTuple } from "leaflet";
+import type { LatLngTuple, CircleMarker as LeafletCircleMarker } from "leaflet";
 import type { RefObject } from "react";
 import { useState } from "react";
 import { FeatureGroup, useMapEvents } from "react-leaflet";

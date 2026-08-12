@@ -10,7 +10,7 @@ import maplibregl, {
 import "@maplibre/maplibre-gl-leaflet";
 import { Protocol } from "pmtiles";
 import { MapContainer, ZoomControl } from "react-leaflet";
-import { Theme } from "../themes.ts";
+import type { Theme } from "../themes.ts";
 import { mappedBuildings } from "../utils.ts";
 import BuildingsOverlay from "./BuildingsOverlay.tsx";
 import { type Filters, isBuildingVisible } from "./Filters.ts";

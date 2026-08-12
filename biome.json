@@ -18,8 +18,9 @@
     ]
   },
   "formatter": {
-    "enabled": true,
-    "useEditorconfig": true
+    "enabled": false,
+    "useEditorconfig": true,
+    "lineEnding": "auto"
   },
   "linter": {
     "enabled": true,

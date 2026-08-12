@@ -4,8 +4,7 @@ import type {
   LayerSpecification,
   StyleSpecification,
 } from "maplibre-gl";
-import { MapStyle, mapStyleDark, mapStyleLight } from "../../themes.ts";
-import { Theme } from "../../themes.ts";
+import { type MapStyle, mapStyleDark, mapStyleLight, Theme } from "../../themes.ts";
 
 export type CreateStyleOptions = {
   language?: string;

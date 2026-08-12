@@ -15,7 +15,7 @@
   -webkit-appearance: none;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .container {
     width: 25.2rem;
   }

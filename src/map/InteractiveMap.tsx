@@ -72,7 +72,10 @@ function buildStyle(
   highlightData: GeoJSON.FeatureCollection,
 ): StyleSpecification {
   const style = structuredClone(
-    createStyle(theme, { language: "uk" }),
+    createStyle(theme, {
+      language: "uk",
+      viewport: window.innerWidth <= 768 ? "mobile" : "desktop",
+    }),
   ) as StyleSpecification & {
     sources: Record<string, unknown>;
     glyphs?: string;

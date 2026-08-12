@@ -11,6 +11,7 @@ export type CreateStyleOptions = {
   language?: string;
   source?: string;
   glyphs?: string;
+  viewport?: "mobile" | "desktop";
 };
 
 const DEFAULT_SOURCE = "openmaptiles";
@@ -53,11 +54,20 @@ function nameField(lang: string): ExpressionSpecification {
   ];
 }
 
-function widthRamp([w14, w22]: [
-  number,
-  number,
-]): DataDrivenPropertyValueSpecification<number> {
-  return ["interpolate", ["exponential", 1.5], ["zoom"], 14, w14, 22, w22];
+function widthRamp(
+  [minZoomWidth, maxZoomWidth]: [number, number],
+  minZoom: number = 14,
+  maxZoom: number = 20,
+): DataDrivenPropertyValueSpecification<number> {
+  return [
+    "interpolate",
+    ["exponential", 1.5],
+    ["zoom"],
+    minZoom,
+    minZoomWidth,
+    maxZoom,
+    maxZoomWidth,
+  ];
 }
 
 export function createStyle(
@@ -66,8 +76,14 @@ export function createStyle(
 ): StyleSpecification {
   const mapStyle: MapStyle =
     theme === Theme.Dark ? mapStyleDark : mapStyleLight;
-  const { language = "uk", source = DEFAULT_SOURCE, glyphs = "" } = options;
+  const {
+    viewport = "mobile",
+    language = "uk",
+    source = DEFAULT_SOURCE,
+    glyphs = "",
+  } = options;
   const text = nameField(language);
+  const isMobile = viewport === "mobile";
 
   // https://maplibre.org/maplibre-style-spec/layers
   const layers: LayerSpecification[] = [
@@ -189,7 +205,7 @@ export function createStyle(
         "symbol-placement": "line",
         "text-field": text,
         "text-font": ["Philosopher Italic"],
-        "text-size": widthRamp([10, 30]),
+        "text-size": widthRamp([isMobile ? 15 : 12, isMobile ? 33 : 28], 16),
         "text-overlap": "never",
         "text-padding": 2,
       },
@@ -210,7 +226,7 @@ export function createStyle(
         "symbol-placement": "line",
         "text-field": text,
         "text-font": ["Philosopher Regular"],
-        "text-size": widthRamp([12, 30]),
+        "text-size": widthRamp([isMobile ? 16 : 13, isMobile ? 36 : 30], 16),
         "text-overlap": "never",
         "text-padding": 2,
       },
@@ -230,7 +246,7 @@ export function createStyle(
       layout: {
         "text-field": ["get", "housenumber"],
         "text-font": ["Philosopher Bold"],
-        "text-size": widthRamp([7, 40]),
+        "text-size": widthRamp([isMobile ? 18 : 14, isMobile ? 40 : 25], 17),
         "text-overlap": "always",
         "text-padding": 2,
       },
@@ -250,7 +266,7 @@ export function createStyle(
       layout: {
         "text-field": text,
         "text-font": ["Philosopher Bold"],
-        "text-size": widthRamp([20, 80]),
+        "text-size": widthRamp([25, 175]),
         "text-overlap": "cooperative",
         "symbol-sort-key": ["coalesce", ["get", "rank"], 100],
         "text-padding": 2,

@@ -97,10 +97,10 @@ const Legend = ({
       {isMobile && (
         <button
           type="button"
-          aria-label={expanded ? "Сховати фільтри" : "Більше фільтрів"}
+          aria-label={expanded ? "Сховати фільтри" : "Ще фільтрів"}
           onClick={() => setExpanded(!expanded)}
         >
-          {expanded ? "▲ Сховати фільтри" : "◆ Більше фільтрів"}
+          {expanded ? "▲ Сховати фільтри" : "◆ Ще фільтрів"}
         </button>
       )}
     </div>

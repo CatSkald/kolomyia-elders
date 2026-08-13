@@ -1,7 +1,7 @@
 // Build-time enrichment: 
 // fetch OSM building footprints for the Kolomyia bbox,
 // spatially join them to the coordinates in buildings.json,
-// and emit public/highlighted-buildings.geojson
+// and emit public/highlights.geojson
 // (footprint polygons tagged with the building's period color).
 // Unmatched buildings are printed so their coordinate can be adjusted manually.
 //
@@ -162,7 +162,7 @@ async function main() {
     }
   }
 
-  const outPath = resolve(here, "../public/highlighted-buildings.geojson");
+  const outPath = resolve(here, "../public/highlights.geojson");
   writeFileSync(
     outPath,
     JSON.stringify({ type: "FeatureCollection", features: outFeatures }),

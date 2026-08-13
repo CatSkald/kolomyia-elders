@@ -1,24 +1,21 @@
-import "leaflet/dist/leaflet.css";
-import "maplibre-gl/dist/maplibre-gl.css";
+import "@maplibre/maplibre-gl-leaflet";
 import * as L from "leaflet";
-import { useEffect, useMemo, useRef, useState } from "react";
 import "leaflet-hash";
+import "leaflet/dist/leaflet.css";
 import maplibregl, {
   type FilterSpecification,
   type StyleSpecification,
 } from "maplibre-gl";
-import "@maplibre/maplibre-gl-leaflet";
+import "maplibre-gl/dist/maplibre-gl.css";
 import { Protocol } from "pmtiles";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { MapContainer, ZoomControl } from "react-leaflet";
 import type { Theme } from "../themes.ts";
 import { mappedBuildings } from "../utils.ts";
 import BuildingsOverlay from "./BuildingsOverlay.tsx";
+import { createStyle, GEOJSON_HIGHLIGHT_SOURCE_ID } from "./createStyle.ts";
 import { type Filters, isBuildingVisible } from "./Filters.ts";
 import { type MapSettings, mapBoundaries } from "./MapSettings.ts";
-import {
-  createStyle,
-  GEOJSON_HIGHLIGHT_SOURCE_ID,
-} from "./style/createStyle.ts";
 
 const protocol = new Protocol();
 maplibregl.addProtocol("pmtiles", protocol.tile);
@@ -47,7 +44,7 @@ const EMPTY_FC: GeoJSON.FeatureCollection = {
 const highlights = (() => {
   let loaded = false;
   let value: GeoJSON.FeatureCollection = EMPTY_FC;
-  const promise = fetch(asset("highlighted-buildings.geojson"))
+  const promise = fetch(asset("highlights.geojson"))
     .then((response) => response.json())
     .then(
       (geo: GeoJSON.FeatureCollection) => {

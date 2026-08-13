@@ -27,8 +27,7 @@ See [this](./docs/Generate_tiles.md).
 
 ## Deploy
 
-1. Run `npm run preview`
-1. Run `npm run deploy`
+`npm run deploy`
 
 ## Built with, and thanks to
 

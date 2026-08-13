@@ -96,7 +96,7 @@ Regenerate (Section 4) after editing the Lua, then recopy `kolomyia.pmtiles`.
 
 ## 6. Building highlights (footprints) and tile regeneration
 
-The colored buildings-of-interest are **not** baked into the tiles. They come from `public/highlighted-buildings.geojson`, produced by `tools/enrich-buildings.ts`:
+The colored buildings-of-interest are **not** baked into the tiles. They come from `public/highlights.geojson`, produced by `tools/enrich-buildings.ts`:
 
 1. Fetch every building footprint in the Kolomyia bbox from **Overpass** (live OSM).
 2. Spatially join each footprint to the coordinates in `src/data/buildings.json` (point-in-polygon).

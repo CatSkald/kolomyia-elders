@@ -8,11 +8,11 @@ import {
   mappedLostBuildings,
   mappedMonuments,
 } from "../utils";
+import { HIDE_HIGHLIGHTED_MARKER_ZOOM } from "./createStyle";
 import { type Filters, isBuildingVisible, matchSearchTerm } from "./Filters";
 import BuildingMarker from "./markers/BuildingMarker";
 import LostBuildingMarker from "./markers/LostBuildingMarker";
 import MonumentMarker from "./markers/MonumentMarker";
-import { HIDE_HIGHLIGHTED_MARKER_ZOOM } from "./style/createStyle";
 
 const BuildingsOverlay = ({
   initialZoom,

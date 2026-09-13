@@ -1,8 +1,9 @@
-import { CircleMarker, Popup } from "react-leaflet";
+import { Marker, Popup } from "react-leaflet";
 
 import "leaflet/dist/leaflet.css";
+import { DivIcon } from "leaflet";
 import { useState } from "react";
-import { palette } from "../../themes";
+import { getLostBuildingMarkerImage, palette } from "../../themes";
 import type { LostBuildingProfile } from "../../types/types";
 import BuildingHistory from "../popup/BuildingHistory";
 import ReadMoreButton from "../popup/ReadMoreButton";
@@ -21,21 +22,22 @@ export default function LostBuildingMarker({
 
   const markerColor = data.periodOfDestruction?.color ?? palette.unknown;
   return !data.coordinates ? null : (
-    <CircleMarker
-      center={data.coordinates}
-      radius={markerSize / 2}
-      color={palette.overlay}
-      opacity={0.5}
-      fillColor={markerColor}
-      fillOpacity={1}
-      stroke={true}
-      weight={1}
+    <Marker
+      position={data.coordinates}
       eventHandlers={{
         click: (event) => {
           onClick();
           event.target.openPopup(data.coordinates);
         },
       }}
+      icon={
+        new DivIcon({
+          className: "marker",
+          iconSize: [markerSize, markerSize],
+          iconAnchor: [markerSize / 2, markerSize],
+          html: getLostBuildingMarkerImage(markerSize, markerColor, true),
+        })
+      }
     >
       <Popup className="marker-popup" autoPan={false}>
         <div
@@ -117,6 +119,6 @@ export default function LostBuildingMarker({
         )}
         {data.history && <BuildingHistory data={data.history} />}
       </Popup>
-    </CircleMarker>
+    </Marker>
   );
 }

@@ -3,6 +3,7 @@ import { periods, periodsOfDestruction } from "../data/periods";
 import type { Filters } from "../map/Filters";
 import {
   getDeselectedImage,
+  getLostBuildingMarkerImage,
   getMarkerImage,
   getMonumentMarkerImage,
   palette,
@@ -81,7 +82,7 @@ const Legend = ({
             return getImage(
               p.name,
               isSelected
-                ? getMarkerImage(imageWidth, p.color)
+                ? getLostBuildingMarkerImage(imageWidth, p.color, false)
                 : getDeselectedImage(imageWidth, p.color),
               () =>
                 setFilters({
@@ -97,10 +98,10 @@ const Legend = ({
       {isMobile && (
         <button
           type="button"
-          aria-label={expanded ? "Сховати фільтри" : "Ще фільтрів"}
+          aria-label={expanded ? "Сховати фільтри" : "Більше фільтрів"}
           onClick={() => setExpanded(!expanded)}
         >
-          {expanded ? "▲ Сховати фільтри" : "◆ Ще фільтрів"}
+          {expanded ? "▲ Сховати фільтри" : "◆ Більше..."}
         </button>
       )}
     </div>

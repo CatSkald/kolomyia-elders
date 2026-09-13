@@ -2,11 +2,15 @@ import "@maplibre/maplibre-gl-leaflet";
 import * as L from "leaflet";
 import "leaflet-hash";
 import "leaflet/dist/leaflet.css";
-import maplibregl, {
+import {
+  addProtocol,
   type FilterSpecification,
+  type Map as MapLibreMap,
   type StyleSpecification,
+  setWorkerUrl,
 } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
+import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 import { Protocol } from "pmtiles";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { MapContainer, ZoomControl } from "react-leaflet";
@@ -18,7 +22,8 @@ import { type Filters, isBuildingVisible } from "./Filters.ts";
 import { type MapSettings, mapBoundaries } from "./MapSettings.ts";
 
 const protocol = new Protocol();
-maplibregl.addProtocol("pmtiles", protocol.tile);
+addProtocol("pmtiles", protocol.tile);
+setWorkerUrl(workerUrl);
 
 // Resolve asset URLs against the deployed base (vite `base: "./"`),
 // so they work both at `npm run dev` and under a GitHub Pages subpath.
@@ -224,7 +229,7 @@ const InteractiveMap = ({
 
     const style = buildStyle(theme, highlightData);
 
-    let mapLibreMap: maplibregl.Map;
+    let mapLibreMap: MapLibreMap;
     if (!tilesLayer) {
       enableCoordinatesInUrl(map);
       const layer = L.maplibreGL({ style }).addTo(map);

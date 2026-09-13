@@ -29,6 +29,8 @@ See [this](./docs/Generate_tiles.md).
 
 `npm run deploy`
 
+TODO gh-actions package has an issue on Windows, causing an error `Error: spawn ENAMETOOLONG`. A suggested patch solution is proposed here: https://github.com/tschaub/gh-pages/issues/585#issuecomment-2585457896. The actual fix was merged into the gh-actions but never made it into the actually released version, so for now we stick with the patch workaround.
+
 ## Built with, and thanks to
 
 - **Map data** — [OpenStreetMap](https://www.openstreetmap.org/copyright), © OpenStreetMap, under the [ODbL](https://opendatacommons.org/licenses/odbl/)
